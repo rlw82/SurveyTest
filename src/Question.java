@@ -1,23 +1,35 @@
+import java.util.HashSet;
+import java.util.Set;
 public class Question
 {
-	private String prompt;
+   
+   private Prompt prompt;
+   
+   public void setPrompt(Prompt value) {
+      this.prompt = value;
+   }
+   
+   public Prompt getPrompt() {
+      return this.prompt;
+   }
+   
 	
-	public static void display()
+	public void display()
 	{
 		//To do
 	}
 	
-	public static Answer take()
+	public Answer take()
 	{
 		return new Answer();
 	}
 		
-	public static void modify()
+	public void modify()
 	{
 		
 	}
 	
-	public static void save()
+	public void save()
 	{
 		
 	}

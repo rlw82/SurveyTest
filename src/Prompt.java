@@ -1,14 +1,13 @@
 
-public class Essay extends Question {
-public Essay (Prompt prompt_, Responce responce_) {
+public class Prompt {
+   public Prompt (String prompt) {
       // TODO implement this operation
       throw new UnsupportedOperationException("not implemented");
    }
    
-public Essay () {
+   public Prompt () {
       // TODO implement this operation
       throw new UnsupportedOperationException("not implemented");
    }
    
-      
    }
