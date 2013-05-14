@@ -1,37 +1,37 @@
-public class ShortAnswer extends Essay
-{
-	public ShortAnswer(Prompt prompt_, Responce responce_)
-	{
+package SurveyTestSystem;
+
+public class ShortAnswer extends Essay {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 3295134162398144774L;
+
+	public ShortAnswer(Prompt prompt_, Responce responce_) {
 		// TODO implement this operation
 		throw new UnsupportedOperationException("not implemented");
 	}
 
-	public void display()
-	{
+	public void display() {
 		// TODO implement this operation
 		throw new UnsupportedOperationException("not implemented");
 	}
 
-	public Responce take()
-	{
+	public Responce take() {
 		// TODO implement this operation
 		throw new UnsupportedOperationException("not implemented");
 	}
 
-	public void modify()
-	{
+	public void modify() {
 		// TODO implement this operation
 		throw new UnsupportedOperationException("not implemented");
 	}
 
-	public void save()
-	{
+	public void save() {
 		// TODO implement this operation
 		throw new UnsupportedOperationException("not implemented");
 	}
 
-	public ShortAnswer()
-	{
+	public ShortAnswer() {
 		// TODO implement this operation
 		throw new UnsupportedOperationException("not implemented");
 	}
