@@ -9,7 +9,12 @@ public class Survey implements java.io.Serializable
 	 * 
 	 */
 	private static final long serialVersionUID = -7199734700246684141L;
-
+	
+	public void Create()
+	{
+		throw new UnsupportedOperationException("not implemented");
+	}
+	
 	public void modifyQuestions()
 	{
 		// TODO implement this operation
