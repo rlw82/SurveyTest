@@ -1,449 +1,518 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:UMLLabProfile="http:///schemas/UMLLabProfile/NS/0" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xsi:schemaLocation="http:///schemas/UMLLabProfile/NS/0 pathmap://UMLLAB_PROFILES/UMLLab.profile.uml#UMLLabProfile-Annotation_2-UMLLabProfile">
-  <uml:Model xmi:id="_5KJX8LPFEeKm54LOuiz5zw" name="SurveyTest">
-    <eAnnotations xmi:id="_5RxC4LPFEeKm54LOuiz5zw" source="http://ns.yatta.de/umllab">
-      <contents xmi:type="ecore:EAnnotation" xmi:id="_5Rxp8LPFEeKm54LOuiz5zw" source="codegen">
-        <details xmi:id="_5Rxp8bPFEeKm54LOuiz5zw" key="codegenDirectory" value="/SurveyTest/src"/>
-        <details xmi:id="_5eHc0LPFEeKm54LOuiz5zw" key="AssociatedSourceCode" value="/SurveyTest/src/CorrectResponce.java;1582237166/1;/SurveyTest/src/Essay.java;2163587346/1;/SurveyTest/src/Matching.java;1423251355/1;/SurveyTest/src/MultipleChoice.java;1634555382/1;/SurveyTest/src/Prompt.java;3437321437/1;/SurveyTest/src/Question.java;476853764/1;/SurveyTest/src/Ranking.java;241936106/1;/SurveyTest/src/Responce.java;48826065/1;/SurveyTest/src/ResponceComparison.java;602785077/1;/SurveyTest/src/ShortAnswer.java;1909091075/1;/SurveyTest/src/Survey.java;2567790408/1;/SurveyTest/src/Test.java;398298569/1;/SurveyTest/src/TrueFalse.java;195991324/1;/SurveyTest/src/Choice.java;3586667510/1;"/>
+  <uml:Model xmi:id="_MCtAcL3ZEeKOELt9NwXOhg" name="SurveyTest">
+    <eAnnotations xmi:id="_MObIQL3ZEeKOELt9NwXOhg" source="http://ns.yatta.de/umllab">
+      <contents xmi:type="ecore:EAnnotation" xmi:id="_MOcWYL3ZEeKOELt9NwXOhg" source="codegen">
+        <details xmi:id="_MOcWYb3ZEeKOELt9NwXOhg" key="codegenDirectory" value="/SurveyTest/src"/>
+        <details xmi:id="_Np_HUL3ZEeKOELt9NwXOhg" key="AssociatedSourceCode" value="/SurveyTest/src/DataSystem/Choice.java;2120543636/1;/SurveyTest/src/DataSystem/CorrectResponse.java;1068427180/1;/SurveyTest/src/DataSystem/Essay.java;3813043060/1;/SurveyTest/src/DataSystem/Matching.java;896628132/1;/SurveyTest/src/DataSystem/MultipleChoice.java;3458997079/1;/SurveyTest/src/DataSystem/Prompt.java;705728317/1;/SurveyTest/src/DataSystem/Question.java;3700982784/1;/SurveyTest/src/DataSystem/Ranking.java;387101428/1;/SurveyTest/src/DataSystem/Response.java;850233424/1;/SurveyTest/src/DataSystem/ResponseComparison.java;3986480653/1;/SurveyTest/src/DataSystem/ShortAnswer.java;1483756194/1;/SurveyTest/src/DataSystem/Survey.java;2721808869/1;/SurveyTest/src/DataSystem/Test.java;2960260180/1;/SurveyTest/src/DataSystem/TrueFalse.java;3052544776/1;/SurveyTest/src/Main.java;3923928264/1;"/>
       </contents>
     </eAnnotations>
-    <elementImport xmi:id="_5YcSoLPFEeKm54LOuiz5zw">
+    <elementImport xmi:id="_MwtV8L3ZEeKOELt9NwXOhg">
       <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
     </elementImport>
-    <elementImport xmi:id="_5YcSobPFEeKm54LOuiz5zw">
+    <elementImport xmi:id="_Mwt9AL3ZEeKOELt9NwXOhg">
       <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#byte"/>
     </elementImport>
-    <elementImport xmi:id="_5YcSorPFEeKm54LOuiz5zw">
+    <elementImport xmi:id="_Mwt9Ab3ZEeKOELt9NwXOhg">
       <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#char"/>
     </elementImport>
-    <elementImport xmi:id="_5Yc5sLPFEeKm54LOuiz5zw">
+    <elementImport xmi:id="_Mwt9Ar3ZEeKOELt9NwXOhg">
       <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
     </elementImport>
-    <elementImport xmi:id="_5Yc5sbPFEeKm54LOuiz5zw">
+    <elementImport xmi:id="_Mwt9A73ZEeKOELt9NwXOhg">
       <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#float"/>
     </elementImport>
-    <elementImport xmi:id="_5Yc5srPFEeKm54LOuiz5zw">
+    <elementImport xmi:id="_MwukEL3ZEeKOELt9NwXOhg">
       <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
     </elementImport>
-    <elementImport xmi:id="_5Yc5s7PFEeKm54LOuiz5zw">
+    <elementImport xmi:id="_MwukEb3ZEeKOELt9NwXOhg">
       <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
     </elementImport>
-    <elementImport xmi:id="_5Yc5tLPFEeKm54LOuiz5zw">
+    <elementImport xmi:id="_MwukEr3ZEeKOELt9NwXOhg">
       <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#short"/>
     </elementImport>
-    <elementImport xmi:id="_5YdgwLPFEeKm54LOuiz5zw">
+    <elementImport xmi:id="_MwvLIL3ZEeKOELt9NwXOhg">
       <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
     </elementImport>
-    <packagedElement xmi:type="uml:Package" xmi:id="_5X_msLPFEeKm54LOuiz5zw" name="java">
-      <packagedElement xmi:type="uml:Package" xmi:id="_5X_msbPFEeKm54LOuiz5zw" name="util">
-        <packagedElement xmi:type="uml:Class" xmi:id="_5ZkUALPFEeKm54LOuiz5zw" name="ArrayList"/>
-        <packagedElement xmi:type="uml:Interface" xmi:id="_5ZmJMLPFEeKm54LOuiz5zw" name="Set"/>
-        <packagedElement xmi:type="uml:Class" xmi:id="_5ZmwQbPFEeKm54LOuiz5zw" name="HashSet"/>
-        <packagedElement xmi:type="uml:Class" xmi:id="_HeCasLPOEeKm54LOuiz5zw" name="HashMap"/>
+    <packagedElement xmi:type="uml:Package" xmi:id="_Mw0DoL3ZEeKOELt9NwXOhg" name="java">
+      <packagedElement xmi:type="uml:Package" xmi:id="_Mw0qsL3ZEeKOELt9NwXOhg" name="util">
+        <packagedElement xmi:type="uml:Class" xmi:id="_NJlI8L3ZEeKOELt9NwXOhg" name="HashSet"/>
+        <packagedElement xmi:type="uml:Interface" xmi:id="_NJqogL3ZEeKOELt9NwXOhg" name="Set"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_NJ3c0L3ZEeKOELt9NwXOhg" name="ArrayList"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_NK27UL3ZEeKOELt9NwXOhg" name="HashMap"/>
       </packagedElement>
-      <packagedElement xmi:type="uml:Package" xmi:id="_K_6zwLPTEeKm54LOuiz5zw" name="lang">
-        <packagedElement xmi:type="uml:Class" xmi:id="_K_6zwbPTEeKm54LOuiz5zw" name="Object"/>
+      <packagedElement xmi:type="uml:Package" xmi:id="_Mw140L3ZEeKOELt9NwXOhg" name="io">
+        <packagedElement xmi:type="uml:Interface" xmi:id="_NDhkQL3ZEeKOELt9NwXOhg" name="Serializable"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_NLz9kL3ZEeKOELt9NwXOhg" name="lang">
+        <packagedElement xmi:type="uml:Class" xmi:id="_NL0koL3ZEeKOELt9NwXOhg" name="Object"/>
       </packagedElement>
     </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_5YeH0LPFEeKm54LOuiz5zw" name="Choice">
-      <eAnnotations xmi:id="_K0H3oLPMEeKm54LOuiz5zw" source="http://www.eclipse.org/uml2/2.0.0/UML">
-        <details xmi:id="_K0H3obPMEeKm54LOuiz5zw" key="create"/>
-      </eAnnotations>
-      <ownedAttribute xmi:id="_I1oKoLPMEeKm54LOuiz5zw" name="data">
-        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-      </ownedAttribute>
-      <ownedAttribute xmi:id="_hk4OcLPTEeKm54LOuiz5zw" name="multipleChoice" type="_5YpG8LPFEeKm54LOuiz5zw" association="_hk3nYLPTEeKm54LOuiz5zw">
-        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_hk4OcrPTEeKm54LOuiz5zw" value="*"/>
-        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_hk4OcbPTEeKm54LOuiz5zw"/>
-      </ownedAttribute>
-      <ownedAttribute xmi:id="_lP3ScrPTEeKm54LOuiz5zw" name="matching" type="_5YjnYLPFEeKm54LOuiz5zw" association="_lP2rYLPTEeKm54LOuiz5zw">
-        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_lP3SdLPTEeKm54LOuiz5zw" value="*"/>
-        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_lP3Sc7PTEeKm54LOuiz5zw"/>
-      </ownedAttribute>
-      <ownedOperation xmi:id="_5Yeu4LPFEeKm54LOuiz5zw" name="Choice">
-        <eAnnotations xmi:id="_5Yeu4bPFEeKm54LOuiz5zw" source="http://www.eclipse.org/uml2/2.0.0/UML">
-          <details xmi:id="_5Yeu4rPFEeKm54LOuiz5zw" key="create"/>
-        </eAnnotations>
-        <ownedParameter xmi:id="_5Yeu47PFEeKm54LOuiz5zw" type="_5YeH0LPFEeKm54LOuiz5zw" direction="return"/>
-      </ownedOperation>
-      <ownedOperation xmi:id="_H5vKILPMEeKm54LOuiz5zw" name="Choice">
-        <eAnnotations xmi:id="_MsrUsLPMEeKm54LOuiz5zw" source="http://www.eclipse.org/uml2/2.0.0/UML">
-          <details xmi:id="_MsrUsbPMEeKm54LOuiz5zw" key="create"/>
-        </eAnnotations>
-        <ownedParameter xmi:id="_H5vKIbPMEeKm54LOuiz5zw" type="_5YeH0LPFEeKm54LOuiz5zw" direction="return"/>
-        <ownedParameter xmi:id="_H5vKIrPMEeKm54LOuiz5zw" name="data_">
+    <packagedElement xmi:type="uml:Package" xmi:id="_MxAQ4L3ZEeKOELt9NwXOhg" name="DataSystem">
+      <packagedElement xmi:type="uml:Class" xmi:id="_NDRFkL3ZEeKOELt9NwXOhg" name="Choice" clientDependency="_NDzREL3ZEeKOELt9NwXOhg">
+        <ownedAttribute xmi:id="_NNjC8L3ZEeKOELt9NwXOhg" name="serialVersionUID" visibility="private" isLeaf="true" isStatic="true" isReadOnly="true">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_NNkREL3ZEeKOELt9NwXOhg" value="-3404142485157034370L"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_NNk4IL3ZEeKOELt9NwXOhg" name="multipleChoice" type="_NE3oEL3ZEeKOELt9NwXOhg" association="_NOXiUL3ZEeKOELt9NwXOhg">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_NNk4Ib3ZEeKOELt9NwXOhg" value="*"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_NOWUML3ZEeKOELt9NwXOhg"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_NNmGQL3ZEeKOELt9NwXOhg" name="matching" type="_NEhCwL3ZEeKOELt9NwXOhg" association="_NNpJkL3ZEeKOELt9NwXOhg">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_NNmtUL3ZEeKOELt9NwXOhg" value="*"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_NNmGQb3ZEeKOELt9NwXOhg"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_NNqXsL3ZEeKOELt9NwXOhg" name="data">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-        </ownedParameter>
-      </ownedOperation>
-      <ownedOperation xmi:id="_Onv6QLPMEeKm54LOuiz5zw" name="display"/>
-      <ownedOperation xmi:id="_sJkVMLPTEeKm54LOuiz5zw" name="setChoice">
-        <ownedParameter xmi:id="_sJk8QLPTEeKm54LOuiz5zw" name="chage">
+        </ownedAttribute>
+        <interfaceRealization xmi:id="_NDzREL3ZEeKOELt9NwXOhg" supplier="_NDhkQL3ZEeKOELt9NwXOhg" client="_NDRFkL3ZEeKOELt9NwXOhg" contract="_NDhkQL3ZEeKOELt9NwXOhg"/>
+        <ownedOperation xmi:id="_ND27cL3ZEeKOELt9NwXOhg" name="setChoice">
+          <ownedParameter xmi:id="_ND27cb3ZEeKOELt9NwXOhg" name="chage">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_ND4woL3ZEeKOELt9NwXOhg" name="display"/>
+        <ownedOperation xmi:id="_ND7M4L3ZEeKOELt9NwXOhg" name="Choice">
+          <eAnnotations xmi:id="_ND7M4r3ZEeKOELt9NwXOhg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+            <details xmi:id="_ND7z8L3ZEeKOELt9NwXOhg" key="create"/>
+          </eAnnotations>
+          <ownedParameter xmi:id="_ND7M4b3ZEeKOELt9NwXOhg" name="data_">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_ND7z8b3ZEeKOELt9NwXOhg" type="_NDRFkL3ZEeKOELt9NwXOhg" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_ND8bAL3ZEeKOELt9NwXOhg" name="Choice">
+          <eAnnotations xmi:id="_ND9CEL3ZEeKOELt9NwXOhg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+            <details xmi:id="_ND9CEb3ZEeKOELt9NwXOhg" key="create"/>
+          </eAnnotations>
+          <ownedParameter xmi:id="_ND9CEr3ZEeKOELt9NwXOhg" type="_NDRFkL3ZEeKOELt9NwXOhg" direction="return"/>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_NEHaIL3ZEeKOELt9NwXOhg" name="CorrectResponse">
+        <generalization xmi:id="_NJ8VUL3ZEeKOELt9NwXOhg" general="_NF_pcL3ZEeKOELt9NwXOhg"/>
+        <ownedAttribute xmi:id="_NNupIL3ZEeKOELt9NwXOhg" name="serialVersionUID" visibility="private" isLeaf="true" isStatic="true" isReadOnly="true">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_NNvQML3ZEeKOELt9NwXOhg" value="5047825296745554578L"/>
+        </ownedAttribute>
+        <ownedOperation xmi:id="_NEJPUL3ZEeKOELt9NwXOhg" name="CorrectResponse">
+          <eAnnotations xmi:id="_NEJ2YL3ZEeKOELt9NwXOhg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+            <details xmi:id="_NEJ2Yb3ZEeKOELt9NwXOhg" key="create"/>
+          </eAnnotations>
+          <ownedParameter xmi:id="_NEJ2Yr3ZEeKOELt9NwXOhg" type="_NEHaIL3ZEeKOELt9NwXOhg" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_NL7SUL3ZEeKOELt9NwXOhg" name="CorrectResponse">
+          <eAnnotations xmi:id="_NL75Yb3ZEeKOELt9NwXOhg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+            <details xmi:id="_NL75Yr3ZEeKOELt9NwXOhg" key="create"/>
+          </eAnnotations>
+          <ownedParameter xmi:id="_NL7SUb3ZEeKOELt9NwXOhg" name="key" type="_NL0koL3ZEeKOELt9NwXOhg"/>
+          <ownedParameter xmi:id="_NL75YL3ZEeKOELt9NwXOhg" name="values" type="_NJ3c0L3ZEeKOELt9NwXOhg"/>
+          <ownedParameter xmi:id="_NL8gcL3ZEeKOELt9NwXOhg" type="_NEHaIL3ZEeKOELt9NwXOhg" direction="return"/>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_NERyML3ZEeKOELt9NwXOhg" name="Essay">
+        <generalization xmi:id="_NKERIL3ZEeKOELt9NwXOhg" general="_NFZMgL3ZEeKOELt9NwXOhg"/>
+        <ownedAttribute xmi:id="_NNyTgL3ZEeKOELt9NwXOhg" name="serialVersionUID" visibility="private" isLeaf="true" isStatic="true" isReadOnly="true">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_NNy6kL3ZEeKOELt9NwXOhg" value="9216347102043281617L"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_NNzhoL3ZEeKOELt9NwXOhg" name="data">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-        </ownedParameter>
-      </ownedOperation>
-    </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_5YfV8LPFEeKm54LOuiz5zw" name="CorrectResponce">
-      <generalization xmi:id="_5Zn-YLPFEeKm54LOuiz5zw" general="_5Y4-kLPFEeKm54LOuiz5zw"/>
-      <ownedOperation xmi:id="_DFTtoLPTEeKm54LOuiz5zw" name="CorrectResponce">
-        <eAnnotations xmi:id="_IHa8oLPTEeKm54LOuiz5zw" source="http://www.eclipse.org/uml2/2.0.0/UML">
-          <details xmi:id="_IHa8obPTEeKm54LOuiz5zw" key="create"/>
-        </eAnnotations>
-        <ownedParameter xmi:id="_DFTtobPTEeKm54LOuiz5zw" type="_5YfV8LPFEeKm54LOuiz5zw" direction="return"/>
-      </ownedOperation>
-      <ownedOperation xmi:id="_HVd7QLPTEeKm54LOuiz5zw" name="CorrectResponce">
-        <eAnnotations xmi:id="_IyYlMLPTEeKm54LOuiz5zw" source="http://www.eclipse.org/uml2/2.0.0/UML">
-          <details xmi:id="_IyYlMbPTEeKm54LOuiz5zw" key="create"/>
-        </eAnnotations>
-        <ownedParameter xmi:id="_HVd7QbPTEeKm54LOuiz5zw" type="_5YfV8LPFEeKm54LOuiz5zw" direction="return"/>
-        <ownedParameter xmi:id="_HVfJYLPTEeKm54LOuiz5zw" name="keys" type="_5ZkUALPFEeKm54LOuiz5zw"/>
-        <ownedParameter xmi:id="_HVfwcLPTEeKm54LOuiz5zw" name="values" type="_5ZkUALPFEeKm54LOuiz5zw"/>
-      </ownedOperation>
-    </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_5YhLILPFEeKm54LOuiz5zw" name="Essay">
-      <generalization xmi:id="_5ZpMg7PFEeKm54LOuiz5zw" general="_5Ywbs7PFEeKm54LOuiz5zw"/>
-      <ownedAttribute xmi:id="_8mlr0LPUEeKm54LOuiz5zw" name="data">
-        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-      </ownedAttribute>
-      <ownedOperation xmi:id="_5YhyMLPFEeKm54LOuiz5zw" name="Essay">
-        <eAnnotations xmi:id="_5YiZQLPFEeKm54LOuiz5zw" source="http://www.eclipse.org/uml2/2.0.0/UML">
-          <details xmi:id="_5YiZQbPFEeKm54LOuiz5zw" key="create"/>
-        </eAnnotations>
-        <ownedParameter xmi:id="_5YiZQrPFEeKm54LOuiz5zw" type="_5YhLILPFEeKm54LOuiz5zw" direction="return"/>
-      </ownedOperation>
-      <ownedOperation xmi:id="_5ZolcLPFEeKm54LOuiz5zw" name="Essay">
-        <eAnnotations xmi:id="_5ZpMgLPFEeKm54LOuiz5zw" source="http://www.eclipse.org/uml2/2.0.0/UML">
-          <details xmi:id="_5ZpMgbPFEeKm54LOuiz5zw" key="create"/>
-        </eAnnotations>
-        <ownedParameter xmi:id="_5ZolcbPFEeKm54LOuiz5zw" name="prompt_" type="_5YumgLPFEeKm54LOuiz5zw"/>
-        <ownedParameter xmi:id="_5ZolcrPFEeKm54LOuiz5zw" name="responce_">
+        </ownedAttribute>
+        <ownedOperation xmi:id="_NEUOcL3ZEeKOELt9NwXOhg" name="display"/>
+        <ownedOperation xmi:id="_NEU1gL3ZEeKOELt9NwXOhg" name="take">
+          <ownedParameter xmi:id="_NKBN0L3ZEeKOELt9NwXOhg" type="_NF0qUL3ZEeKOELt9NwXOhg" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_NEWDoL3ZEeKOELt9NwXOhg" name="modify"/>
+        <ownedOperation xmi:id="_NEWqsL3ZEeKOELt9NwXOhg" name="save"/>
+        <ownedOperation xmi:id="_NEZG8L3ZEeKOELt9NwXOhg" name="Essay">
+          <eAnnotations xmi:id="_NEZuAL3ZEeKOELt9NwXOhg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+            <details xmi:id="_NEZuAb3ZEeKOELt9NwXOhg" key="create"/>
+          </eAnnotations>
+          <ownedParameter xmi:id="_NEZuAr3ZEeKOELt9NwXOhg" type="_NERyML3ZEeKOELt9NwXOhg" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_NKCb8L3ZEeKOELt9NwXOhg" name="Essay">
+          <eAnnotations xmi:id="_NKDDAL3ZEeKOELt9NwXOhg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+            <details xmi:id="_NKDDAb3ZEeKOELt9NwXOhg" key="create"/>
+          </eAnnotations>
+          <ownedParameter xmi:id="_NKCb8b3ZEeKOELt9NwXOhg" name="prompt_" type="_NFPbgL3ZEeKOELt9NwXOhg"/>
+          <ownedParameter xmi:id="_NKCb8r3ZEeKOELt9NwXOhg" name="responce_">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_NKDDAr3ZEeKOELt9NwXOhg" type="_NERyML3ZEeKOELt9NwXOhg" direction="return"/>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_NEhCwL3ZEeKOELt9NwXOhg" name="Matching">
+        <generalization xmi:id="_NKNbEL3ZEeKOELt9NwXOhg" general="_NFZMgL3ZEeKOELt9NwXOhg"/>
+        <ownedAttribute xmi:id="_NN3MAL3ZEeKOELt9NwXOhg" name="serialVersionUID" visibility="private" isLeaf="true" isStatic="true" isReadOnly="true">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_NN3zEL3ZEeKOELt9NwXOhg" value="-2192435490657815108L"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_NN9SoL3ZEeKOELt9NwXOhg" name="left" visibility="protected" type="_NJ3c0L3ZEeKOELt9NwXOhg" association="_NRWk4L3ZEeKOELt9NwXOhg"/>
+        <ownedAttribute xmi:id="_NOGckL3ZEeKOELt9NwXOhg" name="right" visibility="protected" type="_NJ3c0L3ZEeKOELt9NwXOhg" association="_NRa2UL3ZEeKOELt9NwXOhg"/>
+        <ownedOperation xmi:id="_NEi38L3ZEeKOELt9NwXOhg" name="take">
+          <ownedParameter xmi:id="_NKJwsL3ZEeKOELt9NwXOhg" type="_NF0qUL3ZEeKOELt9NwXOhg" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_NEkGEL3ZEeKOELt9NwXOhg" name="modify"/>
+        <ownedOperation xmi:id="_NEktIL3ZEeKOELt9NwXOhg" name="save"/>
+        <ownedOperation xmi:id="_NEnwcL3ZEeKOELt9NwXOhg" name="Matching">
+          <eAnnotations xmi:id="_NEoXgL3ZEeKOELt9NwXOhg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+            <details xmi:id="_NEoXgb3ZEeKOELt9NwXOhg" key="create"/>
+          </eAnnotations>
+          <ownedParameter xmi:id="_NEoXgr3ZEeKOELt9NwXOhg" type="_NEhCwL3ZEeKOELt9NwXOhg" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_NEo-kL3ZEeKOELt9NwXOhg" name="display"/>
+        <ownedOperation xmi:id="_NMHfkL3ZEeKOELt9NwXOhg" name="Matching">
+          <eAnnotations xmi:id="_NMItsL3ZEeKOELt9NwXOhg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+            <details xmi:id="_NMItsb3ZEeKOELt9NwXOhg" key="create"/>
+          </eAnnotations>
+          <ownedParameter xmi:id="_NMIGoL3ZEeKOELt9NwXOhg" name="prompt_">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_NMIGob3ZEeKOELt9NwXOhg" name="left_" type="_NJ3c0L3ZEeKOELt9NwXOhg"/>
+          <ownedParameter xmi:id="_NMIGor3ZEeKOELt9NwXOhg" name="right_" type="_NJ3c0L3ZEeKOELt9NwXOhg"/>
+          <ownedParameter xmi:id="_NMItsr3ZEeKOELt9NwXOhg" type="_NEhCwL3ZEeKOELt9NwXOhg" direction="return"/>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_NE3oEL3ZEeKOELt9NwXOhg" name="MultipleChoice">
+        <generalization xmi:id="_NKd5wL3ZEeKOELt9NwXOhg" general="_NFZMgL3ZEeKOELt9NwXOhg"/>
+        <ownedAttribute xmi:id="_NOSp0L3ZEeKOELt9NwXOhg" name="serialVersionUID" visibility="private" isLeaf="true" isStatic="true" isReadOnly="true">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_NOTQ4L3ZEeKOELt9NwXOhg" value="7005563851486654225L"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_NOT38L3ZEeKOELt9NwXOhg" name="choice" type="_NDRFkL3ZEeKOELt9NwXOhg" association="_NOXiUL3ZEeKOELt9NwXOhg">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_NOUfAL3ZEeKOELt9NwXOhg" value="*"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_NOT38b3ZEeKOELt9NwXOhg"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_NOZXgL3ZEeKOELt9NwXOhg" name="choices" type="_NJ3c0L3ZEeKOELt9NwXOhg" association="_NRfu0b3ZEeKOELt9NwXOhg"/>
+        <ownedOperation xmi:id="_NE5dQL3ZEeKOELt9NwXOhg" name="take">
+          <ownedParameter xmi:id="_NKcEkL3ZEeKOELt9NwXOhg" type="_NF0qUL3ZEeKOELt9NwXOhg" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_NE7ScL3ZEeKOELt9NwXOhg" name="MultipleChoice">
+          <eAnnotations xmi:id="_NE75gL3ZEeKOELt9NwXOhg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+            <details xmi:id="_NE75gb3ZEeKOELt9NwXOhg" key="create"/>
+          </eAnnotations>
+          <ownedParameter xmi:id="_NE9Hob3ZEeKOELt9NwXOhg" type="_NE3oEL3ZEeKOELt9NwXOhg" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_NE-80L3ZEeKOELt9NwXOhg" name="display"/>
+        <ownedOperation xmi:id="_NE_j4L3ZEeKOELt9NwXOhg" name="modify"/>
+        <ownedOperation xmi:id="_NFAK8L3ZEeKOELt9NwXOhg" name="save"/>
+        <ownedOperation xmi:id="_NMer8L3ZEeKOELt9NwXOhg" name="MultipleChoice">
+          <eAnnotations xmi:id="_NMfTAL3ZEeKOELt9NwXOhg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+            <details xmi:id="_NMfTAb3ZEeKOELt9NwXOhg" key="create"/>
+          </eAnnotations>
+          <ownedParameter xmi:id="_NMer8b3ZEeKOELt9NwXOhg" name="answers" type="_NJ3c0L3ZEeKOELt9NwXOhg"/>
+          <ownedParameter xmi:id="_NMfTAr3ZEeKOELt9NwXOhg" type="_NE3oEL3ZEeKOELt9NwXOhg" direction="return"/>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_NFPbgL3ZEeKOELt9NwXOhg" name="Prompt" clientDependency="_NFQpoL3ZEeKOELt9NwXOhg">
+        <ownedAttribute xmi:id="_NOkWoL3ZEeKOELt9NwXOhg" name="serialVersionUID" visibility="private" isLeaf="true" isStatic="true" isReadOnly="true">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_NOk9sL3ZEeKOELt9NwXOhg" value="-4046878163899659905L"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_NOk9sb3ZEeKOELt9NwXOhg" name="prompt_">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-        </ownedParameter>
-        <ownedParameter xmi:id="_5ZpMgrPFEeKm54LOuiz5zw" type="_5YhLILPFEeKm54LOuiz5zw" direction="return"/>
-      </ownedOperation>
-      <ownedOperation xmi:id="_aX8x4LPMEeKm54LOuiz5zw" name="display"/>
-      <ownedOperation xmi:id="_bOk34LPMEeKm54LOuiz5zw" name="take">
-        <ownedParameter xmi:id="_bOk34bPMEeKm54LOuiz5zw" type="_5Y3JYLPFEeKm54LOuiz5zw" direction="return"/>
-      </ownedOperation>
-      <ownedOperation xmi:id="_b33FcLPMEeKm54LOuiz5zw" name="modify"/>
-      <ownedOperation xmi:id="_cO9W0LPMEeKm54LOuiz5zw" name="save"/>
-    </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_5YjnYLPFEeKm54LOuiz5zw" name="Matching">
-      <generalization xmi:id="_5ZqaoLPFEeKm54LOuiz5zw" general="_5Ywbs7PFEeKm54LOuiz5zw"/>
-      <ownedAttribute xmi:id="_5aC1ILPFEeKm54LOuiz5zw" name="left" visibility="private" type="_5ZkUALPFEeKm54LOuiz5zw" association="_5aSFsLPFEeKm54LOuiz5zw"/>
-      <ownedAttribute xmi:id="_5aEqUbPFEeKm54LOuiz5zw" name="right" visibility="private" type="_5ZkUALPFEeKm54LOuiz5zw" association="_5aTT0LPFEeKm54LOuiz5zw"/>
-      <ownedAttribute xmi:id="_lP2rYbPTEeKm54LOuiz5zw" name="choice" type="_5YeH0LPFEeKm54LOuiz5zw" association="_lP2rYLPTEeKm54LOuiz5zw">
-        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_lP3ScbPTEeKm54LOuiz5zw" value="*"/>
-        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_lP3ScLPTEeKm54LOuiz5zw"/>
-      </ownedAttribute>
-      <ownedOperation xmi:id="_5YlckLPFEeKm54LOuiz5zw" name="Matching">
-        <eAnnotations xmi:id="_5YlckbPFEeKm54LOuiz5zw" source="http://www.eclipse.org/uml2/2.0.0/UML">
-          <details xmi:id="_5YlckrPFEeKm54LOuiz5zw" key="create"/>
-        </eAnnotations>
-        <ownedParameter xmi:id="_5YmDoLPFEeKm54LOuiz5zw" type="_5YjnYLPFEeKm54LOuiz5zw" direction="return"/>
-      </ownedOperation>
-      <ownedOperation xmi:id="_5YmDobPFEeKm54LOuiz5zw" name="display"/>
-      <ownedOperation xmi:id="_5Z5rMLPFEeKm54LOuiz5zw" name="Matching">
-        <eAnnotations xmi:id="_5Z6SQrPFEeKm54LOuiz5zw" source="http://www.eclipse.org/uml2/2.0.0/UML">
-          <details xmi:id="_5Z6SQ7PFEeKm54LOuiz5zw" key="create"/>
-        </eAnnotations>
-        <ownedParameter xmi:id="_5Z5rMbPFEeKm54LOuiz5zw" name="prompt_">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-        </ownedParameter>
-        <ownedParameter xmi:id="_5Z6SQLPFEeKm54LOuiz5zw" name="left_" type="_5ZkUALPFEeKm54LOuiz5zw"/>
-        <ownedParameter xmi:id="_5Z6SQbPFEeKm54LOuiz5zw" name="right_" type="_5ZkUALPFEeKm54LOuiz5zw"/>
-        <ownedParameter xmi:id="_5Z6SRLPFEeKm54LOuiz5zw" type="_5YjnYLPFEeKm54LOuiz5zw" direction="return"/>
-      </ownedOperation>
-      <ownedOperation xmi:id="_YzFs4LPMEeKm54LOuiz5zw" name="modify"/>
-      <ownedOperation xmi:id="_ZUCd0LPMEeKm54LOuiz5zw" name="save"/>
-      <ownedOperation xmi:id="_vON2ILPMEeKm54LOuiz5zw" name="take">
-        <ownedParameter xmi:id="_vON2IbPMEeKm54LOuiz5zw" type="_5Y3JYLPFEeKm54LOuiz5zw" direction="return"/>
-      </ownedOperation>
-    </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_5YpG8LPFEeKm54LOuiz5zw" name="MultipleChoice">
-      <generalization xmi:id="_5Zs24LPFEeKm54LOuiz5zw" general="_5Ywbs7PFEeKm54LOuiz5zw"/>
-      <ownedAttribute xmi:id="_5aGfgLPFEeKm54LOuiz5zw" name="choices" type="_5ZkUALPFEeKm54LOuiz5zw" association="_5aObULPFEeKm54LOuiz5zw"/>
-      <ownedAttribute xmi:id="_hk3nYbPTEeKm54LOuiz5zw" name="choice" type="_5YeH0LPFEeKm54LOuiz5zw" association="_hk3nYLPTEeKm54LOuiz5zw">
-        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_hk3nY7PTEeKm54LOuiz5zw" value="*"/>
-        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_hk3nYrPTEeKm54LOuiz5zw"/>
-      </ownedAttribute>
-      <ownedOperation xmi:id="_5YpuALPFEeKm54LOuiz5zw" name="MultipleChoice">
-        <eAnnotations xmi:id="_5YpuAbPFEeKm54LOuiz5zw" source="http://www.eclipse.org/uml2/2.0.0/UML">
-          <details xmi:id="_5YqVELPFEeKm54LOuiz5zw" key="create"/>
-        </eAnnotations>
-        <ownedParameter xmi:id="_5YqVErPFEeKm54LOuiz5zw" type="_5YpG8LPFEeKm54LOuiz5zw" direction="return"/>
-      </ownedOperation>
-      <ownedOperation xmi:id="_5YrjMLPFEeKm54LOuiz5zw" name="display"/>
-      <ownedOperation xmi:id="_5YrjMbPFEeKm54LOuiz5zw" name="modify"/>
-      <ownedOperation xmi:id="_5YrjMrPFEeKm54LOuiz5zw" name="save"/>
-      <ownedOperation xmi:id="_5Z8HcLPFEeKm54LOuiz5zw" name="MultipleChoice">
-        <eAnnotations xmi:id="_5Z8HcrPFEeKm54LOuiz5zw" source="http://www.eclipse.org/uml2/2.0.0/UML">
-          <details xmi:id="_5Z8Hc7PFEeKm54LOuiz5zw" key="create"/>
-        </eAnnotations>
-        <ownedParameter xmi:id="_5Z8HcbPFEeKm54LOuiz5zw" name="answers" type="_5ZkUALPFEeKm54LOuiz5zw"/>
-        <ownedParameter xmi:id="_5Z8HdLPFEeKm54LOuiz5zw" type="_5YpG8LPFEeKm54LOuiz5zw" direction="return"/>
-      </ownedOperation>
-      <ownedOperation xmi:id="_98LfYLPMEeKm54LOuiz5zw" name="take">
-        <ownedParameter xmi:id="_98LfYbPMEeKm54LOuiz5zw" type="_5Y3JYLPFEeKm54LOuiz5zw" direction="return"/>
-      </ownedOperation>
-    </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_5YumgLPFEeKm54LOuiz5zw" name="Prompt">
-      <ownedAttribute xmi:id="_1I610LPTEeKm54LOuiz5zw" name="prompt_">
-        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-      </ownedAttribute>
-      <ownedOperation xmi:id="_5YvNkLPFEeKm54LOuiz5zw" name="Prompt">
-        <eAnnotations xmi:id="_5YvNkrPFEeKm54LOuiz5zw" source="http://www.eclipse.org/uml2/2.0.0/UML">
-          <details xmi:id="_5Yv0oLPFEeKm54LOuiz5zw" key="create"/>
-        </eAnnotations>
-        <ownedParameter xmi:id="_5YvNkbPFEeKm54LOuiz5zw" name="prompt">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-        </ownedParameter>
-        <ownedParameter xmi:id="_5Yv0obPFEeKm54LOuiz5zw" type="_5YumgLPFEeKm54LOuiz5zw" direction="return"/>
-      </ownedOperation>
-      <ownedOperation xmi:id="_5Yv0orPFEeKm54LOuiz5zw" name="Prompt">
-        <eAnnotations xmi:id="_5YwbsLPFEeKm54LOuiz5zw" source="http://www.eclipse.org/uml2/2.0.0/UML">
-          <details xmi:id="_5YwbsbPFEeKm54LOuiz5zw" key="create"/>
-        </eAnnotations>
-        <ownedParameter xmi:id="_5YwbsrPFEeKm54LOuiz5zw" type="_5YumgLPFEeKm54LOuiz5zw" direction="return"/>
-      </ownedOperation>
-      <ownedOperation xmi:id="_T3qG8LPHEeKm54LOuiz5zw" name="display"/>
-    </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_5Ywbs7PFEeKm54LOuiz5zw" name="Question">
-      <ownedAttribute xmi:id="_8LCgoLPGEeKm54LOuiz5zw" name="prompt" type="_5YumgLPFEeKm54LOuiz5zw" association="_88oVoLPGEeKm54LOuiz5zw">
-        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_zIfsoLPHEeKm54LOuiz5zw" value="1"/>
-        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_zIfFkLPHEeKm54LOuiz5zw" value="1"/>
-      </ownedAttribute>
-      <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_5aMmILPFEeKm54LOuiz5zw" name="display" specification="_5Yxp0LPFEeKm54LOuiz5zw">
-        <language>java</language>
-        <body>//To do&#xD;
+        </ownedAttribute>
+        <interfaceRealization xmi:id="_NFQpoL3ZEeKOELt9NwXOhg" supplier="_NDhkQL3ZEeKOELt9NwXOhg" client="_NFPbgL3ZEeKOELt9NwXOhg" contract="_NDhkQL3ZEeKOELt9NwXOhg"/>
+        <ownedOperation xmi:id="_NFR3wL3ZEeKOELt9NwXOhg" name="display"/>
+        <ownedOperation xmi:id="_NFTF4L3ZEeKOELt9NwXOhg" name="Prompt">
+          <eAnnotations xmi:id="_NFUUAL3ZEeKOELt9NwXOhg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+            <details xmi:id="_NFUUAb3ZEeKOELt9NwXOhg" key="create"/>
+          </eAnnotations>
+          <ownedParameter xmi:id="_NFTs8L3ZEeKOELt9NwXOhg" name="prompt">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_NFUUAr3ZEeKOELt9NwXOhg" type="_NFPbgL3ZEeKOELt9NwXOhg" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_NFU7EL3ZEeKOELt9NwXOhg" name="Prompt">
+          <eAnnotations xmi:id="_NFViIL3ZEeKOELt9NwXOhg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+            <details xmi:id="_NFViIb3ZEeKOELt9NwXOhg" key="create"/>
+          </eAnnotations>
+          <ownedParameter xmi:id="_NFViIr3ZEeKOELt9NwXOhg" type="_NFPbgL3ZEeKOELt9NwXOhg" direction="return"/>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_NFZMgL3ZEeKOELt9NwXOhg" name="Question" clientDependency="_NFaaoL3ZEeKOELt9NwXOhg">
+        <ownedAttribute xmi:id="_NOoBAL3ZEeKOELt9NwXOhg" name="serialVersionUID" visibility="private" isLeaf="true" isStatic="true" isReadOnly="true">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_NOooEL3ZEeKOELt9NwXOhg" value="8843589270194213785L"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_NOooEb3ZEeKOELt9NwXOhg" name="prompt" type="_NFPbgL3ZEeKOELt9NwXOhg" association="_NQwH8L3ZEeKOELt9NwXOhg"/>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_NQGAoL3ZEeKOELt9NwXOhg" name="display" specification="_NFcP0L3ZEeKOELt9NwXOhg">
+          <language>java</language>
+          <body>//To do&#xD;
 	</body>
-      </ownedBehavior>
-      <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_5aMmIbPFEeKm54LOuiz5zw" name="take" specification="_5Yxp0bPFEeKm54LOuiz5zw">
-        <ownedParameter xmi:id="_7VDB4LPIEeKm54LOuiz5zw" type="_5Y3JYLPFEeKm54LOuiz5zw" direction="return"/>
-        <language>java</language>
-        <body>return new Responce();&#xD;
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_NQH10L3ZEeKOELt9NwXOhg" name="take" specification="_NFdd8L3ZEeKOELt9NwXOhg">
+          <ownedParameter xmi:id="_NQH10b3ZEeKOELt9NwXOhg" type="_NF0qUL3ZEeKOELt9NwXOhg" direction="return"/>
+          <language>java</language>
+          <body>return new Response();&#xD;
 	</body>
-      </ownedBehavior>
-      <ownedOperation xmi:id="_5Yxp0LPFEeKm54LOuiz5zw" name="display" method="_5aMmILPFEeKm54LOuiz5zw"/>
-      <ownedOperation xmi:id="_5Yxp0bPFEeKm54LOuiz5zw" name="take" method="_5aMmIbPFEeKm54LOuiz5zw">
-        <ownedParameter xmi:id="_5ZusELPFEeKm54LOuiz5zw" type="_5Y3JYLPFEeKm54LOuiz5zw" direction="return"/>
-      </ownedOperation>
-      <ownedOperation xmi:id="_5YyQ4LPFEeKm54LOuiz5zw" name="modify"/>
-      <ownedOperation xmi:id="_5Yy38LPFEeKm54LOuiz5zw" name="save"/>
+        </ownedBehavior>
+        <interfaceRealization xmi:id="_NFaaoL3ZEeKOELt9NwXOhg" supplier="_NDhkQL3ZEeKOELt9NwXOhg" client="_NFZMgL3ZEeKOELt9NwXOhg" contract="_NDhkQL3ZEeKOELt9NwXOhg"/>
+        <ownedOperation xmi:id="_NFcP0L3ZEeKOELt9NwXOhg" name="display" method="_NQGAoL3ZEeKOELt9NwXOhg"/>
+        <ownedOperation xmi:id="_NFdd8L3ZEeKOELt9NwXOhg" name="take" method="_NQH10L3ZEeKOELt9NwXOhg">
+          <ownedParameter xmi:id="_NKpf8L3ZEeKOELt9NwXOhg" type="_NF0qUL3ZEeKOELt9NwXOhg" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_NFesEL3ZEeKOELt9NwXOhg" name="modify"/>
+        <ownedOperation xmi:id="_NFf6ML3ZEeKOELt9NwXOhg" name="save"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_NFmA0L3ZEeKOELt9NwXOhg" name="Ranking">
+        <generalization xmi:id="_NKtxYL3ZEeKOELt9NwXOhg" general="_NEhCwL3ZEeKOELt9NwXOhg"/>
+        <ownedAttribute xmi:id="_NOs5gL3ZEeKOELt9NwXOhg" name="serialVersionUID" visibility="private" isLeaf="true" isStatic="true" isReadOnly="true">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_NOs5gb3ZEeKOELt9NwXOhg" value="7552164284178692603L"/>
+        </ownedAttribute>
+        <ownedOperation xmi:id="_NFpEIL3ZEeKOELt9NwXOhg" name="Ranking">
+          <eAnnotations xmi:id="_NFpEIb3ZEeKOELt9NwXOhg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+            <details xmi:id="_NFpEIr3ZEeKOELt9NwXOhg" key="create"/>
+          </eAnnotations>
+          <ownedParameter xmi:id="_NFpEI73ZEeKOELt9NwXOhg" type="_NFmA0L3ZEeKOELt9NwXOhg" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_NFprML3ZEeKOELt9NwXOhg" name="take">
+          <ownedParameter xmi:id="_NKsjQL3ZEeKOELt9NwXOhg" type="_NF0qUL3ZEeKOELt9NwXOhg" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_NFq5UL3ZEeKOELt9NwXOhg" name="modify"/>
+        <ownedOperation xmi:id="_NFq5Ub3ZEeKOELt9NwXOhg" name="display"/>
+        <ownedOperation xmi:id="_NFrgYL3ZEeKOELt9NwXOhg" name="save"/>
+        <ownedOperation xmi:id="_NMsuYL3ZEeKOELt9NwXOhg" name="Ranking">
+          <eAnnotations xmi:id="_NMtVcL3ZEeKOELt9NwXOhg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+            <details xmi:id="_NMtVcb3ZEeKOELt9NwXOhg" key="create"/>
+          </eAnnotations>
+          <ownedParameter xmi:id="_NMsuYb3ZEeKOELt9NwXOhg" name="prompt_">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_NMsuYr3ZEeKOELt9NwXOhg" name="right_" type="_NJ3c0L3ZEeKOELt9NwXOhg"/>
+          <ownedParameter xmi:id="_NMtVcr3ZEeKOELt9NwXOhg" type="_NFmA0L3ZEeKOELt9NwXOhg" direction="return"/>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_NF0qUL3ZEeKOELt9NwXOhg" name="Response">
+        <generalization xmi:id="_NKyp4L3ZEeKOELt9NwXOhg" general="_NF_pcL3ZEeKOELt9NwXOhg"/>
+        <ownedAttribute xmi:id="_NOwj4L3ZEeKOELt9NwXOhg" name="serialVersionUID" visibility="private" isLeaf="true" isStatic="true" isReadOnly="true">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_NOxK8L3ZEeKOELt9NwXOhg" value="2549913857878546785L"/>
+        </ownedAttribute>
+        <ownedOperation xmi:id="_NF47wL3ZEeKOELt9NwXOhg" name="Response">
+          <eAnnotations xmi:id="_NF5i0L3ZEeKOELt9NwXOhg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+            <details xmi:id="_NF5i0b3ZEeKOELt9NwXOhg" key="create"/>
+          </eAnnotations>
+          <ownedParameter xmi:id="_NF6J4L3ZEeKOELt9NwXOhg" type="_NF0qUL3ZEeKOELt9NwXOhg" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_NM3GcL3ZEeKOELt9NwXOhg" name="Response">
+          <eAnnotations xmi:id="_NM3tgL3ZEeKOELt9NwXOhg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+            <details xmi:id="_NM3tgb3ZEeKOELt9NwXOhg" key="create"/>
+          </eAnnotations>
+          <ownedParameter xmi:id="_NM3Gcb3ZEeKOELt9NwXOhg" name="key" type="_NL0koL3ZEeKOELt9NwXOhg"/>
+          <ownedParameter xmi:id="_NM3Gcr3ZEeKOELt9NwXOhg" name="values" type="_NJ3c0L3ZEeKOELt9NwXOhg"/>
+          <ownedParameter xmi:id="_NM3tgr3ZEeKOELt9NwXOhg" type="_NF0qUL3ZEeKOELt9NwXOhg" direction="return"/>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_NF_pcL3ZEeKOELt9NwXOhg" name="ResponseComparison" clientDependency="_NGAQgL3ZEeKOELt9NwXOhg">
+        <ownedAttribute xmi:id="_NO0OQL3ZEeKOELt9NwXOhg" name="serialVersionUID" visibility="private" isLeaf="true" isStatic="true" isReadOnly="true">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_NO1cYL3ZEeKOELt9NwXOhg" value="7389044652354777516L"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_NO2DcL3ZEeKOELt9NwXOhg" name="answers" type="_NK27UL3ZEeKOELt9NwXOhg" association="_NRknUb3ZEeKOELt9NwXOhg"/>
+        <interfaceRealization xmi:id="_NGAQgL3ZEeKOELt9NwXOhg" supplier="_NDhkQL3ZEeKOELt9NwXOhg" client="_NF_pcL3ZEeKOELt9NwXOhg" contract="_NDhkQL3ZEeKOELt9NwXOhg"/>
+        <ownedOperation xmi:id="_NK7MwL3ZEeKOELt9NwXOhg" name="compare">
+          <ownedParameter xmi:id="_NK7Mwb3ZEeKOELt9NwXOhg" name="responce1" type="_NF_pcL3ZEeKOELt9NwXOhg"/>
+          <ownedParameter xmi:id="_NK7Mwr3ZEeKOELt9NwXOhg" name="responce2" type="_NF_pcL3ZEeKOELt9NwXOhg"/>
+          <ownedParameter xmi:id="_NK7z0L3ZEeKOELt9NwXOhg" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+          </ownedParameter>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_NGJacL3ZEeKOELt9NwXOhg" name="ShortAnswer">
+        <generalization xmi:id="_NLDvoL3ZEeKOELt9NwXOhg" general="_NERyML3ZEeKOELt9NwXOhg"/>
+        <ownedAttribute xmi:id="_NO-mUL3ZEeKOELt9NwXOhg" name="serialVersionUID" visibility="private" isLeaf="true" isStatic="true" isReadOnly="true">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_NO_NYL3ZEeKOELt9NwXOhg" value="-4343050404498262554L"/>
+        </ownedAttribute>
+        <ownedOperation xmi:id="_NGNE0L3ZEeKOELt9NwXOhg" name="display"/>
+        <ownedOperation xmi:id="_NGNr4L3ZEeKOELt9NwXOhg" name="take">
+          <ownedParameter xmi:id="_NLDIkL3ZEeKOELt9NwXOhg" type="_NF0qUL3ZEeKOELt9NwXOhg" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_NGO6AL3ZEeKOELt9NwXOhg" name="modify"/>
+        <ownedOperation xmi:id="_NGPhEL3ZEeKOELt9NwXOhg" name="save"/>
+        <ownedOperation xmi:id="_NGQvML3ZEeKOELt9NwXOhg" name="ShortAnswer">
+          <eAnnotations xmi:id="_NGR9UL3ZEeKOELt9NwXOhg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+            <details xmi:id="_NGR9Ub3ZEeKOELt9NwXOhg" key="create"/>
+          </eAnnotations>
+          <ownedParameter xmi:id="_NGR9Ur3ZEeKOELt9NwXOhg" type="_NGJacL3ZEeKOELt9NwXOhg" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_NLAsUL3ZEeKOELt9NwXOhg" name="ShortAnswer">
+          <eAnnotations xmi:id="_NLB6cL3ZEeKOELt9NwXOhg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+            <details xmi:id="_NLB6cb3ZEeKOELt9NwXOhg" key="create"/>
+          </eAnnotations>
+          <ownedParameter xmi:id="_NLBTYL3ZEeKOELt9NwXOhg" name="prompt_" type="_NFPbgL3ZEeKOELt9NwXOhg"/>
+          <ownedParameter xmi:id="_NLBTYb3ZEeKOELt9NwXOhg" name="responce_" type="_NF0qUL3ZEeKOELt9NwXOhg"/>
+          <ownedParameter xmi:id="_NLChgL3ZEeKOELt9NwXOhg" type="_NGJacL3ZEeKOELt9NwXOhg" direction="return"/>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_NGZSEL3ZEeKOELt9NwXOhg" name="Survey" clientDependency="_NGagML3ZEeKOELt9NwXOhg">
+        <ownedAttribute xmi:id="_NPCQsL3ZEeKOELt9NwXOhg" name="serialVersionUID" visibility="private" isLeaf="true" isStatic="true" isReadOnly="true">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_NPC3wL3ZEeKOELt9NwXOhg" value="-7199734700246684141L"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_NPEF4L3ZEeKOELt9NwXOhg" name="questions" type="_NFZMgL3ZEeKOELt9NwXOhg" association="_NQ2OkL3ZEeKOELt9NwXOhg"/>
+        <ownedAttribute xmi:id="_NPEs8L3ZEeKOELt9NwXOhg" name="responses" visibility="private" type="_NF0qUL3ZEeKOELt9NwXOhg" association="_NRo4wb3ZEeKOELt9NwXOhg"/>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_NQN8cL3ZEeKOELt9NwXOhg" name="setResponces" specification="_NLIoIL3ZEeKOELt9NwXOhg">
+          <ownedParameter xmi:id="_NQN8cb3ZEeKOELt9NwXOhg" name="value" type="_NF0qUL3ZEeKOELt9NwXOhg"/>
+          <language>java</language>
+          <body>this.responses = value;&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_NQOjgL3ZEeKOELt9NwXOhg" name="getResponces" specification="_NGjqIL3ZEeKOELt9NwXOhg">
+          <ownedParameter xmi:id="_NQOjgb3ZEeKOELt9NwXOhg" type="_NF0qUL3ZEeKOELt9NwXOhg" direction="return"/>
+          <language>java</language>
+          <body>return this.responses;&#xD;
+	</body>
+        </ownedBehavior>
+        <interfaceRealization xmi:id="_NGagML3ZEeKOELt9NwXOhg" supplier="_NDhkQL3ZEeKOELt9NwXOhg" client="_NGZSEL3ZEeKOELt9NwXOhg" contract="_NDhkQL3ZEeKOELt9NwXOhg"/>
+        <ownedOperation xmi:id="_NGbuUL3ZEeKOELt9NwXOhg" name="modifyQuestions"/>
+        <ownedOperation xmi:id="_NGdjgL3ZEeKOELt9NwXOhg" name="seralize">
+          <ownedParameter xmi:id="_NGeKkL3ZEeKOELt9NwXOhg" name="filename">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_NGeKkb3ZEeKOELt9NwXOhg" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_NGexoL3ZEeKOELt9NwXOhg" name="tabulate">
+          <ownedParameter xmi:id="_NND6wL3ZEeKOELt9NwXOhg" type="_NJ3c0L3ZEeKOELt9NwXOhg" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_NGjqIL3ZEeKOELt9NwXOhg" name="getResponces" method="_NQOjgL3ZEeKOELt9NwXOhg">
+          <ownedParameter xmi:id="_NLKdUL3ZEeKOELt9NwXOhg" type="_NF0qUL3ZEeKOELt9NwXOhg" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_NGmGYL3ZEeKOELt9NwXOhg" name="Survey">
+          <eAnnotations xmi:id="_NGmtcL3ZEeKOELt9NwXOhg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+            <details xmi:id="_NGmtcb3ZEeKOELt9NwXOhg" key="create"/>
+          </eAnnotations>
+          <ownedParameter xmi:id="_NGmtcr3ZEeKOELt9NwXOhg" type="_NGZSEL3ZEeKOELt9NwXOhg" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_NGn7kL3ZEeKOELt9NwXOhg" name="Survey">
+          <eAnnotations xmi:id="_NGoioL3ZEeKOELt9NwXOhg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+            <details xmi:id="_NGoiob3ZEeKOELt9NwXOhg" key="create"/>
+          </eAnnotations>
+          <ownedParameter xmi:id="_NGn7kb3ZEeKOELt9NwXOhg" name="title">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_NGoior3ZEeKOELt9NwXOhg" type="_NGZSEL3ZEeKOELt9NwXOhg" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_NLIoIL3ZEeKOELt9NwXOhg" name="setResponces" method="_NQN8cL3ZEeKOELt9NwXOhg">
+          <ownedParameter xmi:id="_NLJPML3ZEeKOELt9NwXOhg" name="value" type="_NF0qUL3ZEeKOELt9NwXOhg"/>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_NG0I0L3ZEeKOELt9NwXOhg" name="Test">
+        <generalization xmi:id="_NLSZIL3ZEeKOELt9NwXOhg" general="_NGZSEL3ZEeKOELt9NwXOhg"/>
+        <ownedAttribute xmi:id="_NPKzkL3ZEeKOELt9NwXOhg" name="serialVersionUID" visibility="private" isLeaf="true" isStatic="true" isReadOnly="true">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_NPKzkb3ZEeKOELt9NwXOhg" value="-8529910696342239131L"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_NPMBsL3ZEeKOELt9NwXOhg" name="correctAnswers" type="_NEHaIL3ZEeKOELt9NwXOhg" association="_NQ_YgL3ZEeKOELt9NwXOhg"/>
+        <ownedOperation xmi:id="_NG1-AL3ZEeKOELt9NwXOhg" name="modifyAnswers"/>
+        <ownedOperation xmi:id="_NG2lEL3ZEeKOELt9NwXOhg" name="grade">
+          <ownedParameter xmi:id="_NG3MIL3ZEeKOELt9NwXOhg" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_NG3zML3ZEeKOELt9NwXOhg" name="Test">
+          <eAnnotations xmi:id="_NG4aQL3ZEeKOELt9NwXOhg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+            <details xmi:id="_NG4aQb3ZEeKOELt9NwXOhg" key="create"/>
+          </eAnnotations>
+          <ownedParameter xmi:id="_NG4aQr3ZEeKOELt9NwXOhg" type="_NG0I0L3ZEeKOELt9NwXOhg" direction="return"/>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_NG-g4L3ZEeKOELt9NwXOhg" name="TrueFalse">
+        <generalization xmi:id="_NLYfwL3ZEeKOELt9NwXOhg" general="_NE3oEL3ZEeKOELt9NwXOhg"/>
+        <ownedAttribute xmi:id="_NPOd8L3ZEeKOELt9NwXOhg" name="serialVersionUID" visibility="private" isLeaf="true" isStatic="true" isReadOnly="true">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_NPPFAL3ZEeKOELt9NwXOhg" value="7298235727155569817L"/>
+        </ownedAttribute>
+        <ownedOperation xmi:id="_NHA9IL3ZEeKOELt9NwXOhg" name="take">
+          <ownedParameter xmi:id="_NLWDgL3ZEeKOELt9NwXOhg" type="_NF0qUL3ZEeKOELt9NwXOhg" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_NHCLQL3ZEeKOELt9NwXOhg" name="display"/>
+        <ownedOperation xmi:id="_NHCyUL3ZEeKOELt9NwXOhg" name="modify"/>
+        <ownedOperation xmi:id="_NHDZYL3ZEeKOELt9NwXOhg" name="save"/>
+        <ownedOperation xmi:id="_NHEngL3ZEeKOELt9NwXOhg" name="TrueFalse">
+          <eAnnotations xmi:id="_NHFOkL3ZEeKOELt9NwXOhg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+            <details xmi:id="_NHFOkb3ZEeKOELt9NwXOhg" key="create"/>
+          </eAnnotations>
+          <ownedParameter xmi:id="_NHFOkr3ZEeKOELt9NwXOhg" type="_NG-g4L3ZEeKOELt9NwXOhg" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_NLWqkL3ZEeKOELt9NwXOhg" name="TrueFalse">
+          <eAnnotations xmi:id="_NLXRob3ZEeKOELt9NwXOhg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+            <details xmi:id="_NLXRor3ZEeKOELt9NwXOhg" key="create"/>
+          </eAnnotations>
+          <ownedParameter xmi:id="_NLXRoL3ZEeKOELt9NwXOhg" name="prompt_" type="_NFPbgL3ZEeKOELt9NwXOhg"/>
+          <ownedParameter xmi:id="_NLX4sL3ZEeKOELt9NwXOhg" type="_NG-g4L3ZEeKOELt9NwXOhg" direction="return"/>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_NNpJkL3ZEeKOELt9NwXOhg" name="" memberEnd="_NNnUYL3ZEeKOELt9NwXOhg _NNmGQL3ZEeKOELt9NwXOhg">
+        <ownedEnd xmi:id="_NNnUYL3ZEeKOELt9NwXOhg" name="" type="_NDRFkL3ZEeKOELt9NwXOhg" association="_NNpJkL3ZEeKOELt9NwXOhg"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_NOXiUL3ZEeKOELt9NwXOhg" name="" memberEnd="_NOT38L3ZEeKOELt9NwXOhg _NNk4IL3ZEeKOELt9NwXOhg"/>
+      <packagedElement xmi:type="uml:Association" xmi:id="_NQwH8L3ZEeKOELt9NwXOhg" name="" memberEnd="_NOooEb3ZEeKOELt9NwXOhg _NQwH8b3ZEeKOELt9NwXOhg">
+        <ownedEnd xmi:id="_NQwH8b3ZEeKOELt9NwXOhg" name="" type="_NFZMgL3ZEeKOELt9NwXOhg" association="_NQwH8L3ZEeKOELt9NwXOhg"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_NQ2OkL3ZEeKOELt9NwXOhg" name="" memberEnd="_NPEF4L3ZEeKOELt9NwXOhg _NQ2Okb3ZEeKOELt9NwXOhg">
+        <ownedEnd xmi:id="_NQ2Okb3ZEeKOELt9NwXOhg" name="" type="_NGZSEL3ZEeKOELt9NwXOhg" association="_NQ2OkL3ZEeKOELt9NwXOhg"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_NQ_YgL3ZEeKOELt9NwXOhg" name="" memberEnd="_NPMBsL3ZEeKOELt9NwXOhg _NQ_Ygb3ZEeKOELt9NwXOhg">
+        <ownedEnd xmi:id="_NQ_Ygb3ZEeKOELt9NwXOhg" name="" type="_NG0I0L3ZEeKOELt9NwXOhg" association="_NQ_YgL3ZEeKOELt9NwXOhg"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_NRWk4L3ZEeKOELt9NwXOhg" name="" memberEnd="_NRWk4b3ZEeKOELt9NwXOhg _NN9SoL3ZEeKOELt9NwXOhg">
+        <ownedEnd xmi:id="_NRWk4b3ZEeKOELt9NwXOhg" name="" type="_NEhCwL3ZEeKOELt9NwXOhg" association="_NRWk4L3ZEeKOELt9NwXOhg"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_NRa2UL3ZEeKOELt9NwXOhg" name="" memberEnd="_NRa2Ub3ZEeKOELt9NwXOhg _NOGckL3ZEeKOELt9NwXOhg">
+        <ownedEnd xmi:id="_NRa2Ub3ZEeKOELt9NwXOhg" name="" type="_NEhCwL3ZEeKOELt9NwXOhg" association="_NRa2UL3ZEeKOELt9NwXOhg"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_NRfu0b3ZEeKOELt9NwXOhg" name="" memberEnd="_NRfu0r3ZEeKOELt9NwXOhg _NOZXgL3ZEeKOELt9NwXOhg">
+        <ownedEnd xmi:id="_NRfu0r3ZEeKOELt9NwXOhg" name="" type="_NE3oEL3ZEeKOELt9NwXOhg" association="_NRfu0b3ZEeKOELt9NwXOhg"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_NRknUb3ZEeKOELt9NwXOhg" name="" memberEnd="_NRknUr3ZEeKOELt9NwXOhg _NO2DcL3ZEeKOELt9NwXOhg">
+        <ownedEnd xmi:id="_NRknUr3ZEeKOELt9NwXOhg" name="" type="_NF_pcL3ZEeKOELt9NwXOhg" association="_NRknUb3ZEeKOELt9NwXOhg"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_NRo4wb3ZEeKOELt9NwXOhg" name="" memberEnd="_NRo4wr3ZEeKOELt9NwXOhg _NPEs8L3ZEeKOELt9NwXOhg">
+        <ownedEnd xmi:id="_NRo4wr3ZEeKOELt9NwXOhg" name="" type="_NGZSEL3ZEeKOELt9NwXOhg" association="_NRo4wb3ZEeKOELt9NwXOhg"/>
+      </packagedElement>
     </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_5Y0tILPFEeKm54LOuiz5zw" name="Ranking">
-      <generalization xmi:id="_5Zv6MLPFEeKm54LOuiz5zw" general="_5YjnYLPFEeKm54LOuiz5zw"/>
-      <ownedOperation xmi:id="_5Z9VkLPFEeKm54LOuiz5zw" name="Ranking">
-        <eAnnotations xmi:id="_5Z98oLPFEeKm54LOuiz5zw" source="http://www.eclipse.org/uml2/2.0.0/UML">
-          <details xmi:id="_5Z98obPFEeKm54LOuiz5zw" key="create"/>
-        </eAnnotations>
-        <ownedParameter xmi:id="_5Z9VkbPFEeKm54LOuiz5zw" name="prompt_">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-        </ownedParameter>
-        <ownedParameter xmi:id="_5Z9VkrPFEeKm54LOuiz5zw" name="right_" type="_5ZkUALPFEeKm54LOuiz5zw"/>
-        <ownedParameter xmi:id="_5Z98orPFEeKm54LOuiz5zw" type="_5Y0tILPFEeKm54LOuiz5zw" direction="return"/>
-      </ownedOperation>
-      <ownedOperation xmi:id="_Ck0ecLPNEeKm54LOuiz5zw" name="Ranking">
-        <eAnnotations xmi:id="_GjUUULPNEeKm54LOuiz5zw" source="http://www.eclipse.org/uml2/2.0.0/UML">
-          <details xmi:id="_GjUUUbPNEeKm54LOuiz5zw" key="create"/>
-        </eAnnotations>
-        <ownedParameter xmi:id="_Ck0ecbPNEeKm54LOuiz5zw" type="_5Y0tILPFEeKm54LOuiz5zw" direction="return"/>
-      </ownedOperation>
-      <ownedOperation xmi:id="_Dr7QcLPNEeKm54LOuiz5zw" name="take">
-        <ownedParameter xmi:id="_Dr7QcbPNEeKm54LOuiz5zw" type="_5Y3JYLPFEeKm54LOuiz5zw" direction="return"/>
-      </ownedOperation>
-      <ownedOperation xmi:id="_Eb5U0LPNEeKm54LOuiz5zw" name="modify"/>
-      <ownedOperation xmi:id="_E9tBYLPNEeKm54LOuiz5zw" name="display"/>
-      <ownedOperation xmi:id="_FwkowLPNEeKm54LOuiz5zw" name="save"/>
-    </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_5Y3JYLPFEeKm54LOuiz5zw" name="Responce">
-      <generalization xmi:id="_5ZwhQLPFEeKm54LOuiz5zw" general="_5Y4-kLPFEeKm54LOuiz5zw"/>
-      <ownedOperation xmi:id="_4FVn0LPMEeKm54LOuiz5zw" name="Responce">
-        <eAnnotations xmi:id="_5vh4wLPMEeKm54LOuiz5zw" source="http://www.eclipse.org/uml2/2.0.0/UML">
-          <details xmi:id="_5vh4wbPMEeKm54LOuiz5zw" key="create"/>
-        </eAnnotations>
-        <ownedParameter xmi:id="_4FVn0bPMEeKm54LOuiz5zw" type="_5Y3JYLPFEeKm54LOuiz5zw" direction="return"/>
-      </ownedOperation>
-      <ownedOperation xmi:id="_QZ2F0LPTEeKm54LOuiz5zw" name="Responce">
-        <eAnnotations xmi:id="_almvMLPTEeKm54LOuiz5zw" source="http://www.eclipse.org/uml2/2.0.0/UML">
-          <details xmi:id="_almvMbPTEeKm54LOuiz5zw" key="create"/>
-        </eAnnotations>
-        <ownedParameter xmi:id="_QZ2F0bPTEeKm54LOuiz5zw" name="keys" type="_5ZkUALPFEeKm54LOuiz5zw"/>
-        <ownedParameter xmi:id="_QZ2F0rPTEeKm54LOuiz5zw" name="values" type="_5ZkUALPFEeKm54LOuiz5zw"/>
-        <ownedParameter xmi:id="_almvMrPTEeKm54LOuiz5zw" type="_5Y3JYLPFEeKm54LOuiz5zw" direction="return"/>
-      </ownedOperation>
-    </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_5Y4-kLPFEeKm54LOuiz5zw" name="ResponceComparison">
-      <ownedAttribute xmi:id="_bk9FoLPOEeKm54LOuiz5zw" name="answers" type="_HeCasLPOEeKm54LOuiz5zw" association="_b3UA8LPOEeKm54LOuiz5zw"/>
-      <ownedOperation xmi:id="_wbN7ILPUEeKm54LOuiz5zw" name="compare">
-        <ownedParameter xmi:id="_wbN7IbPUEeKm54LOuiz5zw" direction="return">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
-        </ownedParameter>
-        <ownedParameter xmi:id="_wbN7IrPUEeKm54LOuiz5zw" name="responce1" type="_5Y4-kLPFEeKm54LOuiz5zw"/>
-        <ownedParameter xmi:id="_wbN7I7PUEeKm54LOuiz5zw" name="responce2" type="_5Y4-kLPFEeKm54LOuiz5zw"/>
-      </ownedOperation>
-    </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_5Y4-kbPFEeKm54LOuiz5zw" name="ShortAnswer">
-      <generalization xmi:id="_5ZxIULPFEeKm54LOuiz5zw" general="_5YhLILPFEeKm54LOuiz5zw"/>
-      <ownedOperation xmi:id="_5Y5loLPFEeKm54LOuiz5zw" name="ShortAnswer">
-        <eAnnotations xmi:id="_5Y5lobPFEeKm54LOuiz5zw" source="http://www.eclipse.org/uml2/2.0.0/UML">
-          <details xmi:id="_5Y6MsLPFEeKm54LOuiz5zw" key="create"/>
-        </eAnnotations>
-        <ownedParameter xmi:id="_5Y6MsbPFEeKm54LOuiz5zw" type="_5Y4-kbPFEeKm54LOuiz5zw" direction="return"/>
-      </ownedOperation>
-      <ownedOperation xmi:id="_iLAegLPMEeKm54LOuiz5zw" name="ShortAnswer">
-        <eAnnotations xmi:id="_jEcn8LPMEeKm54LOuiz5zw" source="http://www.eclipse.org/uml2/2.0.0/UML">
-          <details xmi:id="_jEcn8bPMEeKm54LOuiz5zw" key="create"/>
-        </eAnnotations>
-        <ownedParameter xmi:id="_iLAegbPMEeKm54LOuiz5zw" type="_5Y4-kbPFEeKm54LOuiz5zw" direction="return"/>
-        <ownedParameter xmi:id="_iLAegrPMEeKm54LOuiz5zw" name="prompt_" type="_5YumgLPFEeKm54LOuiz5zw"/>
-        <ownedParameter xmi:id="_iLAeg7PMEeKm54LOuiz5zw" name="responce_" type="_5Y3JYLPFEeKm54LOuiz5zw"/>
-      </ownedOperation>
-      <ownedOperation xmi:id="_j2g-ELPMEeKm54LOuiz5zw" name="display"/>
-      <ownedOperation xmi:id="_kduIALPMEeKm54LOuiz5zw" name="take">
-        <ownedParameter xmi:id="_kduIAbPMEeKm54LOuiz5zw" type="_5Y3JYLPFEeKm54LOuiz5zw" direction="return"/>
-      </ownedOperation>
-      <ownedOperation xmi:id="_omKkELPMEeKm54LOuiz5zw" name="modify"/>
-      <ownedOperation xmi:id="_o-NQoLPMEeKm54LOuiz5zw" name="save"/>
-    </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_5Y6zwLPFEeKm54LOuiz5zw" name="Survey">
-      <ownedAttribute xmi:id="_5aKw8LPFEeKm54LOuiz5zw" name="responces" type="_5Y3JYLPFEeKm54LOuiz5zw" association="_5aPpcLPFEeKm54LOuiz5zw">
-        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_DtNRkLPHEeKm54LOuiz5zw" value="1"/>
-        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_DtMqgLPHEeKm54LOuiz5zw" value="1"/>
-      </ownedAttribute>
-      <ownedAttribute xmi:id="_trGP0LPHEeKm54LOuiz5zw" name="questions" type="_5Ywbs7PFEeKm54LOuiz5zw" association="_vmiBwLPHEeKm54LOuiz5zw">
-        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_xn8f4bPHEeKm54LOuiz5zw" value="1"/>
-        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_xn8f4LPHEeKm54LOuiz5zw" value="1"/>
-      </ownedAttribute>
-      <ownedOperation xmi:id="_5Y8B4LPFEeKm54LOuiz5zw" name="Survey">
-        <eAnnotations xmi:id="_5Y8B4bPFEeKm54LOuiz5zw" source="http://www.eclipse.org/uml2/2.0.0/UML">
-          <details xmi:id="_5Y8B4rPFEeKm54LOuiz5zw" key="create"/>
-        </eAnnotations>
-        <ownedParameter xmi:id="_5Y8B47PFEeKm54LOuiz5zw" type="_5Y6zwLPFEeKm54LOuiz5zw" direction="return"/>
-      </ownedOperation>
-      <ownedOperation xmi:id="_5Y8o8LPFEeKm54LOuiz5zw" name="Survey">
-        <eAnnotations xmi:id="_5Y8o8rPFEeKm54LOuiz5zw" source="http://www.eclipse.org/uml2/2.0.0/UML">
-          <details xmi:id="_5Y8o87PFEeKm54LOuiz5zw" key="create"/>
-        </eAnnotations>
-        <ownedParameter xmi:id="_5Y8o8bPFEeKm54LOuiz5zw" name="title">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-        </ownedParameter>
-        <ownedParameter xmi:id="_5Y8o9LPFEeKm54LOuiz5zw" type="_5Y6zwLPFEeKm54LOuiz5zw" direction="return"/>
-      </ownedOperation>
-      <ownedOperation xmi:id="_H-AtgLPJEeKm54LOuiz5zw" name="tabulate">
-        <ownedParameter xmi:id="_H-AtgbPJEeKm54LOuiz5zw" type="_5ZkUALPFEeKm54LOuiz5zw" direction="return"/>
-      </ownedOperation>
-      <ownedOperation xmi:id="_htQS4LPJEeKm54LOuiz5zw" name="seralize">
-        <ownedParameter xmi:id="_htQS4bPJEeKm54LOuiz5zw" direction="return">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-        </ownedParameter>
-        <ownedParameter xmi:id="_htQS4rPJEeKm54LOuiz5zw" name="filename">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-        </ownedParameter>
-      </ownedOperation>
-      <ownedOperation xmi:id="_jZS88LPUEeKm54LOuiz5zw" name="modifyQuestions"/>
-    </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_5Y93ELPFEeKm54LOuiz5zw" name="Test">
-      <generalization xmi:id="_5Zy9gLPFEeKm54LOuiz5zw" general="_5Y6zwLPFEeKm54LOuiz5zw"/>
-      <ownedAttribute xmi:id="_5aLYALPFEeKm54LOuiz5zw" name="correctAnswers" type="_5YfV8LPFEeKm54LOuiz5zw" association="_5aPpcrPFEeKm54LOuiz5zw"/>
-      <ownedOperation xmi:id="_LAfnELPJEeKm54LOuiz5zw" name="Test">
-        <eAnnotations xmi:id="_V8bwMLPJEeKm54LOuiz5zw" source="http://www.eclipse.org/uml2/2.0.0/UML">
-          <details xmi:id="_V8bwMbPJEeKm54LOuiz5zw" key="create"/>
-        </eAnnotations>
-        <ownedParameter xmi:id="_LAfnEbPJEeKm54LOuiz5zw" type="_5Y93ELPFEeKm54LOuiz5zw" direction="return"/>
-      </ownedOperation>
-      <ownedOperation xmi:id="_YxyzwLPJEeKm54LOuiz5zw" name="grade">
-        <ownedParameter xmi:id="_YxyzwbPJEeKm54LOuiz5zw" direction="return">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
-        </ownedParameter>
-      </ownedOperation>
-      <ownedOperation xmi:id="_k8fOALPUEeKm54LOuiz5zw" name="modifyAnswers"/>
-    </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_5ZATULPFEeKm54LOuiz5zw" name="TrueFalse">
-      <generalization xmi:id="_5Z0LoLPFEeKm54LOuiz5zw" general="_5YpG8LPFEeKm54LOuiz5zw"/>
-      <ownedOperation xmi:id="_jpcksLPHEeKm54LOuiz5zw" name="TrueFalse">
-        <eAnnotations xmi:id="_nCTW4LPHEeKm54LOuiz5zw" source="http://www.eclipse.org/uml2/2.0.0/UML">
-          <details xmi:id="_nCTW4bPHEeKm54LOuiz5zw" key="create"/>
-        </eAnnotations>
-        <ownedParameter xmi:id="_jpcksbPHEeKm54LOuiz5zw" type="_5ZATULPFEeKm54LOuiz5zw" direction="return"/>
-      </ownedOperation>
-      <ownedOperation xmi:id="_l4WFMLPHEeKm54LOuiz5zw" name="TrueFalse">
-        <eAnnotations xmi:id="_nf_YcLPHEeKm54LOuiz5zw" source="http://www.eclipse.org/uml2/2.0.0/UML">
-          <details xmi:id="_nf_YcbPHEeKm54LOuiz5zw" key="create"/>
-        </eAnnotations>
-        <ownedParameter xmi:id="_l4WFMbPHEeKm54LOuiz5zw" type="_5ZATULPFEeKm54LOuiz5zw" direction="return"/>
-        <ownedParameter xmi:id="_l4WsQLPHEeKm54LOuiz5zw" name="prompt_" type="_5YumgLPFEeKm54LOuiz5zw"/>
-      </ownedOperation>
-      <ownedOperation xmi:id="__whx4LPMEeKm54LOuiz5zw" name="take">
-        <ownedParameter xmi:id="__whx4bPMEeKm54LOuiz5zw" type="_5Y3JYLPFEeKm54LOuiz5zw" direction="return"/>
-      </ownedOperation>
-      <ownedOperation xmi:id="_AVybELPNEeKm54LOuiz5zw" name="display"/>
-      <ownedOperation xmi:id="_AyHxwLPNEeKm54LOuiz5zw" name="modify"/>
-      <ownedOperation xmi:id="_BDiR4LPNEeKm54LOuiz5zw" name="save"/>
-    </packagedElement>
-    <packagedElement xmi:type="uml:Association" xmi:id="_5aObULPFEeKm54LOuiz5zw" name="" memberEnd="_5aGfgLPFEeKm54LOuiz5zw _5aObUbPFEeKm54LOuiz5zw">
-      <ownedEnd xmi:id="_5aObUbPFEeKm54LOuiz5zw" name="" type="_5YpG8LPFEeKm54LOuiz5zw" association="_5aObULPFEeKm54LOuiz5zw"/>
-    </packagedElement>
-    <packagedElement xmi:type="uml:Association" xmi:id="_5aPpcLPFEeKm54LOuiz5zw" name="" memberEnd="_5aKw8LPFEeKm54LOuiz5zw _5aPpcbPFEeKm54LOuiz5zw">
-      <ownedEnd xmi:id="_5aPpcbPFEeKm54LOuiz5zw" name="" type="_5Y6zwLPFEeKm54LOuiz5zw" association="_5aPpcLPFEeKm54LOuiz5zw"/>
-    </packagedElement>
-    <packagedElement xmi:type="uml:Association" xmi:id="_5aPpcrPFEeKm54LOuiz5zw" name="" memberEnd="_5aLYALPFEeKm54LOuiz5zw _5aPpc7PFEeKm54LOuiz5zw">
-      <ownedEnd xmi:id="_5aPpc7PFEeKm54LOuiz5zw" name="" type="_5Y93ELPFEeKm54LOuiz5zw" association="_5aPpcrPFEeKm54LOuiz5zw"/>
-    </packagedElement>
-    <packagedElement xmi:type="uml:Association" xmi:id="_5aSFsLPFEeKm54LOuiz5zw" name="" memberEnd="_5aSFsbPFEeKm54LOuiz5zw _5aC1ILPFEeKm54LOuiz5zw">
-      <ownedEnd xmi:id="_5aSFsbPFEeKm54LOuiz5zw" name="" type="_5YjnYLPFEeKm54LOuiz5zw" association="_5aSFsLPFEeKm54LOuiz5zw"/>
-    </packagedElement>
-    <packagedElement xmi:type="uml:Association" xmi:id="_5aTT0LPFEeKm54LOuiz5zw" name="" memberEnd="_5aTT0bPFEeKm54LOuiz5zw _5aEqUbPFEeKm54LOuiz5zw">
-      <ownedEnd xmi:id="_5aTT0bPFEeKm54LOuiz5zw" name="" type="_5YjnYLPFEeKm54LOuiz5zw" association="_5aTT0LPFEeKm54LOuiz5zw"/>
-    </packagedElement>
-    <packagedElement xmi:type="uml:DataType" xmi:id="_4yDLkLPGEeKm54LOuiz5zw" name="Prompt"/>
-    <packagedElement xmi:type="uml:Association" xmi:id="_88oVoLPGEeKm54LOuiz5zw" name="" memberEnd="_8LCgoLPGEeKm54LOuiz5zw _88oVobPGEeKm54LOuiz5zw">
-      <ownedEnd xmi:id="_88oVobPGEeKm54LOuiz5zw" name="" type="_5Ywbs7PFEeKm54LOuiz5zw" association="_88oVoLPGEeKm54LOuiz5zw"/>
-    </packagedElement>
-    <packagedElement xmi:type="uml:Association" xmi:id="_vmiBwLPHEeKm54LOuiz5zw" name="" memberEnd="_trGP0LPHEeKm54LOuiz5zw _vmj28LPHEeKm54LOuiz5zw">
-      <ownedEnd xmi:id="_vmj28LPHEeKm54LOuiz5zw" name="" type="_5Y6zwLPFEeKm54LOuiz5zw" association="_vmiBwLPHEeKm54LOuiz5zw"/>
-    </packagedElement>
-    <packagedElement xmi:type="uml:DataType" xmi:id="_FMP-QbPOEeKm54LOuiz5zw" name="HashMap"/>
-    <packagedElement xmi:type="uml:Association" xmi:id="_b3UA8LPOEeKm54LOuiz5zw" name="" memberEnd="_bk9FoLPOEeKm54LOuiz5zw _b3UA8bPOEeKm54LOuiz5zw">
-      <ownedEnd xmi:id="_b3UA8bPOEeKm54LOuiz5zw" name="" type="_5Y4-kLPFEeKm54LOuiz5zw" association="_b3UA8LPOEeKm54LOuiz5zw"/>
-    </packagedElement>
-    <packagedElement xmi:type="uml:DataType" xmi:id="_HVeiULPTEeKm54LOuiz5zw" name="Object"/>
-    <packagedElement xmi:type="uml:DataType" xmi:id="_HVfJYbPTEeKm54LOuiz5zw" name="Object"/>
-    <packagedElement xmi:type="uml:DataType" xmi:id="_S-hpELPTEeKm54LOuiz5zw" name="ArrayList"/>
-    <packagedElement xmi:type="uml:DataType" xmi:id="_XAGoILPTEeKm54LOuiz5zw" name="ArrayList"/>
-    <packagedElement xmi:type="uml:DataType" xmi:id="_X9I4ILPTEeKm54LOuiz5zw" name="ArrayList"/>
-    <packagedElement xmi:type="uml:Association" xmi:id="_hk3nYLPTEeKm54LOuiz5zw" name="" memberEnd="_hk3nYbPTEeKm54LOuiz5zw _hk4OcLPTEeKm54LOuiz5zw"/>
-    <packagedElement xmi:type="uml:Association" xmi:id="_lP2rYLPTEeKm54LOuiz5zw" name="" memberEnd="_lP2rYbPTEeKm54LOuiz5zw _lP3ScrPTEeKm54LOuiz5zw"/>
-    <profileApplication xmi:id="_5Rxp8rPFEeKm54LOuiz5zw">
-      <eAnnotations xmi:id="_5Rxp87PFEeKm54LOuiz5zw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+    <packagedElement xmi:type="uml:Class" xmi:id="_NHO_kL3ZEeKOELt9NwXOhg" name="Main"/>
+    <profileApplication xmi:id="_MOeLkL3ZEeKOELt9NwXOhg">
+      <eAnnotations xmi:id="_MOojoL3ZEeKOELt9NwXOhg" source="http://www.eclipse.org/uml2/2.0.0/UML">
         <references xmi:type="ecore:EPackage" href="pathmap://UMLLAB_PROFILES/UMLLab.profile.uml#UMLLabProfile-Annotation_2-UMLLabProfile"/>
       </eAnnotations>
       <appliedProfile href="pathmap://UMLLAB_PROFILES/UMLLab.profile.uml#UMLLabProfile"/>
     </profileApplication>
   </uml:Model>
-  <UMLLabProfile:TargetLanguage xmi:id="_5RyRALPFEeKm54LOuiz5zw" base_Package="_5KJX8LPFEeKm54LOuiz5zw">
+  <UMLLabProfile:TargetLanguage xmi:id="_MO0w4L3ZEeKOELt9NwXOhg" base_Package="_MCtAcL3ZEeKOELt9NwXOhg">
     <languageName>java</languageName>
   </UMLLabProfile:TargetLanguage>
-  <UMLLabProfile:LegacyStyledElement xmi:id="_5YqVEbPFEeKm54LOuiz5zw" base_Element="_5YpuALPFEeKm54LOuiz5zw"/>
-  <UMLLabProfile:LegacyStyledElement xmi:id="_5YyQ4bPFEeKm54LOuiz5zw" base_Element="_5YyQ4LPFEeKm54LOuiz5zw"/>
-  <UMLLabProfile:LegacyStyledElement xmi:id="_5Yy38bPFEeKm54LOuiz5zw" base_Element="_5Yy38LPFEeKm54LOuiz5zw"/>
-  <UMLLabProfile:Reference xmi:id="_5Zk7ELPFEeKm54LOuiz5zw" base_Element="_5ZkUALPFEeKm54LOuiz5zw"/>
-  <UMLLabProfile:Reference xmi:id="_5ZmwQLPFEeKm54LOuiz5zw" base_Element="_5ZmJMLPFEeKm54LOuiz5zw"/>
-  <UMLLabProfile:Reference xmi:id="_5ZnXULPFEeKm54LOuiz5zw" base_Element="_5ZmwQbPFEeKm54LOuiz5zw"/>
-  <UMLLabProfile:Generics xmi:id="_5aEDQLPFEeKm54LOuiz5zw" genericsValue="Choice" base_Element="_5aC1ILPFEeKm54LOuiz5zw"/>
-  <UMLLabProfile:LegacyStyledElement xmi:id="_5aEqULPFEeKm54LOuiz5zw" base_Element="_5aC1ILPFEeKm54LOuiz5zw"/>
-  <UMLLabProfile:Generics xmi:id="_5aF4cLPFEeKm54LOuiz5zw" genericsValue="Choice" base_Element="_5aEqUbPFEeKm54LOuiz5zw"/>
-  <UMLLabProfile:LegacyStyledElement xmi:id="_5aF4cbPFEeKm54LOuiz5zw" base_Element="_5aEqUbPFEeKm54LOuiz5zw"/>
-  <UMLLabProfile:Reference xmi:id="_5aSswLPFEeKm54LOuiz5zw" base_Element="_5aSFsLPFEeKm54LOuiz5zw"/>
-  <UMLLabProfile:Reference xmi:id="_5aT64LPFEeKm54LOuiz5zw" base_Element="_5aTT0LPFEeKm54LOuiz5zw"/>
-  <UMLLabProfile:UnresolvedElement xmi:id="_4yDyoLPGEeKm54LOuiz5zw" base_Element="_4yDLkLPGEeKm54LOuiz5zw"/>
-  <UMLLabProfile:Array xmi:id="_FCj68LPHEeKm54LOuiz5zw" base_Element="_5aKw8LPFEeKm54LOuiz5zw"/>
-  <UMLLabProfile:Array xmi:id="_u9S3gLPHEeKm54LOuiz5zw" base_Element="_trGP0LPHEeKm54LOuiz5zw"/>
-  <UMLLabProfile:UnresolvedElement xmi:id="_FMQlULPOEeKm54LOuiz5zw" base_Element="_FMP-QbPOEeKm54LOuiz5zw"/>
-  <UMLLabProfile:Reference xmi:id="_HeDBwLPOEeKm54LOuiz5zw" base_Element="_HeCasLPOEeKm54LOuiz5zw"/>
-  <UMLLabProfile:UnresolvedElement xmi:id="_HVeiUbPTEeKm54LOuiz5zw" base_Element="_HVeiULPTEeKm54LOuiz5zw"/>
-  <UMLLabProfile:UnresolvedElement xmi:id="_HVfJYrPTEeKm54LOuiz5zw" base_Element="_HVfJYbPTEeKm54LOuiz5zw"/>
-  <UMLLabProfile:Reference xmi:id="_K_7a0LPTEeKm54LOuiz5zw" base_Element="_K_6zwbPTEeKm54LOuiz5zw"/>
-  <UMLLabProfile:UnresolvedElement xmi:id="_S-iQILPTEeKm54LOuiz5zw" base_Element="_S-hpELPTEeKm54LOuiz5zw"/>
-  <UMLLabProfile:UnresolvedElement xmi:id="_XAHPMLPTEeKm54LOuiz5zw" base_Element="_XAGoILPTEeKm54LOuiz5zw"/>
-  <UMLLabProfile:UnresolvedElement xmi:id="_X9JfMLPTEeKm54LOuiz5zw" base_Element="_X9I4ILPTEeKm54LOuiz5zw"/>
+  <UMLLabProfile:Reference xmi:id="_NDjZcL3ZEeKOELt9NwXOhg" base_Element="_NDhkQL3ZEeKOELt9NwXOhg"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_NE9HoL3ZEeKOELt9NwXOhg" base_Element="_NE7ScL3ZEeKOELt9NwXOhg"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_NFfTIL3ZEeKOELt9NwXOhg" base_Element="_NFesEL3ZEeKOELt9NwXOhg"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_NFhIUL3ZEeKOELt9NwXOhg" base_Element="_NFf6ML3ZEeKOELt9NwXOhg"/>
+  <UMLLabProfile:Generics xmi:id="_NGhN4L3ZEeKOELt9NwXOhg" genericsValue="HashMap&lt;Response, Integer>" base_Element="_NGexoL3ZEeKOELt9NwXOhg"/>
+  <UMLLabProfile:Reference xmi:id="_NJpaYL3ZEeKOELt9NwXOhg" base_Element="_NJlI8L3ZEeKOELt9NwXOhg"/>
+  <UMLLabProfile:Reference xmi:id="_NJuS4L3ZEeKOELt9NwXOhg" base_Element="_NJqogL3ZEeKOELt9NwXOhg"/>
+  <UMLLabProfile:Reference xmi:id="_NJ7HML3ZEeKOELt9NwXOhg" base_Element="_NJ3c0L3ZEeKOELt9NwXOhg"/>
+  <UMLLabProfile:Reference xmi:id="_NK5-oL3ZEeKOELt9NwXOhg" base_Element="_NK27UL3ZEeKOELt9NwXOhg"/>
+  <UMLLabProfile:Reference xmi:id="_NL6rQL3ZEeKOELt9NwXOhg" base_Element="_NL0koL3ZEeKOELt9NwXOhg"/>
+  <UMLLabProfile:Generics xmi:id="_NMBY8L3ZEeKOELt9NwXOhg" genericsValue="Object" base_Element="_NL75YL3ZEeKOELt9NwXOhg"/>
+  <UMLLabProfile:Generics xmi:id="_NMM_IL3ZEeKOELt9NwXOhg" genericsValue="Choice" base_Element="_NMIGob3ZEeKOELt9NwXOhg"/>
+  <UMLLabProfile:Generics xmi:id="_NMSesL3ZEeKOELt9NwXOhg" genericsValue="Choice" base_Element="_NMIGor3ZEeKOELt9NwXOhg"/>
+  <UMLLabProfile:Generics xmi:id="_NMi9YL3ZEeKOELt9NwXOhg" genericsValue="Choice" base_Element="_NMer8b3ZEeKOELt9NwXOhg"/>
+  <UMLLabProfile:Generics xmi:id="_NMxm4L3ZEeKOELt9NwXOhg" genericsValue="Choice" base_Element="_NMsuYr3ZEeKOELt9NwXOhg"/>
+  <UMLLabProfile:Generics xmi:id="_NM7-8L3ZEeKOELt9NwXOhg" genericsValue="Object" base_Element="_NM3Gcr3ZEeKOELt9NwXOhg"/>
+  <UMLLabProfile:Generics xmi:id="_NOEnYL3ZEeKOELt9NwXOhg" genericsValue="Choice" base_Element="_NN9SoL3ZEeKOELt9NwXOhg"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_NOF1gL3ZEeKOELt9NwXOhg" base_Element="_NN9SoL3ZEeKOELt9NwXOhg"/>
+  <UMLLabProfile:Generics xmi:id="_NOLVEL3ZEeKOELt9NwXOhg" genericsValue="Choice" base_Element="_NOGckL3ZEeKOELt9NwXOhg"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_NOMjML3ZEeKOELt9NwXOhg" base_Element="_NOGckL3ZEeKOELt9NwXOhg"/>
+  <UMLLabProfile:Generics xmi:id="_NOgFML3ZEeKOELt9NwXOhg" genericsValue="Choice" base_Element="_NOZXgL3ZEeKOELt9NwXOhg"/>
+  <UMLLabProfile:Generics xmi:id="_NO8xIL3ZEeKOELt9NwXOhg" genericsValue="Object, ArrayList&lt;Object>" base_Element="_NO2DcL3ZEeKOELt9NwXOhg"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_NPF7EL3ZEeKOELt9NwXOhg" base_Element="_NPEs8L3ZEeKOELt9NwXOhg"/>
+  <UMLLabProfile:Reference xmi:id="_NRaPQL3ZEeKOELt9NwXOhg" base_Element="_NRWk4L3ZEeKOELt9NwXOhg"/>
+  <UMLLabProfile:Reference xmi:id="_NRfu0L3ZEeKOELt9NwXOhg" base_Element="_NRa2UL3ZEeKOELt9NwXOhg"/>
+  <UMLLabProfile:Reference xmi:id="_NRknUL3ZEeKOELt9NwXOhg" base_Element="_NRfu0b3ZEeKOELt9NwXOhg"/>
+  <UMLLabProfile:Reference xmi:id="_NRo4wL3ZEeKOELt9NwXOhg" base_Element="_NRknUb3ZEeKOELt9NwXOhg"/>
+  <UMLLabProfile:Reference xmi:id="_NRsjIL3ZEeKOELt9NwXOhg" base_Element="_NRo4wb3ZEeKOELt9NwXOhg"/>
 </xmi:XMI>

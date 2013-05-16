@@ -1,15 +1,15 @@
+package DataSystem;
+
 import java.util.HashSet;
 import java.util.Set;
 
-public class Choice
+public class Choice implements java.io.Serializable
 {
 	/**
-	 * <pre>
-	 *           0..*     0..*
-	 * Choice ------------------------- MultipleChoice
-	 *           choice        &gt;       multipleChoice
-	 * </pre>
+	 * 
 	 */
+	private static final long serialVersionUID = -3404142485157034370L;
+
 	private Set<MultipleChoice> multipleChoice;
 
 	public Set<MultipleChoice> getMultipleChoice()
@@ -23,9 +23,9 @@ public class Choice
 
 	/**
 	 * <pre>
-	 *           0..*     0..*
-	 * Choice ------------------------- Matching
-	 *           choice        &gt;       matching
+	 *           1..10..*
+	 * Choice ------------------------>Matching
+	 *                   &gt;       matching
 	 * </pre>
 	 */
 	private Set<Matching> matching;

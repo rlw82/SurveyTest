@@ -1,9 +1,15 @@
+package DataSystem;
+
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Set;
 
 public class MultipleChoice extends Question
 {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 7005563851486654225L;
 	/**
 	 * <pre>
 	 *           0..*     0..*
@@ -22,20 +28,20 @@ public class MultipleChoice extends Question
 		return this.choice;
 	}
 
-	public Responce take()
+	public Response take()
 	{
 		// TODO implement this operation
 		throw new UnsupportedOperationException("not implemented");
 	}
 
-	private ArrayList choices;
+	private ArrayList<Choice> choices;
 
-	public void setChoices(ArrayList value)
+	public void setChoices(ArrayList<Choice> value)
 	{
 		this.choices = value;
 	}
 
-	public ArrayList getChoices()
+	public ArrayList<Choice> getChoices()
 	{
 		return this.choices;
 	}
@@ -45,7 +51,7 @@ public class MultipleChoice extends Question
 
 	}
 
-	public MultipleChoice(ArrayList answers)
+	public MultipleChoice(ArrayList<Choice> answers)
 	{
 		// TODO implement this operation
 		throw new UnsupportedOperationException("not implemented");

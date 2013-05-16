@@ -1,5 +1,11 @@
-public class Prompt
+package DataSystem;
+
+public class Prompt implements java.io.Serializable
 {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -4046878163899659905L;
 	private String prompt_;
 
 	public void setPrompt_(String value)

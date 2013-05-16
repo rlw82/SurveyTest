@@ -1,12 +1,25 @@
-public class TrueFalse extends MultipleChoice
+package DataSystem;
+
+public class ShortAnswer extends Essay
 {
-	public Responce take()
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -4343050404498262554L;
+
+	public ShortAnswer(Prompt prompt_, Response responce_)
 	{
 		// TODO implement this operation
 		throw new UnsupportedOperationException("not implemented");
 	}
 
 	public void display()
+	{
+		// TODO implement this operation
+		throw new UnsupportedOperationException("not implemented");
+	}
+
+	public Response take()
 	{
 		// TODO implement this operation
 		throw new UnsupportedOperationException("not implemented");
@@ -24,13 +37,7 @@ public class TrueFalse extends MultipleChoice
 		throw new UnsupportedOperationException("not implemented");
 	}
 
-	public TrueFalse()
-	{
-		// TODO implement this operation
-		throw new UnsupportedOperationException("not implemented");
-	}
-
-	public TrueFalse(Prompt prompt_)
+	public ShortAnswer()
 	{
 		// TODO implement this operation
 		throw new UnsupportedOperationException("not implemented");

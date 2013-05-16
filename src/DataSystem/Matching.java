@@ -1,24 +1,14 @@
-public class Essay extends Question
+package DataSystem;
+
+import java.util.ArrayList;
+
+public class Matching extends Question
 {
-	private String data;
+	private static final long serialVersionUID = -2192435490657815108L;
+	protected ArrayList<Choice> left;
+	protected ArrayList<Choice> right;
 
-	public void setData(String value)
-	{
-		this.data = value;
-	}
-
-	public String getData()
-	{
-		return this.data;
-	}
-
-	public void display()
-	{
-		// TODO implement this operation
-		throw new UnsupportedOperationException("not implemented");
-	}
-
-	public Responce take()
+	public Response take()
 	{
 		// TODO implement this operation
 		throw new UnsupportedOperationException("not implemented");
@@ -36,13 +26,20 @@ public class Essay extends Question
 		throw new UnsupportedOperationException("not implemented");
 	}
 
-	public Essay(Prompt prompt_, String responce_)
+	public Matching(String prompt_, ArrayList<Choice> left_,
+			ArrayList<Choice> right_)
 	{
 		// TODO implement this operation
 		throw new UnsupportedOperationException("not implemented");
 	}
 
-	public Essay()
+	public Matching()
+	{
+		// TODO implement this operation
+		throw new UnsupportedOperationException("not implemented");
+	}
+
+	public void display()
 	{
 		// TODO implement this operation
 		throw new UnsupportedOperationException("not implemented");

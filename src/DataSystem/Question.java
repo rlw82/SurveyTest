@@ -1,8 +1,11 @@
-import java.util.HashSet;
-import java.util.Set;
+package DataSystem;
 
-public class Question
+public class Question implements java.io.Serializable
 {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 8843589270194213785L;
 	private Prompt prompt;
 
 	public void setPrompt(Prompt value)
@@ -20,9 +23,9 @@ public class Question
 		//To do
 	}
 
-	public Responce take()
+	public Response take()
 	{
-		return new Responce();
+		return new Response();
 	}
 
 	public void modify()

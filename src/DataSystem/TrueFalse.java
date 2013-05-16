@@ -1,20 +1,13 @@
-import java.util.ArrayList;
+package DataSystem;
 
-public class Ranking extends Matching
+public class TrueFalse extends MultipleChoice
 {
-	public Ranking()
-	{
-		// TODO implement this operation
-		throw new UnsupportedOperationException("not implemented");
-	}
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 7298235727155569817L;
 
-	public Responce take()
-	{
-		// TODO implement this operation
-		throw new UnsupportedOperationException("not implemented");
-	}
-
-	public void modify()
+	public Response take()
 	{
 		// TODO implement this operation
 		throw new UnsupportedOperationException("not implemented");
@@ -26,13 +19,25 @@ public class Ranking extends Matching
 		throw new UnsupportedOperationException("not implemented");
 	}
 
+	public void modify()
+	{
+		// TODO implement this operation
+		throw new UnsupportedOperationException("not implemented");
+	}
+
 	public void save()
 	{
 		// TODO implement this operation
 		throw new UnsupportedOperationException("not implemented");
 	}
 
-	public Ranking(String prompt_, ArrayList right_)
+	public TrueFalse()
+	{
+		// TODO implement this operation
+		throw new UnsupportedOperationException("not implemented");
+	}
+
+	public TrueFalse(Prompt prompt_)
 	{
 		// TODO implement this operation
 		throw new UnsupportedOperationException("not implemented");

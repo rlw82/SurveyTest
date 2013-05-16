@@ -1,7 +1,12 @@
-import java.util.ArrayList;
+package DataSystem;
 
 public class Test extends Survey
 {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -8529910696342239131L;
+
 	public void modifyAnswers()
 	{
 		// TODO implement this operation
@@ -20,14 +25,14 @@ public class Test extends Survey
 		throw new UnsupportedOperationException("not implemented");
 	}
 
-	private CorrectResponce correctAnswers;
+	private CorrectResponse correctAnswers;
 
-	public void setCorrectAnswers(CorrectResponce value)
+	public void setCorrectAnswers(CorrectResponse value)
 	{
 		this.correctAnswers = value;
 	}
 
-	public CorrectResponce getCorrectAnswers()
+	public CorrectResponse getCorrectAnswers()
 	{
 		return this.correctAnswers;
 	}

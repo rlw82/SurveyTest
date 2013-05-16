@@ -1,7 +1,15 @@
-import java.util.ArrayList;
+package DataSystem;
 
-public class Survey
+import java.util.ArrayList;
+import java.util.HashMap;
+
+public class Survey implements java.io.Serializable
 {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -7199734700246684141L;
+
 	public void modifyQuestions()
 	{
 		// TODO implement this operation
@@ -14,7 +22,7 @@ public class Survey
 		throw new UnsupportedOperationException("not implemented");
 	}
 
-	public ArrayList tabulate()
+	public ArrayList<HashMap<Response, Integer>> tabulate()
 	{
 		// TODO implement this operation
 		throw new UnsupportedOperationException("not implemented");
@@ -32,16 +40,16 @@ public class Survey
 		return this.questions;
 	}
 
-	private Responce responces;
+	private Response responses;
 
-	public void setResponces(Responce value)
+	public void setResponces(Response value)
 	{
-		this.responces = value;
+		this.responses = value;
 	}
 
-	public Responce getResponces()
+	public Response getResponces()
 	{
-		return this.responces;
+		return this.responses;
 	}
 
 	public Survey()
