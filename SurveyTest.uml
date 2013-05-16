@@ -4,7 +4,7 @@
     <eAnnotations xmi:id="_MObIQL3ZEeKOELt9NwXOhg" source="http://ns.yatta.de/umllab">
       <contents xmi:type="ecore:EAnnotation" xmi:id="_MOcWYL3ZEeKOELt9NwXOhg" source="codegen">
         <details xmi:id="_MOcWYb3ZEeKOELt9NwXOhg" key="codegenDirectory" value="/SurveyTest/src"/>
-        <details xmi:id="_Np_HUL3ZEeKOELt9NwXOhg" key="AssociatedSourceCode" value="/SurveyTest/src/DataSystem/Choice.java;2120543636/1;/SurveyTest/src/DataSystem/CorrectResponse.java;1068427180/1;/SurveyTest/src/DataSystem/Essay.java;3813043060/1;/SurveyTest/src/DataSystem/Matching.java;896628132/1;/SurveyTest/src/DataSystem/MultipleChoice.java;3458997079/1;/SurveyTest/src/DataSystem/Prompt.java;705728317/1;/SurveyTest/src/DataSystem/Question.java;3700982784/1;/SurveyTest/src/DataSystem/Ranking.java;387101428/1;/SurveyTest/src/DataSystem/Response.java;850233424/1;/SurveyTest/src/DataSystem/ResponseComparison.java;3986480653/1;/SurveyTest/src/DataSystem/ShortAnswer.java;1483756194/1;/SurveyTest/src/DataSystem/Survey.java;2721808869/1;/SurveyTest/src/DataSystem/Test.java;2960260180/1;/SurveyTest/src/DataSystem/TrueFalse.java;3052544776/1;/SurveyTest/src/Main.java;3923928264/1;"/>
+        <details xmi:id="_Np_HUL3ZEeKOELt9NwXOhg" key="AssociatedSourceCode" value="/SurveyTest/src/DataSystem/Choice.java;2120543636/1;/SurveyTest/src/DataSystem/CorrectResponse.java;1068427180/1;/SurveyTest/src/DataSystem/Essay.java;3813043060/1;/SurveyTest/src/DataSystem/Matching.java;896628132/1;/SurveyTest/src/DataSystem/MultipleChoice.java;3458997079/1;/SurveyTest/src/DataSystem/Prompt.java;705728317/1;/SurveyTest/src/DataSystem/Question.java;1176754348/1;/SurveyTest/src/DataSystem/Ranking.java;387101428/1;/SurveyTest/src/DataSystem/Response.java;850233424/1;/SurveyTest/src/DataSystem/ResponseComparison.java;3986480653/1;/SurveyTest/src/DataSystem/ShortAnswer.java;1483756194/1;/SurveyTest/src/DataSystem/Survey.java;2721808869/1;/SurveyTest/src/DataSystem/Test.java;2960260180/1;/SurveyTest/src/DataSystem/TrueFalse.java;3052544776/1;/SurveyTest/src/Main.java;3923928264/1;/SurveyTest/src/DataSystem/InputOutput.java;921959224/1;/SurveyTest/src/DataSystem/ConsoleIO.java;479853674/1;"/>
       </contents>
     </eAnnotations>
     <elementImport xmi:id="_MwtV8L3ZEeKOELt9NwXOhg">
@@ -242,7 +242,9 @@
 	</body>
         </ownedBehavior>
         <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_NQH10L3ZEeKOELt9NwXOhg" name="take" specification="_NFdd8L3ZEeKOELt9NwXOhg">
-          <ownedParameter xmi:id="_NQH10b3ZEeKOELt9NwXOhg" type="_NF0qUL3ZEeKOELt9NwXOhg" direction="return"/>
+          <ownedParameter xmi:id="_NQH10b3ZEeKOELt9NwXOhg" type="_NF0qUL3ZEeKOELt9NwXOhg" direction="return">
+            <name xsi:nil="true"/>
+          </ownedParameter>
           <language>java</language>
           <body>return new Response();&#xD;
 	</body>
@@ -474,6 +476,10 @@
       </packagedElement>
       <packagedElement xmi:type="uml:Association" xmi:id="_NRo4wb3ZEeKOELt9NwXOhg" name="" memberEnd="_NRo4wr3ZEeKOELt9NwXOhg _NPEs8L3ZEeKOELt9NwXOhg">
         <ownedEnd xmi:id="_NRo4wr3ZEeKOELt9NwXOhg" name="" type="_NGZSEL3ZEeKOELt9NwXOhg" association="_NRo4wb3ZEeKOELt9NwXOhg"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_nQHasL3eEeKOELt9NwXOhg" name="InputOutput"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_pEBoUL3eEeKOELt9NwXOhg" name="ConsoleIO">
+        <generalization xmi:id="_w9HEcL3eEeKOELt9NwXOhg" general="_nQHasL3eEeKOELt9NwXOhg"/>
       </packagedElement>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_NHO_kL3ZEeKOELt9NwXOhg" name="Main"/>
