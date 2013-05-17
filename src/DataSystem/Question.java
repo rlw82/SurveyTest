@@ -2,15 +2,18 @@ package DataSystem;
 
 public class Question implements java.io.Serializable
 {
-	/**
-	 * 
-	 */
+
 	private static final long serialVersionUID = 8843589270194213785L;
 	private Prompt prompt;
 
 	public void setPrompt(Prompt value)
 	{
 		this.prompt = value;
+	}
+
+	public void create()
+	{
+
 	}
 
 	public Prompt getPrompt()
@@ -30,11 +33,7 @@ public class Question implements java.io.Serializable
 
 	public void modify()
 	{
-
+		//to do
 	}
 
-	public void save()
-	{
-
-	}
 }

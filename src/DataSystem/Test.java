@@ -1,5 +1,7 @@
 package DataSystem;
 
+import java.util.ArrayList;
+
 public class Test extends Survey
 {
 	/**
@@ -13,26 +15,40 @@ public class Test extends Survey
 		throw new UnsupportedOperationException("not implemented");
 	}
 
+	public String getClassType()
+	{
+		return "Test";
+	}
+
 	public double grade()
 	{
 		// TODO implement this operation
 		throw new UnsupportedOperationException("not implemented");
 	}
 
-	public Test()
+	public void create()
 	{
-		// TODO implement this operation
-		throw new UnsupportedOperationException("not implemented");
+		super.create();
+		if (questions.size() != 0)
+			this.correctAnswers = this.take();
+		else
+			return;
 	}
 
-	private CorrectResponse correctAnswers;
+	public Test()
+	{
+		//Just need a default constructor, object is either loaded in through serialization or created from line by line input
+	}
 
-	public void setCorrectAnswers(CorrectResponse value)
+	//I need to figure out what I really want for responses
+	private ArrayList<Response> correctAnswers;
+
+	public void setCorrectAnswers(ArrayList<Response> value)
 	{
 		this.correctAnswers = value;
 	}
 
-	public CorrectResponse getCorrectAnswers()
+	public ArrayList<Response> getCorrectAnswers()
 	{
 		return this.correctAnswers;
 	}
