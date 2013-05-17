@@ -1,5 +1,4 @@
 package DataSystem;
 
-public class InputOutput
-{
+public class InputOutput {
 }

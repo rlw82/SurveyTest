@@ -4,8 +4,7 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Set;
 
-public class MultipleChoice extends Question
-{
+public class MultipleChoice extends Question {
 	/**
 	 * 
 	 */
@@ -19,58 +18,48 @@ public class MultipleChoice extends Question
 	 */
 	private Set<Choice> choice;
 
-	public Set<Choice> getChoice()
-	{
-		if (this.choice == null)
-		{
+	public Set<Choice> getChoice() {
+		if (this.choice == null) {
 			this.choice = new HashSet<Choice>();
 		}
 		return this.choice;
 	}
 
-	public Response take()
-	{
+	public Response take() {
 		// TODO implement this operation
 		throw new UnsupportedOperationException("not implemented");
 	}
 
 	private ArrayList<Choice> choices;
 
-	public void setChoices(ArrayList<Choice> value)
-	{
+	public void setChoices(ArrayList<Choice> value) {
 		this.choices = value;
 	}
 
-	public ArrayList<Choice> getChoices()
-	{
+	public ArrayList<Choice> getChoices() {
 		return this.choices;
 	}
 
-	public MultipleChoice()
-	{
+	public MultipleChoice() {
 
 	}
 
-	public MultipleChoice(ArrayList<Choice> answers)
-	{
+	public MultipleChoice(ArrayList<Choice> answers) {
 		// TODO implement this operation
 		throw new UnsupportedOperationException("not implemented");
 	}
 
-	public void display()
-	{
+	public void display() {
 		// TODO implement this operation
 		throw new UnsupportedOperationException("not implemented");
 	}
 
-	public void modify()
-	{
+	public void modify() {
 		// TODO implement this operation
 		throw new UnsupportedOperationException("not implemented");
 	}
 
-	public void save()
-	{
+	public void save() {
 		// TODO implement this operation
 		throw new UnsupportedOperationException("not implemented");
 	}

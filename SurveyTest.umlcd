@@ -91,18 +91,18 @@
       <cardinality xmi:id="_NsY7E73ZEeKOELt9NwXOhg" label="1" max="1" min="1"/>
     </targetRole>
   </edges>
-  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_NslvYL3ZEeKOELt9NwXOhg" sourceAnchor="179.0,0.0" targetAnchor="310.0,87.0" target="_NsmWcL3ZEeKOELt9NwXOhg" source="_NwQHYL3ZEeKOELt9NwXOhg">
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_NslvYL3ZEeKOELt9NwXOhg" sourceAnchor="179.0,0.0" targetAnchor="310.0,87.0" target="_NsmWcL3ZEeKOELt9NwXOhg" source="_NsmWcL3ZEeKOELt9NwXOhg">
     <modelElement href="SurveyTest.uml#_NQ_YgL3ZEeKOELt9NwXOhg"/>
     <bendpoints xmi:id="_1_6BUb7NEeK83rMBtFrz_w" sourceY="-185" targetX="584"/>
     <nameVisual xmi:id="_NslvYb3ZEeKOELt9NwXOhg" text="">
       <visualProperties xmi:id="_OCcDkL3ZEeKOELt9NwXOhg" position="-300.0,-16.5"/>
     </nameVisual>
-    <targetRole xmi:id="_NslvZb3ZEeKOELt9NwXOhg" aggregationKind="NONE" name="">
+    <sourceRole xmi:id="_NslvZb3ZEeKOELt9NwXOhg" aggregationKind="NONE" name="">
       <modelElement href="SurveyTest.uml#_NQ_Ygb3ZEeKOELt9NwXOhg"/>
       <visualProperties xmi:id="_OCcqoL3ZEeKOELt9NwXOhg" position="36.4375,-46.500000000000114"/>
       <visibility xmi:id="_NslvZr3ZEeKOELt9NwXOhg" label="+"/>
       <cardinality xmi:id="_NslvZ73ZEeKOELt9NwXOhg" label="1" max="1" min="1"/>
-    </targetRole>
+    </sourceRole>
   </edges>
   <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_NstEIL3ZEeKOELt9NwXOhg" source="_NstrML3ZEeKOELt9NwXOhg">
     <modelElement href="SurveyTest.uml#_NRfu0b3ZEeKOELt9NwXOhg"/>
@@ -139,12 +139,6 @@
     <nameVisual xmi:id="_Ntl08L3ZEeKOELt9NwXOhg" text="">
       <visualProperties xmi:id="_OCZnUL3ZEeKOELt9NwXOhg" position="-7.5,-16.5"/>
     </nameVisual>
-    <sourceRole xmi:id="_NtmcAL3ZEeKOELt9NwXOhg" aggregationKind="NONE" name="prompt" navigable="true">
-      <modelElement href="SurveyTest.uml#_NOooEb3ZEeKOELt9NwXOhg"/>
-      <visualProperties xmi:id="_OCYZML3ZEeKOELt9NwXOhg" position="-88.5,2.5"/>
-      <visibility xmi:id="_NtnqIL3ZEeKOELt9NwXOhg" label="+"/>
-      <cardinality xmi:id="_NtnDEL3ZEeKOELt9NwXOhg" label="1" max="1" min="1"/>
-    </sourceRole>
     <targetRole xmi:id="_NtmcAb3ZEeKOELt9NwXOhg" aggregationKind="NONE" name="">
       <modelElement href="SurveyTest.uml#_NQwH8b3ZEeKOELt9NwXOhg"/>
       <visualProperties xmi:id="_OCZnUb3ZEeKOELt9NwXOhg" position="14.076923076923094,2.5"/>
@@ -152,18 +146,18 @@
       <cardinality xmi:id="_NtnqIb3ZEeKOELt9NwXOhg" label="1" max="1" min="1"/>
     </targetRole>
   </edges>
-  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_Nt4I0L3ZEeKOELt9NwXOhg" sourceAnchor="152.0,0.0" targetAnchor="0.0,182.0" target="_NuGLQL3ZEeKOELt9NwXOhg" source="_NtpfUL3ZEeKOELt9NwXOhg">
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_Nt4I0L3ZEeKOELt9NwXOhg" sourceAnchor="152.0,0.0" targetAnchor="0.0,182.0" target="_NuGLQL3ZEeKOELt9NwXOhg" source="_NuGLQL3ZEeKOELt9NwXOhg">
     <modelElement href="SurveyTest.uml#_NQ2OkL3ZEeKOELt9NwXOhg"/>
     <bendpoints xmi:id="_1_4MIL7NEeK83rMBtFrz_w" sourceY="-504" targetX="-93"/>
     <nameVisual xmi:id="_Nt5W8b3ZEeKOELt9NwXOhg" text="">
       <visualProperties xmi:id="_OCVV4L3ZEeKOELt9NwXOhg" position="1.5,41.5"/>
     </nameVisual>
-    <targetRole xmi:id="_Nt5W873ZEeKOELt9NwXOhg" aggregationKind="NONE" name="">
+    <sourceRole xmi:id="_Nt5W873ZEeKOELt9NwXOhg" aggregationKind="NONE" name="">
       <modelElement href="SurveyTest.uml#_NQ2Okb3ZEeKOELt9NwXOhg"/>
       <visualProperties xmi:id="_OCVV4b3ZEeKOELt9NwXOhg" position="-51.5,1.5"/>
       <visibility xmi:id="_NuAEob3ZEeKOELt9NwXOhg" label="+"/>
       <cardinality xmi:id="_NuAEoL3ZEeKOELt9NwXOhg" label="1" max="1" min="1"/>
-    </targetRole>
+    </sourceRole>
   </edges>
   <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:GeneralizationVisual" xmi:id="_Nt5W8L3ZEeKOELt9NwXOhg" sourceAnchor="155.0,0.0" targetAnchor="155.0,365.0" superClass="_NuGLQL3ZEeKOELt9NwXOhg" subClass="_NsmWcL3ZEeKOELt9NwXOhg">
     <modelElement href="SurveyTest.uml#_NLSZIL3ZEeKOELt9NwXOhg"/>
@@ -265,7 +259,7 @@
     <visibility xmi:id="_NqKGcb3ZEeKOELt9NwXOhg" label="+"/>
     <attributes xmi:id="_scwrML6NEeK83rMBtFrz_w" defaultValue="null" name="currentSurvey" staticAttribute="true">
       <modelElement href="SurveyTest.uml#_sJQgYL6NEeK83rMBtFrz_w"/>
-      <stereotypes xmi:id="_sgacIL6NEeK83rMBtFrz_w" name="LegacyStyledElement">
+      <stereotypes xmi:id="_SiS8wL8bEeKq2skbJPUWqw" name="LegacyStyledElement">
         <modelElement href="SurveyTest.uml#_sJRHcL6NEeK83rMBtFrz_w"/>
       </stereotypes>
       <visibility xmi:id="_scwrMb6NEeK83rMBtFrz_w" label="+"/>
@@ -512,7 +506,7 @@
       </parameters>
     </operations>
   </nodes>
-  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_NsmWcL3ZEeKOELt9NwXOhg" name="Test" associationsIn="_NslvYL3ZEeKOELt9NwXOhg" generalizations="_Nt5W8L3ZEeKOELt9NwXOhg">
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_NsmWcL3ZEeKOELt9NwXOhg" name="Test" associationsIn="_NslvYL3ZEeKOELt9NwXOhg" associationsOut="_NslvYL3ZEeKOELt9NwXOhg" generalizations="_Nt5W8L3ZEeKOELt9NwXOhg">
     <modelElement href="SurveyTest.uml#_NG0I0L3ZEeKOELt9NwXOhg"/>
     <visualProperties xmi:id="_NsmWcb3ZEeKOELt9NwXOhg" position="778.0,590.0" size="-1.0,-1.0"/>
     <visibility xmi:id="_NsmWcr3ZEeKOELt9NwXOhg" label="+"/>
@@ -597,10 +591,10 @@
     </attributes>
     <attributes xmi:id="_NstrO73ZEeKOELt9NwXOhg" name="choices">
       <modelElement href="SurveyTest.uml#_NOZXgL3ZEeKOELt9NwXOhg"/>
-      <stereotypes xmi:id="_NstrPb3ZEeKOELt9NwXOhg" name="Generics">
+      <stereotypes xmi:id="_quJNQL6NEeK83rMBtFrz_w" name="Generics">
         <modelElement href="SurveyTest.uml#_NOgFML3ZEeKOELt9NwXOhg"/>
       </stereotypes>
-      <stereotypes xmi:id="_quJNQL6NEeK83rMBtFrz_w" name="Generics">
+      <stereotypes xmi:id="_SiETQL8bEeKq2skbJPUWqw" name="Generics">
         <modelElement href="SurveyTest.uml#_NOgFML3ZEeKOELt9NwXOhg"/>
       </stereotypes>
       <visibility xmi:id="_NstrPr3ZEeKOELt9NwXOhg" label="+"/>
@@ -663,7 +657,7 @@
       </parameters>
     </operations>
   </nodes>
-  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_NtpfUL3ZEeKOELt9NwXOhg" name="Question" associationsIn="_NtiKkL3ZEeKOELt9NwXOhg" associationsOut="_Nt4I0L3ZEeKOELt9NwXOhg" subclassedBy="_NthjgL3ZEeKOELt9NwXOhg _Nthjgb3ZEeKOELt9NwXOhg _NuraEL3ZEeKOELt9NwXOhg">
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_NtpfUL3ZEeKOELt9NwXOhg" name="Question" associationsIn="_NtiKkL3ZEeKOELt9NwXOhg" subclassedBy="_NthjgL3ZEeKOELt9NwXOhg _Nthjgb3ZEeKOELt9NwXOhg _NuraEL3ZEeKOELt9NwXOhg">
     <modelElement href="SurveyTest.uml#_NFZMgL3ZEeKOELt9NwXOhg"/>
     <visualProperties xmi:id="_NtpfUb3ZEeKOELt9NwXOhg" position="533.0,869.0" size="-1.0,-1.0"/>
     <visibility xmi:id="_NtpfUr3ZEeKOELt9NwXOhg" label="+"/>
@@ -677,7 +671,10 @@
     </attributes>
     <attributes xmi:id="_NtqGYr3ZEeKOELt9NwXOhg" name="prompt">
       <modelElement href="SurveyTest.uml#_NOooEb3ZEeKOELt9NwXOhg"/>
-      <visibility xmi:id="_NtqGY73ZEeKOELt9NwXOhg" label="+"/>
+      <stereotypes xmi:id="_uQlzUL8cEeKq2skbJPUWqw" name="LegacyStyledElement">
+        <modelElement href="SurveyTest.uml#_uFfWkL8cEeKq2skbJPUWqw"/>
+      </stereotypes>
+      <visibility xmi:id="_NtqGY73ZEeKOELt9NwXOhg" label="#"/>
       <cardinality xmi:id="_NtqGZL3ZEeKOELt9NwXOhg" label="1" max="1" min="1"/>
       <type xmi:id="_NtqGZb3ZEeKOELt9NwXOhg" name="Prompt">
         <modelElement href="SurveyTest.uml#_NFPbgL3ZEeKOELt9NwXOhg"/>
@@ -708,8 +705,28 @@
       </stereotypes>
       <visibility xmi:id="_BdUCIr61EeK83rMBtFrz_w" label="+"/>
     </operations>
+    <operations xmi:id="_uFq8wL8cEeKq2skbJPUWqw" name="setPrompt">
+      <modelElement href="SurveyTest.uml#_uFbsML8cEeKq2skbJPUWqw"/>
+      <visibility xmi:id="_uFq8wb8cEeKq2skbJPUWqw" label="+"/>
+      <parameters xmi:id="_uFq8wr8cEeKq2skbJPUWqw" name="value">
+        <modelElement href="SurveyTest.uml#_uFcTQL8cEeKq2skbJPUWqw"/>
+        <type xmi:id="_uFq8w78cEeKq2skbJPUWqw" name="Prompt">
+          <modelElement href="SurveyTest.uml#_NFPbgL3ZEeKOELt9NwXOhg"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_uFv1QL8cEeKq2skbJPUWqw" name="getPrompt">
+      <modelElement href="SurveyTest.uml#_uFc6UL8cEeKq2skbJPUWqw"/>
+      <visibility xmi:id="_uFv1Qb8cEeKq2skbJPUWqw" label="+"/>
+      <outParameters xmi:id="_uFv1Qr8cEeKq2skbJPUWqw">
+        <modelElement href="SurveyTest.uml#_uFdhYL8cEeKq2skbJPUWqw"/>
+        <type xmi:id="_uFv1Q78cEeKq2skbJPUWqw" name="Prompt">
+          <modelElement href="SurveyTest.uml#_NFPbgL3ZEeKOELt9NwXOhg"/>
+        </type>
+      </outParameters>
+    </operations>
   </nodes>
-  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_NuGLQL3ZEeKOELt9NwXOhg" name="Survey" associationsIn="_Nt4I0L3ZEeKOELt9NwXOhg _sLt-gL6NEeK83rMBtFrz_w" associationsOut="_Nt5-AL3ZEeKOELt9NwXOhg" subclassedBy="_Nt5W8L3ZEeKOELt9NwXOhg">
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_NuGLQL3ZEeKOELt9NwXOhg" name="Survey" associationsIn="_Nt4I0L3ZEeKOELt9NwXOhg _sLt-gL6NEeK83rMBtFrz_w" associationsOut="_Nt5-AL3ZEeKOELt9NwXOhg _Nt4I0L3ZEeKOELt9NwXOhg" subclassedBy="_Nt5W8L3ZEeKOELt9NwXOhg">
     <modelElement href="SurveyTest.uml#_NGZSEL3ZEeKOELt9NwXOhg"/>
     <visualProperties xmi:id="_NuGLQb3ZEeKOELt9NwXOhg" position="778.0,183.0" size="-1.0,-1.0"/>
     <visibility xmi:id="_NuGLQr3ZEeKOELt9NwXOhg" label="+"/>
@@ -737,13 +754,13 @@
     </attributes>
     <attributes xmi:id="_NuGyVb3ZEeKOELt9NwXOhg" name="responses">
       <modelElement href="SurveyTest.uml#_NPEs8L3ZEeKOELt9NwXOhg"/>
-      <stereotypes xmi:id="_NuE9IL3ZEeKOELt9NwXOhg" name="LegacyStyledElement">
-        <modelElement href="SurveyTest.uml#_NPF7EL3ZEeKOELt9NwXOhg"/>
-      </stereotypes>
       <stereotypes xmi:id="_quLpgL6NEeK83rMBtFrz_w" name="LegacyStyledElement">
         <modelElement href="SurveyTest.uml#_NPF7EL3ZEeKOELt9NwXOhg"/>
       </stereotypes>
-      <stereotypes xmi:id="_M2UXML60EeK83rMBtFrz_w" name="Generics">
+      <stereotypes xmi:id="_SiLA8L8bEeKq2skbJPUWqw" name="LegacyStyledElement">
+        <modelElement href="SurveyTest.uml#_NPF7EL3ZEeKOELt9NwXOhg"/>
+      </stereotypes>
+      <stereotypes xmi:id="_SiLoAL8bEeKq2skbJPUWqw" name="Generics">
         <modelElement href="SurveyTest.uml#_M16HgL60EeK83rMBtFrz_w"/>
       </stereotypes>
       <visibility xmi:id="_NuGyV73ZEeKOELt9NwXOhg" label="-"/>
@@ -1024,6 +1041,10 @@
         </type>
       </parameters>
     </operations>
+    <operations xmi:id="_5pmyoL8fEeKq2skbJPUWqw" name="create">
+      <modelElement href="SurveyTest.uml#_5pePwL8fEeKq2skbJPUWqw"/>
+      <visibility xmi:id="_5pmyob8fEeKq2skbJPUWqw" label="+"/>
+    </operations>
   </nodes>
   <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_NvOMoL3ZEeKOELt9NwXOhg" name="ShortAnswer" generalizations="_NvJ7ML3ZEeKOELt9NwXOhg">
     <modelElement href="SurveyTest.uml#_NGJacL3ZEeKOELt9NwXOhg"/>
@@ -1108,10 +1129,10 @@
     </attributes>
     <attributes xmi:id="_NvfSZ73ZEeKOELt9NwXOhg" name="left">
       <modelElement href="SurveyTest.uml#_NN9SoL3ZEeKOELt9NwXOhg"/>
-      <stereotypes xmi:id="_quCfkL6NEeK83rMBtFrz_w" name="Generics">
+      <stereotypes xmi:id="_Sh7JUL8bEeKq2skbJPUWqw" name="Generics">
         <modelElement href="SurveyTest.uml#_NOEnYL3ZEeKOELt9NwXOhg"/>
       </stereotypes>
-      <stereotypes xmi:id="_quDGoL6NEeK83rMBtFrz_w" name="LegacyStyledElement">
+      <stereotypes xmi:id="_Sh8XcL8bEeKq2skbJPUWqw" name="LegacyStyledElement">
         <modelElement href="SurveyTest.uml#_NOF1gL3ZEeKOELt9NwXOhg"/>
       </stereotypes>
       <visibility xmi:id="_NvfSar3ZEeKOELt9NwXOhg" label="#"/>
@@ -1122,10 +1143,10 @@
     </attributes>
     <attributes xmi:id="_NvfSbb3ZEeKOELt9NwXOhg" name="right">
       <modelElement href="SurveyTest.uml#_NOGckL3ZEeKOELt9NwXOhg"/>
-      <stereotypes xmi:id="_quHYEL6NEeK83rMBtFrz_w" name="Generics">
+      <stereotypes xmi:id="_SiAB0L8bEeKq2skbJPUWqw" name="Generics">
         <modelElement href="SurveyTest.uml#_NOLVEL3ZEeKOELt9NwXOhg"/>
       </stereotypes>
-      <stereotypes xmi:id="_quH_IL6NEeK83rMBtFrz_w" name="LegacyStyledElement">
+      <stereotypes xmi:id="_SiAo4L8bEeKq2skbJPUWqw" name="LegacyStyledElement">
         <modelElement href="SurveyTest.uml#_NOMjML3ZEeKOELt9NwXOhg"/>
       </stereotypes>
       <visibility xmi:id="_NvfScL3ZEeKOELt9NwXOhg" label="#"/>
@@ -1258,10 +1279,10 @@
     </attributes>
     <attributes xmi:id="_NwIyp73ZEeKOELt9NwXOhg" name="answers">
       <modelElement href="SurveyTest.uml#_NO2DcL3ZEeKOELt9NwXOhg"/>
-      <stereotypes xmi:id="_NwIyqb3ZEeKOELt9NwXOhg" name="Generics">
+      <stereotypes xmi:id="_quMQkL6NEeK83rMBtFrz_w" name="Generics">
         <modelElement href="SurveyTest.uml#_NO8xIL3ZEeKOELt9NwXOhg"/>
       </stereotypes>
-      <stereotypes xmi:id="_quMQkL6NEeK83rMBtFrz_w" name="Generics">
+      <stereotypes xmi:id="_SiP5cL8bEeKq2skbJPUWqw" name="Generics">
         <modelElement href="SurveyTest.uml#_NO8xIL3ZEeKOELt9NwXOhg"/>
       </stereotypes>
       <visibility xmi:id="_NwIyqr3ZEeKOELt9NwXOhg" label="+"/>
@@ -1293,7 +1314,7 @@
       </parameters>
     </operations>
   </nodes>
-  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_NwQHYL3ZEeKOELt9NwXOhg" name="CorrectResponse" associationsOut="_NslvYL3ZEeKOELt9NwXOhg" generalizations="_NwBd4L3ZEeKOELt9NwXOhg">
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_NwQHYL3ZEeKOELt9NwXOhg" name="CorrectResponse" generalizations="_NwBd4L3ZEeKOELt9NwXOhg">
     <modelElement href="SurveyTest.uml#_NEHaIL3ZEeKOELt9NwXOhg"/>
     <visualProperties xmi:id="_NwQHYb3ZEeKOELt9NwXOhg" position="1493.0,862.0" size="-1.0,-1.0"/>
     <visibility xmi:id="_NwQHYr3ZEeKOELt9NwXOhg" label="+"/>
