@@ -4,25 +4,30 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Scanner;
 
-public class Survey implements java.io.Serializable {
+public class Survey implements java.io.Serializable
+{
 	private static final long serialVersionUID = -7199734700246684141L;
 	protected String title;
 	protected ArrayList<Question> questions;
 
-	public Survey() {
+	public Survey()
+	{
 		//Just a default constructor is needed
 	}
 
-	public void display() {
+	public void display()
+	{
 		for (int i = 0; i < questions.size(); i++)
 			questions.get(i).display();
 	}
 
-	public ArrayList<Response> take() {
+	public ArrayList<Response> take()
+	{
 		throw new UnsupportedOperationException("not implemented");
 	}
 
-	public void create() {
+	public void create()
+	{
 		//Prompt user for choice
 		System.out.println("Enter a choice");
 		System.out
@@ -31,33 +36,41 @@ public class Survey implements java.io.Serializable {
 		Scanner scan = new Scanner(System.in);
 		temp = scan.next();
 		int choice = -1;
-		try {
+		try
+		{
 			//Will go into exception if input is not an integer
 			choice = Integer.parseInt(temp);
-		} catch (Exception e) {
+		}
+		catch (Exception e)
+		{
 			//Catch invalid input, non digit
-			System.out
-					.println("Invalid entry enter a single digit 1-3\n\n\n\n\n");
+			System.out.println("Invalid entry enter a single digit 1-3\n\n\n\n\n");
 			create();
 			scan.close();
 			return;
 		}
 		//Not valid choices for this menu, let the user know and prompt again
-		if (choice > 3 || choice < 1) {
-			System.out
-					.println("Invalid entry enter a single digit 1-3\n\n\n\n\n");
+		if (choice > 3 || choice < 1)
+		{
+			System.out.println("Invalid entry enter a single digit 1-3\n\n\n\n\n");
 			create();
 			scan.close();
 			return;
-		} else {
-			switch (choice) {
+		}
+		else
+		{
+			switch (choice)
+			{
 			case 1:
-				if (questions.size() == 0) {
+				if (questions.size() == 0)
+				{
 					System.out.println("Creating new survey, enter title");
 					this.title = scan.next();
 					Question tempQuestion = questionMenu();
-					if (tempQuestion == null) {
-						System.out.println("Cancelling survey, returning to main menu\n\n\n\n\n");
+					if (tempQuestion == null)
+					{
+						System.out
+								.println("Cancelling survey, returning to main menu\n\n\n\n\n");
 						scan.close();
 						return;
 					}
@@ -65,7 +78,8 @@ public class Survey implements java.io.Serializable {
 						this.questions.add(tempQuestion);
 				}
 			case 2:
-				if (questions.size() == 0) {
+				if (questions.size() == 0)
+				{
 					System.out.println("No questions to display yet!\n\n\n\n\n");
 					scan.close();
 					create();
@@ -77,7 +91,8 @@ public class Survey implements java.io.Serializable {
 		}
 	}
 
-	private Question questionMenu() {
+	private Question questionMenu()
+	{
 		System.out
 				.println("Choose an option\n1) T/F question\n2) multiple choice question\n3) "
 						+ "short answer question\n4) essay question\n5) ranking question\n6) matching question\n7) return to previous menu");
@@ -85,26 +100,31 @@ public class Survey implements java.io.Serializable {
 		Scanner scan = new Scanner(System.in);
 		temp = scan.next();
 		int choice = -1;
-		try {
+		try
+		{
 			//Will go into exception if input is not an integer
 			choice = Integer.parseInt(temp);
-		} catch (Exception e) {
+		}
+		catch (Exception e)
+		{
 			//Catch invalid input, non digit
-			System.out
-					.println("Invalid entry enter a single digit 1-7\n\n\n\n\n");
+			System.out.println("Invalid entry enter a single digit 1-7\n\n\n\n\n");
 			scan.close();
 			return questionMenu();
 		}
 		//Not valid choices for this menu, let the user know and prompt again
-		if (choice > 7 || choice < 1) {
-			System.out
-					.println("Invalid entry enter a single digit 1-7\n\n\n\n\n");
+		if (choice > 7 || choice < 1)
+		{
+			System.out.println("Invalid entry enter a single digit 1-7\n\n\n\n\n");
 			scan.close();
 			return questionMenu();
-		} else {
+		}
+		else
+		{
 			Question tempQuest;
 			scan.close();
-			switch (choice) {
+			switch (choice)
+			{
 			case 1:
 				tempQuest = new TrueFalse();
 				tempQuest.create();
@@ -135,40 +155,48 @@ public class Survey implements java.io.Serializable {
 		}
 	}
 
-	public String getClassType() {
+	public String getClassType()
+	{
 		return "Survey";
 	}
 
-	public void modifyQuestions() {
+	public void modifyQuestions()
+	{
 		// TODO implement this operation
 		throw new UnsupportedOperationException("not implemented");
 	}
 
-	public String seralize(String filename) {
+	public String seralize(String filename)
+	{
 		// TODO implement this operation
 		throw new UnsupportedOperationException("not implemented");
 	}
 
-	public ArrayList<HashMap<Response, Integer>> tabulate() {
+	public ArrayList<HashMap<Response, Integer>> tabulate()
+	{
 		// TODO implement this operation
 		throw new UnsupportedOperationException("not implemented");
 	}
 
-	public void setQuestions(ArrayList<Question> value) {
+	public void setQuestions(ArrayList<Question> value)
+	{
 		this.questions = value;
 	}
 
-	public ArrayList<Question> getQuestions() {
+	public ArrayList<Question> getQuestions()
+	{
 		return this.questions;
 	}
 
 	private ArrayList<Response> responses;
 
-	public void setResponces(ArrayList<Response> value) {
+	public void setResponces(ArrayList<Response> value)
+	{
 		this.responses = value;
 	}
 
-	public ArrayList<Response> getResponces() {
+	public ArrayList<Response> getResponces()
+	{
 		return this.responses;
 	}
 

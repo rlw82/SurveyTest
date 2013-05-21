@@ -2,27 +2,32 @@ package DataSystem;
 
 import java.util.ArrayList;
 
-public class Test extends Survey {
+public class Test extends Survey
+{
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = -8529910696342239131L;
 
-	public void modifyAnswers() {
+	public void modifyAnswers()
+	{
 		// TODO implement this operation
 		throw new UnsupportedOperationException("not implemented");
 	}
 
-	public String getClassType() {
+	public String getClassType()
+	{
 		return "Test";
 	}
 
-	public double grade() {
+	public double grade()
+	{
 		// TODO implement this operation
 		throw new UnsupportedOperationException("not implemented");
 	}
 
-	public void create() {
+	public void create()
+	{
 		super.create();
 		if (questions.size() != 0)
 			this.correctAnswers = this.take();
@@ -30,18 +35,21 @@ public class Test extends Survey {
 			return;
 	}
 
-	public Test() {
+	public Test()
+	{
 		//Just need a default constructor, object is either loaded in through serialization or created from line by line input
 	}
 
 	//I need to figure out what I really want for responses
 	private ArrayList<Response> correctAnswers;
 
-	public void setCorrectAnswers(ArrayList<Response> value) {
+	public void setCorrectAnswers(ArrayList<Response> value)
+	{
 		this.correctAnswers = value;
 	}
 
-	public ArrayList<Response> getCorrectAnswers() {
+	public ArrayList<Response> getCorrectAnswers()
+	{
 		return this.correctAnswers;
 	}
 

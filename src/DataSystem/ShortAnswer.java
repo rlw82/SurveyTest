@@ -1,42 +1,49 @@
 package DataSystem;
 
-public class ShortAnswer extends Essay {
+public class ShortAnswer extends Essay
+{
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = -4343050404498262554L;
 
-	public ShortAnswer(Prompt prompt_, Response responce_) {
+	public ShortAnswer(Prompt prompt_, Response responce_)
+	{
 		// TODO implement this operation
 		throw new UnsupportedOperationException("not implemented");
 	}
 
-	public void display() {
+	public void display()
+	{
 		// TODO implement this operation
 		throw new UnsupportedOperationException("not implemented");
 	}
 
-	public Response take() {
+	public Response take()
+	{
 		// TODO implement this operation
 		throw new UnsupportedOperationException("not implemented");
 	}
 
-	public void modify() {
+	public void modify()
+	{
 		// TODO implement this operation
 		throw new UnsupportedOperationException("not implemented");
 	}
 
-	public void save() {
+	public void save()
+	{
 		// TODO implement this operation
 		throw new UnsupportedOperationException("not implemented");
 	}
-	
+
 	public void create()
 	{
 		super.create();
 	}
 
-	public ShortAnswer() {
+	public ShortAnswer()
+	{
 		// TODO implement this operation
 		throw new UnsupportedOperationException("not implemented");
 	}
