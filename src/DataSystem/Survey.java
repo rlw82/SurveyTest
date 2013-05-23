@@ -1,5 +1,6 @@
 package DataSystem;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Scanner;
@@ -13,6 +14,7 @@ public class Survey implements java.io.Serializable
 	public Survey()
 	{
 		//Just a default constructor is needed
+		questions = new ArrayList<Question>();
 	}
 
 	public void display()
@@ -26,12 +28,12 @@ public class Survey implements java.io.Serializable
 		throw new UnsupportedOperationException("not implemented");
 	}
 
-	public void create()
+	public void create() throws IOException
 	{
 		//Prompt user for choice
-		System.out.println("Enter a choice");
+		System.out.println("\nEnter a choice");
 		System.out
-				.println("1) Add a New Question\n2) Display Current Survey3) Quit");
+				.println("1) Add a New Question\n2) Display Current Questions\n3) Quit");
 		String temp = "";
 		Scanner scan = new Scanner(System.in);
 		temp = scan.next();
@@ -45,7 +47,7 @@ public class Survey implements java.io.Serializable
 		{
 			//Catch invalid input, non digit
 			System.out.println("Invalid entry enter a single digit 1-3\n\n\n\n\n");
-			create();
+			this.create();
 			scan.close();
 			return;
 		}
@@ -53,7 +55,7 @@ public class Survey implements java.io.Serializable
 		if (choice > 3 || choice < 1)
 		{
 			System.out.println("Invalid entry enter a single digit 1-3\n\n\n\n\n");
-			create();
+			this.create();
 			scan.close();
 			return;
 		}
@@ -62,36 +64,83 @@ public class Survey implements java.io.Serializable
 			switch (choice)
 			{
 			case 1:
-				if (questions.size() == 0)
-				{
-					System.out.println("Creating new survey, enter title");
+				try{
+					if (questions.size() == 0)
+					{
+						System.out.println("Creating new survey, enter title");
+						this.title = scan.next();
+						Question tempQuestion = questionMenu();
+						if(tempQuestion.getPrompt() == null)
+						{
+							System.out.println("Cancelling survey, returning to main menu\n\n\n\n\n");
+							scan.close();
+							return;
+						}
+						else
+						{
+							this.questions.add(tempQuestion);
+							this.create();
+							scan.close();
+							return;
+						}
+					}
+					else
+					{
+						Question tempQuestion = questionMenu();
+						if(tempQuestion.getPrompt() == null)
+						{
+							System.out.println("Cancelling current question\n\n\n\n\n");
+							scan.close();
+							return;
+						}
+						else
+						{
+							this.questions.add(tempQuestion);
+							this.create();
+							scan.close();
+							return;
+						}
+					}
+				} catch(Exception e) {
+					scan = new Scanner(System.in);
 					this.title = scan.next();
 					Question tempQuestion = questionMenu();
 					if (tempQuestion == null)
 					{
-						System.out
-								.println("Cancelling survey, returning to main menu\n\n\n\n\n");
+						System.out.println("Cancelling survey, returning to main menu\n\n\n\n\n");
 						scan.close();
 						return;
 					}
 					else
+					{
 						this.questions.add(tempQuestion);
+						this.create();
+						scan.close();
+						return;
+					}
 				}
 			case 2:
+			try{
 				if (questions.size() == 0)
 				{
 					System.out.println("No questions to display yet!\n\n\n\n\n");
+					this.create();
 					scan.close();
-					create();
 					return;
 				}
+			} catch(Exception e) {
+				System.out.println("No questions to display yet!\n\n\n\n\n");
+				this.create();
+				scan.close();
+				return;
+			}
 			}
 			scan.close();
 			return;
 		}
 	}
 
-	private Question questionMenu()
+	private Question questionMenu() throws IOException
 	{
 		System.out
 				.println("Choose an option\n1) T/F question\n2) multiple choice question\n3) "
@@ -122,34 +171,40 @@ public class Survey implements java.io.Serializable
 		else
 		{
 			Question tempQuest;
-			scan.close();
 			switch (choice)
 			{
 			case 1:
 				tempQuest = new TrueFalse();
 				tempQuest.create();
+				scan.close();
 				return tempQuest;
 			case 2:
 				tempQuest = new MultipleChoice();
 				tempQuest.create();
+				scan.close();
 				return tempQuest;
 			case 3:
 				tempQuest = new ShortAnswer();
 				tempQuest.create();
+				scan.close();
 				return tempQuest;
 			case 4:
 				tempQuest = new Essay();
 				tempQuest.create();
+				scan.close();
 				return tempQuest;
 			case 5:
 				tempQuest = new Ranking();
 				tempQuest.create();
+				scan.close();
 				return tempQuest;
 			case 6:
 				tempQuest = new Matching();
 				tempQuest.create();
+				scan.close();
 				return tempQuest;
 			default:
+				scan.close();
 				return null;
 			}
 		}

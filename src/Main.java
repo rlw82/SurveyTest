@@ -6,6 +6,7 @@ import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.util.Scanner;
 
@@ -23,7 +24,8 @@ public class Main
 	//Current Loaded Survey or Test
 	public static Survey currentSurvey = null;
 
-	public static void main(String[] args)
+	@SuppressWarnings("resource")
+	public static void main(String[] args) throws IOException
 	{
 		//Prompt user for choice
 		System.out.println("Enter a choice\n");
@@ -62,22 +64,24 @@ public class Main
 			case 1:
 				currentSurvey = new Survey();
 				currentSurvey.create();
+				scan.close();
 				main(args);
 				return;
 			case 2:
 				currentSurvey = new Test();
 				currentSurvey.create();
+				scan.close();
 				main(args);
 				return;
 			case 3:
-				if (currentSurvey.equals(null))
-				{
-					System.out
-							.println("No Survey/Test currently active in System\n\n\n\n\n");
-					main(args);
-					return;
+				try{
+					currentSurvey.display();
+				} catch (Exception e) {
+					System.out.println("No Survey/Test currently active in System\n\n\n\n\n");
 				}
-				currentSurvey.display();
+				main(args);
+				scan.close();
+				return;
 			case 4:
 				try
 				{

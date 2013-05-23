@@ -1,5 +1,6 @@
 package DataSystem;
 
+import java.io.IOException;
 import java.util.Scanner;
 
 public class Essay extends Question
@@ -33,7 +34,7 @@ public class Essay extends Question
 	}
 
 	//All you need for an essay and a short answer is a prompt
-	public void create()
+	public void create() throws IOException
 	{
 		super.create();
 	}
@@ -63,8 +64,6 @@ public class Essay extends Question
 
 	public Essay()
 	{
-		// TODO implement this operation
-		throw new UnsupportedOperationException("not implemented");
 	}
 
 }

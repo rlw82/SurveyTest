@@ -1,5 +1,7 @@
 package DataSystem;
 
+import java.io.IOException;
+
 public class TrueFalse extends MultipleChoice
 {
 	/**
@@ -13,6 +15,15 @@ public class TrueFalse extends MultipleChoice
 		throw new UnsupportedOperationException("not implemented");
 	}
 
+	public void create() throws IOException
+	{
+		super.create();
+		if(this.prompt == null)
+		{
+			return;
+		}
+	}
+	
 	public void display()
 	{
 		// TODO implement this operation
@@ -33,8 +44,6 @@ public class TrueFalse extends MultipleChoice
 
 	public TrueFalse()
 	{
-		// TODO implement this operation
-		throw new UnsupportedOperationException("not implemented");
 	}
 
 	public TrueFalse(Prompt prompt_)

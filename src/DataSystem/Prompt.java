@@ -26,14 +26,11 @@ public class Prompt implements java.io.Serializable
 
 	public Prompt(String prompt)
 	{
-		// TODO implement this operation
-		throw new UnsupportedOperationException("not implemented");
+		prompt_ = prompt;
 	}
 
 	public Prompt()
 	{
-		// TODO implement this operation
-		throw new UnsupportedOperationException("not implemented");
 	}
 
 }

@@ -1,5 +1,6 @@
 package DataSystem;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -30,7 +31,7 @@ public class MultipleChoice extends Question
 
 	}
 
-	public void create()
+	public void create() throws IOException
 	{
 		super.create();
 		Scanner scan = new Scanner(System.in);
@@ -66,7 +67,7 @@ public class MultipleChoice extends Question
 		}
 	}
 
-	public MultipleChoice(ArrayList<Choice> answers)
+	public MultipleChoice(Prompt prompt_, ArrayList<Choice> answers)
 	{
 		// TODO implement this operation
 		throw new UnsupportedOperationException("not implemented");

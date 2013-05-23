@@ -1,6 +1,8 @@
 package DataSystem;
 
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
 public class Question implements java.io.Serializable
 {
@@ -14,16 +16,17 @@ public class Question implements java.io.Serializable
 	}
 
 	//All questions will at least take a prompt
-	public void create()
+	public void create() throws IOException
 	{
-		System.out.println("Enter a prompt('Q' to cancel):");
-		Scanner scan = new Scanner(System.in);
-		String temp = scan.next();
+		System.out.println("Enter a prompt('Q' to cancel)");
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		
+		String temp = br.readLine();
 		if (temp.toLowerCase().equals("q"))
 			prompt = null;
 		else
 			prompt = new Prompt(temp);
-		scan.close();
+		br.close();
 	}
 
 	public Prompt getPrompt()
@@ -45,5 +48,10 @@ public class Question implements java.io.Serializable
 	{
 		//to do
 	}
-
+	public static void main(String [] args) throws IOException
+	{
+		//test
+		Question quest = new Question();
+		quest.create();
+	}
 }

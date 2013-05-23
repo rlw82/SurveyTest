@@ -1,5 +1,7 @@
 package DataSystem;
 
+import java.io.IOException;
+
 public class ShortAnswer extends Essay
 {
 	/**
@@ -37,7 +39,7 @@ public class ShortAnswer extends Essay
 		throw new UnsupportedOperationException("not implemented");
 	}
 
-	public void create()
+	public void create() throws IOException
 	{
 		super.create();
 	}

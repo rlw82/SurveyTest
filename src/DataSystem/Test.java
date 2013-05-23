@@ -1,5 +1,6 @@
 package DataSystem;
 
+import java.io.IOException;
 import java.util.ArrayList;
 
 public class Test extends Survey
@@ -26,7 +27,7 @@ public class Test extends Survey
 		throw new UnsupportedOperationException("not implemented");
 	}
 
-	public void create()
+	public void create() throws IOException
 	{
 		super.create();
 		if (questions.size() != 0)
