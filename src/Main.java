@@ -7,6 +7,7 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.io.ObjectInputStream;
 import java.util.Scanner;
 
@@ -24,7 +25,6 @@ public class Main
 	//Current Loaded Survey or Test
 	public static Survey currentSurvey = null;
 
-	@SuppressWarnings("resource")
 	public static void main(String[] args) throws IOException
 	{
 		//Prompt user for choice
@@ -33,8 +33,8 @@ public class Main
 				.println("1) Create a new Survey\n2) Create a new Test\n3) Display current Survey/Test\n"
 						+ "4) Load a Survey\n5) Load a Test\n6) Quit");
 		String temp = "";
-		Scanner scan = new Scanner(System.in);
-		temp = scan.next();
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		temp = br.readLine();
 		int choice = -1;
 		try
 		{
@@ -46,7 +46,6 @@ public class Main
 			//Catch invalid input, non digit
 			System.out.println("Invalid entry enter a single digit 1-6\n\n\n\n\n");
 			main(args);
-			scan.close();
 			return;
 		}
 		//Not valid choices for this menu, let the user know and prompt again
@@ -54,7 +53,6 @@ public class Main
 		{
 			System.out.println("Invalid entry enter a single digit 1-6\n\n\n\n\n");
 			main(args);
-			scan.close();
 			return;
 		}
 		else
@@ -64,13 +62,11 @@ public class Main
 			case 1:
 				currentSurvey = new Survey();
 				currentSurvey.create();
-				scan.close();
 				main(args);
 				return;
 			case 2:
 				currentSurvey = new Test();
 				currentSurvey.create();
-				scan.close();
 				main(args);
 				return;
 			case 3:
@@ -80,13 +76,12 @@ public class Main
 					System.out.println("No Survey/Test currently active in System\n\n\n\n\n");
 				}
 				main(args);
-				scan.close();
 				return;
 			case 4:
 				try
 				{
 					FileReader fr = new FileReader(".\\surveys.txt");
-					BufferedReader br = new BufferedReader(fr);
+					br = new BufferedReader(fr);
 					String surveyList = "";
 					temp = br.readLine();
 					while (!temp.equals(null))
@@ -116,13 +111,14 @@ public class Main
 					{
 						//Already tested for...
 					}
+					br.close();
 					System.exit(-1);
 				}
 			case 5:
 				try
 				{
 					FileReader fr = new FileReader(".\\tests.txt");
-					BufferedReader br = new BufferedReader(fr);
+					br = new BufferedReader(fr);
 					String surveyList = "";
 					temp = br.readLine();
 					while (!temp.equals(null))
@@ -152,21 +148,23 @@ public class Main
 					{
 						//Already tested for...
 					}
+					br.close();
 					System.exit(-1);
 				}
 			case 6:
 				System.out.println("Exiting");
+				br.close();
 				System.exit(1);
 			default:
 				//won't get here
 			}
-			scan.close();
 		}
 	}
 
 	//Menu for loading a survey or test
 	//Since the only difference would be the casting of the object, just take an argument for the type you're
 	//doing
+	@SuppressWarnings("resource")
 	private static void loadSurveyTest(String surveyList, String type)
 	{
 		System.out.println("Select a " + type);
@@ -180,7 +178,7 @@ public class Main
 		System.out.println("" + (surveys.length + 1) + ") Exit");
 		int choice = -1;
 		Scanner scan = new Scanner(System.in);
-		temp = scan.next();
+		temp = scan.nextLine();
 		try
 		{
 			//Will go into exception if input is not an integer
@@ -192,7 +190,6 @@ public class Main
 			System.out.println("Invalid entry enter a number for a " + type
 					+ " \n\n\n\n\n");
 			loadSurveyTest(surveyList, type);
-			scan.close();
 			return;
 		}
 		//Not valid choices for this menu, let the user know and prompt again
@@ -201,7 +198,6 @@ public class Main
 			System.out.println("Invalid entry enter a number for a " + type
 					+ " \n\n\n\n\n");
 			loadSurveyTest(surveyList, type);
-			scan.close();
 			return;
 		}
 		else
@@ -230,11 +226,11 @@ public class Main
 				}
 				fis.close();
 				ois.close();
-				scan.close();
 			}
 			catch (Exception e)
 			{
 				System.out.println("File was not serialized correctly");
+				scan.close();
 				System.exit(0);
 			}
 		}

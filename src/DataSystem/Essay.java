@@ -1,7 +1,6 @@
 package DataSystem;
 
 import java.io.IOException;
-import java.util.Scanner;
 
 public class Essay extends Question
 {

@@ -1,6 +1,8 @@
 package DataSystem;
 
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 
 public class TrueFalse extends MultipleChoice
 {
@@ -13,15 +15,6 @@ public class TrueFalse extends MultipleChoice
 	{
 		// TODO implement this operation
 		throw new UnsupportedOperationException("not implemented");
-	}
-
-	public void create() throws IOException
-	{
-		super.create();
-		if(this.prompt == null)
-		{
-			return;
-		}
 	}
 	
 	public void display()
@@ -42,8 +35,22 @@ public class TrueFalse extends MultipleChoice
 		throw new UnsupportedOperationException("not implemented");
 	}
 
-	public TrueFalse()
+	public TrueFalse() throws IOException
 	{
+		System.out.println("Enter a prompt('Q' to cancel)");
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		
+		String temp = br.readLine();
+		if (temp.toLowerCase().equals("q"))
+			prompt = null;
+		else
+			prompt = new Prompt(temp);
+		if(prompt!=null)
+		{
+			this.choices.add(new Choice("True"));
+			this.choices.add(new Choice("False"));
+		}
+		return;
 	}
 
 	public TrueFalse(Prompt prompt_)

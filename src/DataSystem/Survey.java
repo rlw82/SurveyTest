@@ -1,9 +1,10 @@
 package DataSystem;
 
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Scanner;
 
 public class Survey implements java.io.Serializable
 {
@@ -35,8 +36,8 @@ public class Survey implements java.io.Serializable
 		System.out
 				.println("1) Add a New Question\n2) Display Current Questions\n3) Quit");
 		String temp = "";
-		Scanner scan = new Scanner(System.in);
-		temp = scan.next();
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		temp = br.readLine();
 		int choice = -1;
 		try
 		{
@@ -48,7 +49,6 @@ public class Survey implements java.io.Serializable
 			//Catch invalid input, non digit
 			System.out.println("Invalid entry enter a single digit 1-3\n\n\n\n\n");
 			this.create();
-			scan.close();
 			return;
 		}
 		//Not valid choices for this menu, let the user know and prompt again
@@ -56,7 +56,6 @@ public class Survey implements java.io.Serializable
 		{
 			System.out.println("Invalid entry enter a single digit 1-3\n\n\n\n\n");
 			this.create();
-			scan.close();
 			return;
 		}
 		else
@@ -68,19 +67,18 @@ public class Survey implements java.io.Serializable
 					if (questions.size() == 0)
 					{
 						System.out.println("Creating new survey, enter title");
-						this.title = scan.next();
+						br = new BufferedReader(new InputStreamReader(System.in));
+						this.title = br.readLine();
 						Question tempQuestion = questionMenu();
 						if(tempQuestion.getPrompt() == null)
 						{
 							System.out.println("Cancelling survey, returning to main menu\n\n\n\n\n");
-							scan.close();
 							return;
 						}
 						else
 						{
 							this.questions.add(tempQuestion);
 							this.create();
-							scan.close();
 							return;
 						}
 					}
@@ -90,32 +88,29 @@ public class Survey implements java.io.Serializable
 						if(tempQuestion.getPrompt() == null)
 						{
 							System.out.println("Cancelling current question\n\n\n\n\n");
-							scan.close();
 							return;
 						}
 						else
 						{
 							this.questions.add(tempQuestion);
 							this.create();
-							scan.close();
 							return;
 						}
 					}
 				} catch(Exception e) {
-					scan = new Scanner(System.in);
-					this.title = scan.next();
+					System.out.println(e.toString());
+					br = new BufferedReader(new InputStreamReader(System.in));
+					this.title = br.readLine();
 					Question tempQuestion = questionMenu();
 					if (tempQuestion == null)
 					{
 						System.out.println("Cancelling survey, returning to main menu\n\n\n\n\n");
-						scan.close();
 						return;
 					}
 					else
 					{
 						this.questions.add(tempQuestion);
 						this.create();
-						scan.close();
 						return;
 					}
 				}
@@ -125,17 +120,14 @@ public class Survey implements java.io.Serializable
 				{
 					System.out.println("No questions to display yet!\n\n\n\n\n");
 					this.create();
-					scan.close();
 					return;
 				}
 			} catch(Exception e) {
 				System.out.println("No questions to display yet!\n\n\n\n\n");
 				this.create();
-				scan.close();
 				return;
 			}
 			}
-			scan.close();
 			return;
 		}
 	}
@@ -146,8 +138,8 @@ public class Survey implements java.io.Serializable
 				.println("Choose an option\n1) T/F question\n2) multiple choice question\n3) "
 						+ "short answer question\n4) essay question\n5) ranking question\n6) matching question\n7) return to previous menu");
 		String temp = "";
-		Scanner scan = new Scanner(System.in);
-		temp = scan.next();
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		temp = br.readLine();
 		int choice = -1;
 		try
 		{
@@ -158,14 +150,12 @@ public class Survey implements java.io.Serializable
 		{
 			//Catch invalid input, non digit
 			System.out.println("Invalid entry enter a single digit 1-7\n\n\n\n\n");
-			scan.close();
 			return questionMenu();
 		}
 		//Not valid choices for this menu, let the user know and prompt again
 		if (choice > 7 || choice < 1)
 		{
 			System.out.println("Invalid entry enter a single digit 1-7\n\n\n\n\n");
-			scan.close();
 			return questionMenu();
 		}
 		else
@@ -175,36 +165,28 @@ public class Survey implements java.io.Serializable
 			{
 			case 1:
 				tempQuest = new TrueFalse();
-				tempQuest.create();
-				scan.close();
 				return tempQuest;
 			case 2:
 				tempQuest = new MultipleChoice();
 				tempQuest.create();
-				scan.close();
 				return tempQuest;
 			case 3:
 				tempQuest = new ShortAnswer();
 				tempQuest.create();
-				scan.close();
 				return tempQuest;
 			case 4:
 				tempQuest = new Essay();
 				tempQuest.create();
-				scan.close();
 				return tempQuest;
 			case 5:
 				tempQuest = new Ranking();
 				tempQuest.create();
-				scan.close();
 				return tempQuest;
 			case 6:
 				tempQuest = new Matching();
 				tempQuest.create();
-				scan.close();
 				return tempQuest;
 			default:
-				scan.close();
 				return null;
 			}
 		}

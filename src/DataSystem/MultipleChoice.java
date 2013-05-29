@@ -1,20 +1,22 @@
 package DataSystem;
 
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
-import java.util.Scanner;
 
 public class MultipleChoice extends Question
 {
 	private static final long serialVersionUID = 7005563851486654225L;
 
+	
 	public Response take()
 	{
 		// TODO implement this operation
 		throw new UnsupportedOperationException("not implemented");
 	}
 
-	private ArrayList<Choice> choices;
+	protected ArrayList<Choice> choices;
 
 	public void setChoices(ArrayList<Choice> value)
 	{
@@ -28,17 +30,22 @@ public class MultipleChoice extends Question
 
 	public MultipleChoice()
 	{
-
+		this.choices = new ArrayList<Choice>();
+	}
+	
+	public MultipleChoice(ArrayList<Choice> choice_,Prompt prompt_)
+	{
+		this.prompt = prompt_;
+		this.choices = choice_;
 	}
 
 	public void create() throws IOException
 	{
 		super.create();
-		Scanner scan = new Scanner(System.in);
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		System.out.println("Make a selection\n");
-		System.out.println("1) Create another Question\n2) End Questions");
-		String temp = scan.next();
-		scan.close();
+		System.out.println("1) Create another Choice\n2) End Choices");
+		String temp = br.readLine();
 		int choice;
 		try
 		{
@@ -63,15 +70,25 @@ public class MultipleChoice extends Question
 		switch (choice)
 		{
 		case 1:
-
+			System.out.println("Enter your choice");
+			choices.add(new Choice(br.readLine()));
+			create();
+			return;
+		case 2:
+			if(choices.size() == 0)
+			{
+				System.out.println("No choices given cancelling question");
+				this.prompt = null;
+				return;
+			}
+			else
+			{
+				return;
+			}
 		}
+		
 	}
 
-	public MultipleChoice(Prompt prompt_, ArrayList<Choice> answers)
-	{
-		// TODO implement this operation
-		throw new UnsupportedOperationException("not implemented");
-	}
 
 	public void display()
 	{

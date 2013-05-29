@@ -26,7 +26,7 @@ public class Question implements java.io.Serializable
 			prompt = null;
 		else
 			prompt = new Prompt(temp);
-		br.close();
+		return;
 	}
 
 	public Prompt getPrompt()
