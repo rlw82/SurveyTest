@@ -1,6 +1,5 @@
 package DataSystem;
 
-
 public class Essay extends Question
 {
 	/**
@@ -18,7 +17,7 @@ public class Essay extends Question
 		this.display(new ConsoleIO());
 		return new Response();
 	}
-	
+
 	public Prompt getPrompt()
 	{
 		return this.prompt;
@@ -30,7 +29,8 @@ public class Essay extends Question
 		throw new UnsupportedOperationException("not implemented");
 	}
 
-	public Essay(Prompt tempPrompt) {
+	public Essay(Prompt tempPrompt)
+	{
 		super(tempPrompt);
 	}
 

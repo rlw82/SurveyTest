@@ -6,7 +6,6 @@ public class MultipleChoice extends Question
 {
 	private static final long serialVersionUID = 7005563851486654225L;
 
-	
 	public Response take()
 	{
 		// TODO implement this operation
@@ -24,17 +23,21 @@ public class MultipleChoice extends Question
 	{
 		return this.choices;
 	}
-	
+
 	public MultipleChoice(Prompt prompt_, ArrayList<Choice> choice_)
 	{
 		super(prompt_);
 		this.choices = choice_;
 	}
 
-	public void display()
+	public void display(InputOutput io)
 	{
-		// TODO implement this operation
-		throw new UnsupportedOperationException("not implemented");
+		super.display(io);
+		for(int i = 0; i < choices.size(); i++)
+		{
+			choices.get(i).display(io);
+			io.display("\n");
+		}
 	}
 
 	public void modify()

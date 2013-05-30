@@ -31,7 +31,7 @@ public class Main
 		System.out.println("Enter a choice\n");
 		System.out
 				.println("1) Create a new Survey\n2) Create a new Test\n3) Display current Survey/Test\n"
-						+ "4) Load a Survey\n5) Load a Test\n6) Quit");
+						+ "4) Save current Survey/Test\n5) Load a Survey\n6) Load a Test\n7) Quit");
 		String temp = "";
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		temp = br.readLine();
@@ -44,14 +44,14 @@ public class Main
 		catch (Exception e)
 		{
 			//Catch invalid input, non digit
-			System.out.println("Invalid entry enter a single digit 1-6\n\n\n\n\n");
+			System.out.println("Invalid entry enter a single digit 1-7\n\n\n");
 			main(args);
 			return;
 		}
 		//Not valid choices for this menu, let the user know and prompt again
-		if (choice > 6 || choice < 1)
+		if (choice > 7 || choice < 1)
 		{
-			System.out.println("Invalid entry enter a single digit 1-6\n\n\n\n\n");
+			System.out.println("Invalid entry enter a single digit 1-7\n\n\n");
 			main(args);
 			return;
 		}
@@ -70,28 +70,50 @@ public class Main
 				main(args);
 				return;
 			case 3:
-				try{
-					currentSurvey.display();
-				} catch (Exception e) {
-					System.out.println("No Survey/Test currently active in System\n\n\n\n\n");
+				try
+				{
+					if(currentSurvey.getTitle() != null && currentSurvey.getQuestions() != null)
+					{
+						currentSurvey.display();
+					}
+				}
+				catch (Exception e)
+				{
+					System.out.println("No Survey/Test currently active in System\n\n\n");
 				}
 				main(args);
 				return;
 			case 4:
 				try
 				{
-					FileReader fr = new FileReader(".\\surveys.txt");
+					if(currentSurvey.getTitle() != null && currentSurvey.getQuestions() != null)
+					{
+						currentSurvey.serialize();
+					}
+				}
+				catch (Exception e)
+				{
+					System.out.println("No Survey/Test currently active in System\n\n\n");
+				}
+				main(args);
+				return;
+			case 5:
+				try
+				{
+					FileReader fr = new FileReader("surveys.txt");
 					br = new BufferedReader(fr);
 					String surveyList = "";
 					temp = br.readLine();
-					while (!temp.equals(null))
+					while (temp != null)
 					{
 						//Ensures no blank lines since file is edited inside system
 						if (!temp.equals(""))
-							surveyList = surveyList + temp;
+							surveyList = surveyList + temp + "\n";
 						temp = br.readLine();
 					}
 					loadSurveyTest(surveyList, "Survey");
+					main(args);
+					return;
 				}
 				catch (FileNotFoundException e)
 				{
@@ -103,9 +125,8 @@ public class Main
 				{
 					try
 					{
-						System.out
-								.println("File has been edited outside of system check at "
-										+ (new FileReader(".\\surveys.txt")).toString());
+						System.out.println("File has been edited outside of system check at "
+										+ (new FileReader("surveys.txt")).toString());
 					}
 					catch (FileNotFoundException e1)
 					{
@@ -114,10 +135,10 @@ public class Main
 					br.close();
 					System.exit(-1);
 				}
-			case 5:
+			case 6:
 				try
 				{
-					FileReader fr = new FileReader(".\\tests.txt");
+					FileReader fr = new FileReader("tests.txt");
 					br = new BufferedReader(fr);
 					String surveyList = "";
 					temp = br.readLine();
@@ -140,9 +161,8 @@ public class Main
 				{
 					try
 					{
-						System.out
-								.println("File has been edited outside of system check at "
-										+ (new FileReader(".\\tests.txt")).toString());
+						System.out.println("File has been edited outside of system check at "
+								+ (new FileReader("tests.txt")).toString());
 					}
 					catch (FileNotFoundException e1)
 					{
@@ -151,7 +171,7 @@ public class Main
 					br.close();
 					System.exit(-1);
 				}
-			case 6:
+			case 7:
 				System.out.println("Exiting");
 				br.close();
 				System.exit(1);
@@ -164,7 +184,6 @@ public class Main
 	//Menu for loading a survey or test
 	//Since the only difference would be the casting of the object, just take an argument for the type you're
 	//doing
-	@SuppressWarnings("resource")
 	private static void loadSurveyTest(String surveyList, String type)
 	{
 		System.out.println("Select a " + type);
@@ -188,7 +207,7 @@ public class Main
 		{
 			//Catch invalid input, non digit
 			System.out.println("Invalid entry enter a number for a " + type
-					+ " \n\n\n\n\n");
+					+ " \n\n\n");
 			loadSurveyTest(surveyList, type);
 			return;
 		}
@@ -196,7 +215,7 @@ public class Main
 		if (choice > surveys.length + 1 || choice < 1)
 		{
 			System.out.println("Invalid entry enter a number for a " + type
-					+ " \n\n\n\n\n");
+					+ " \n\n\n");
 			loadSurveyTest(surveyList, type);
 			return;
 		}
@@ -210,7 +229,7 @@ public class Main
 			try
 			{
 				//Deserialize the selected survey or test
-				FileInputStream fis = new FileInputStream(surveys[choice + 1]);
+				FileInputStream fis = new FileInputStream(type.toLowerCase() + "s\\" + surveys[choice - 1]);
 				ObjectInputStream ois = new ObjectInputStream(fis);
 				switch (type.toLowerCase())
 				{
@@ -229,7 +248,7 @@ public class Main
 			}
 			catch (Exception e)
 			{
-				System.out.println("File was not serialized correctly");
+				System.out.println("File was not serialized correctly or may be an old version");
 				scan.close();
 				System.exit(0);
 			}

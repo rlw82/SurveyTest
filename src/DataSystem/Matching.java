@@ -26,15 +26,23 @@ public class Matching extends Question
 		throw new UnsupportedOperationException("not implemented");
 	}
 
-	public Matching(Prompt prompt_, ArrayList<Choice> left_, ArrayList<Choice> right_)
+	public Matching(Prompt prompt_, ArrayList<Choice> left_,ArrayList<Choice> right_)
 	{
 		super(prompt_);
+		this.left = left_;
+		this.right = right_;
 	}
 
-	public void display()
+	public void display(InputOutput io)
 	{
-		// TODO implement this operation
-		throw new UnsupportedOperationException("not implemented");
+		super.display(io);
+		for(int i = 0; i < left.size(); i++)
+		{
+			left.get(i).display(io);
+			io.display("\t");
+			right.get(i).display(io);
+			io.display("\n");
+		}
 	}
 
 }

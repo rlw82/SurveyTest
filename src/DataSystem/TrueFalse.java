@@ -14,12 +14,6 @@ public class TrueFalse extends MultipleChoice
 		// TODO implement this operation
 		throw new UnsupportedOperationException("not implemented");
 	}
-	
-	public void display()
-	{
-		// TODO implement this operation
-		throw new UnsupportedOperationException("not implemented");
-	}
 
 	public void modify()
 	{
@@ -27,7 +21,8 @@ public class TrueFalse extends MultipleChoice
 		throw new UnsupportedOperationException("not implemented");
 	}
 
-	public TrueFalse(Prompt tempPrompt, ArrayList<Choice> tempChoice) {
+	public TrueFalse(Prompt tempPrompt, ArrayList<Choice> tempChoice)
+	{
 		super(tempPrompt, tempChoice);
 	}
 

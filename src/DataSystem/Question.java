@@ -1,13 +1,13 @@
 package DataSystem;
 
-
 public abstract class Question implements java.io.Serializable
 {
 
 	private static final long serialVersionUID = 8843589270194213785L;
 	protected Prompt prompt;
 
-	public Question(Prompt tempPrompt) {
+	public Question(Prompt tempPrompt)
+	{
 		this.prompt = tempPrompt;
 	}
 

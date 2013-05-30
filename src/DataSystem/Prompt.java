@@ -20,7 +20,7 @@ public class Prompt implements java.io.Serializable
 
 	public void display(InputOutput io)
 	{
-		io.display(this.prompt_);
+		io.display(this.prompt_ +"\n");
 	}
 
 	public Prompt(String prompt)

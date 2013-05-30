@@ -4,7 +4,7 @@
     <eAnnotations xmi:id="_MObIQL3ZEeKOELt9NwXOhg" source="http://ns.yatta.de/umllab">
       <contents xmi:type="ecore:EAnnotation" xmi:id="_MOcWYL3ZEeKOELt9NwXOhg" source="codegen">
         <details xmi:id="_MOcWYb3ZEeKOELt9NwXOhg" key="codegenDirectory" value="/SurveyTest/src"/>
-        <details xmi:id="_Np_HUL3ZEeKOELt9NwXOhg" key="AssociatedSourceCode" value="/SurveyTest/src/DataSystem/Choice.java;11584134/1;/SurveyTest/src/DataSystem/CorrectResponse.java;1068427180/1;/SurveyTest/src/DataSystem/Essay.java;3240111247/1;/SurveyTest/src/DataSystem/Matching.java;896628132/1;/SurveyTest/src/DataSystem/MultipleChoice.java;3091563185/1;/SurveyTest/src/DataSystem/Prompt.java;705728317/1;/SurveyTest/src/DataSystem/Question.java;3720531903/1;/SurveyTest/src/DataSystem/Ranking.java;387101428/1;/SurveyTest/src/DataSystem/Response.java;628010807/1;/SurveyTest/src/DataSystem/ResponseComparison.java;236786519/1;/SurveyTest/src/DataSystem/ShortAnswer.java;3966996658/1;/SurveyTest/src/DataSystem/Survey.java;4144504206/1;/SurveyTest/src/DataSystem/Test.java;2527428587/1;/SurveyTest/src/DataSystem/TrueFalse.java;3052544776/1;/SurveyTest/src/Main.java;2649665552/1;/SurveyTest/src/DataSystem/InputOutput.java;921959224/1;/SurveyTest/src/DataSystem/ConsoleIO.java;167772812/1;"/>
+        <details xmi:id="_Np_HUL3ZEeKOELt9NwXOhg" key="AssociatedSourceCode" value="/SurveyTest/src/DataSystem/Choice.java;446385486/1;/SurveyTest/src/DataSystem/CorrectResponse.java;1068427180/1;/SurveyTest/src/DataSystem/Essay.java;746054932/1;/SurveyTest/src/DataSystem/Matching.java;1771709509/1;/SurveyTest/src/DataSystem/MultipleChoice.java;3386200120/1;/SurveyTest/src/DataSystem/Prompt.java;450945431/1;/SurveyTest/src/DataSystem/Question.java;196771085/1;/SurveyTest/src/DataSystem/Ranking.java;290485828/1;/SurveyTest/src/DataSystem/Response.java;628010807/1;/SurveyTest/src/DataSystem/ResponseComparison.java;3400349366/1;/SurveyTest/src/DataSystem/ShortAnswer.java;2011411808/1;/SurveyTest/src/DataSystem/Survey.java;3857008075/1;/SurveyTest/src/DataSystem/Test.java;2221183214/1;/SurveyTest/src/DataSystem/TrueFalse.java;96075759/1;/SurveyTest/src/Main.java;2153429171/1;/SurveyTest/src/DataSystem/InputOutput.java;1417990216/1;/SurveyTest/src/DataSystem/ConsoleIO.java;4109934036/1;"/>
       </contents>
       <contents xmi:type="ecore:EAnnotation" xmi:id="_ru-YIL6NEeK83rMBtFrz_w" source="preferences">
         <contents xmi:type="ecore:EAnnotation" xmi:id="_ru_mQL6NEeK83rMBtFrz_w" source="com.yattasolutions.codegen.reverse">
@@ -57,6 +57,7 @@
         <packagedElement xmi:type="uml:Class" xmi:id="_xWHU4L6PEeK83rMBtFrz_w" name="BufferedReader"/>
         <packagedElement xmi:type="uml:Class" xmi:id="_xWIjAb6PEeK83rMBtFrz_w" name="FileReader"/>
         <packagedElement xmi:type="uml:Class" xmi:id="_ZYb7UL6xEeK83rMBtFrz_w" name="ObjectInputStream"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_dM-cIMjyEeKhwsxlaj5FWA" name="IOException"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Package" xmi:id="_NLz9kL3ZEeKOELt9NwXOhg" name="lang">
         <packagedElement xmi:type="uml:Class" xmi:id="_NL0koL3ZEeKOELt9NwXOhg" name="Object"/>
@@ -68,17 +69,23 @@
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
           <defaultValue xmi:type="uml:LiteralString" xmi:id="_NNkREL3ZEeKOELt9NwXOhg" value="-3404142485157034370L"/>
         </ownedAttribute>
-        <ownedAttribute xmi:id="_NNk4IL3ZEeKOELt9NwXOhg" name="multipleChoice" type="_NE3oEL3ZEeKOELt9NwXOhg" association="_NOXiUL3ZEeKOELt9NwXOhg">
-          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_NNk4Ib3ZEeKOELt9NwXOhg" value="*"/>
-          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_NOWUML3ZEeKOELt9NwXOhg"/>
-        </ownedAttribute>
-        <ownedAttribute xmi:id="_NNmGQL3ZEeKOELt9NwXOhg" name="matching" type="_NEhCwL3ZEeKOELt9NwXOhg" association="_NNpJkL3ZEeKOELt9NwXOhg">
-          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_NNmtUL3ZEeKOELt9NwXOhg" value="*"/>
-          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_NNmGQb3ZEeKOELt9NwXOhg"/>
+        <ownedAttribute xmi:id="_NNmGQL3ZEeKOELt9NwXOhg" name="choice" visibility="package">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
         </ownedAttribute>
         <ownedAttribute xmi:id="_NNqXsL3ZEeKOELt9NwXOhg" name="data">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
         </ownedAttribute>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_dNrmwMjyEeKhwsxlaj5FWA" name="Choice" specification="_ND7M4L3ZEeKOELt9NwXOhg">
+          <ownedParameter xmi:id="_dNrmwcjyEeKhwsxlaj5FWA" name="data_">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_dNrmwsjyEeKhwsxlaj5FWA" type="_NDRFkL3ZEeKOELt9NwXOhg" direction="return">
+            <name xsi:nil="true"/>
+          </ownedParameter>
+          <language>java</language>
+          <body>this.choice = data_;&#xD;
+	</body>
+        </ownedBehavior>
         <interfaceRealization xmi:id="_NDzREL3ZEeKOELt9NwXOhg" supplier="_NDhkQL3ZEeKOELt9NwXOhg" client="_NDRFkL3ZEeKOELt9NwXOhg" contract="_NDhkQL3ZEeKOELt9NwXOhg"/>
         <ownedOperation xmi:id="_ND27cL3ZEeKOELt9NwXOhg" name="setChoice">
           <ownedParameter xmi:id="_ND27cb3ZEeKOELt9NwXOhg" name="chage">
@@ -86,7 +93,7 @@
           </ownedParameter>
         </ownedOperation>
         <ownedOperation xmi:id="_ND4woL3ZEeKOELt9NwXOhg" name="display"/>
-        <ownedOperation xmi:id="_ND7M4L3ZEeKOELt9NwXOhg" name="Choice">
+        <ownedOperation xmi:id="_ND7M4L3ZEeKOELt9NwXOhg" name="Choice" method="_dNrmwMjyEeKhwsxlaj5FWA">
           <eAnnotations xmi:id="_ND7M4r3ZEeKOELt9NwXOhg" source="http://www.eclipse.org/uml2/2.0.0/UML">
             <details xmi:id="_ND7z8L3ZEeKOELt9NwXOhg" key="create"/>
           </eAnnotations>
@@ -94,12 +101,6 @@
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
           </ownedParameter>
           <ownedParameter xmi:id="_ND7z8b3ZEeKOELt9NwXOhg" type="_NDRFkL3ZEeKOELt9NwXOhg" direction="return"/>
-        </ownedOperation>
-        <ownedOperation xmi:id="_ND8bAL3ZEeKOELt9NwXOhg" name="Choice">
-          <eAnnotations xmi:id="_ND9CEL3ZEeKOELt9NwXOhg" source="http://www.eclipse.org/uml2/2.0.0/UML">
-            <details xmi:id="_ND9CEb3ZEeKOELt9NwXOhg" key="create"/>
-          </eAnnotations>
-          <ownedParameter xmi:id="_ND9CEr3ZEeKOELt9NwXOhg" type="_NDRFkL3ZEeKOELt9NwXOhg" direction="return"/>
         </ownedOperation>
       </packagedElement>
       <packagedElement xmi:type="uml:Class" xmi:id="_NEHaIL3ZEeKOELt9NwXOhg" name="CorrectResponse">
@@ -129,12 +130,10 @@
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
           <defaultValue xmi:type="uml:LiteralString" xmi:id="_NNy6kL3ZEeKOELt9NwXOhg" value="9216347102043281617L"/>
         </ownedAttribute>
-        <ownedAttribute xmi:id="_NNzhoL3ZEeKOELt9NwXOhg" name="data">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-        </ownedAttribute>
         <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_5pjIQL8fEeKq2skbJPUWqw" name="display" specification="_NEUOcL3ZEeKOELt9NwXOhg">
+          <ownedParameter xmi:id="_dNs04sjyEeKhwsxlaj5FWA" name="io" type="_nQHasL3eEeKOELt9NwXOhg"/>
           <language>java</language>
-          <body>super.display();&#xD;
+          <body>super.display(io);&#xD;
 	</body>
         </ownedBehavior>
         <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_5pjvUL8fEeKq2skbJPUWqw" name="take" specification="_NEU1gL3ZEeKOELt9NwXOhg">
@@ -142,14 +141,8 @@
             <name xsi:nil="true"/>
           </ownedParameter>
           <language>java</language>
-          <body>this.display();&#xD;
+          <body>this.display(new ConsoleIO());&#xD;
 		return new Response();&#xD;
-&#xD;
-	</body>
-        </ownedBehavior>
-        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_5pkWYL8fEeKq2skbJPUWqw" name="create" specification="_5pePwL8fEeKq2skbJPUWqw">
-          <language>java</language>
-          <body>super.create();&#xD;
 	</body>
         </ownedBehavior>
         <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_-GW4sL9JEeKaVINf8BnwXA" name="getPrompt" specification="_-ElXEL9JEeKaVINf8BnwXA">
@@ -160,29 +153,27 @@
           <body>return this.prompt;&#xD;
 	</body>
         </ownedBehavior>
-        <ownedOperation xmi:id="_NEUOcL3ZEeKOELt9NwXOhg" name="display" method="_5pjIQL8fEeKq2skbJPUWqw"/>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_dNtb8MjyEeKhwsxlaj5FWA" name="Essay" specification="_NEZG8L3ZEeKOELt9NwXOhg">
+          <ownedParameter xmi:id="_q0xukMjyEeKhwsxlaj5FWA" type="_NERyML3ZEeKOELt9NwXOhg" direction="return"/>
+          <ownedParameter xmi:id="_q0xukcjyEeKhwsxlaj5FWA" name="tempPrompt" type="_NFPbgL3ZEeKOELt9NwXOhg"/>
+          <language>java</language>
+          <body>super(tempPrompt);&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedOperation xmi:id="_NEUOcL3ZEeKOELt9NwXOhg" name="display" method="_5pjIQL8fEeKq2skbJPUWqw">
+          <ownedParameter xmi:id="_dJlJ4MjyEeKhwsxlaj5FWA" name="io" type="_nQHasL3eEeKOELt9NwXOhg"/>
+        </ownedOperation>
         <ownedOperation xmi:id="_NEU1gL3ZEeKOELt9NwXOhg" name="take" method="_5pjvUL8fEeKq2skbJPUWqw">
           <ownedParameter xmi:id="_NKBN0L3ZEeKOELt9NwXOhg" type="_NF0qUL3ZEeKOELt9NwXOhg" direction="return"/>
         </ownedOperation>
         <ownedOperation xmi:id="_NEWDoL3ZEeKOELt9NwXOhg" name="modify"/>
-        <ownedOperation xmi:id="_NEWqsL3ZEeKOELt9NwXOhg" name="save"/>
-        <ownedOperation xmi:id="_NEZG8L3ZEeKOELt9NwXOhg" name="Essay">
+        <ownedOperation xmi:id="_NEZG8L3ZEeKOELt9NwXOhg" name="Essay" method="_dNtb8MjyEeKhwsxlaj5FWA">
           <eAnnotations xmi:id="_NEZuAL3ZEeKOELt9NwXOhg" source="http://www.eclipse.org/uml2/2.0.0/UML">
             <details xmi:id="_NEZuAb3ZEeKOELt9NwXOhg" key="create"/>
           </eAnnotations>
           <ownedParameter xmi:id="_NEZuAr3ZEeKOELt9NwXOhg" type="_NERyML3ZEeKOELt9NwXOhg" direction="return"/>
+          <ownedParameter xmi:id="_NKCb8b3ZEeKOELt9NwXOhg" name="tempPrompt" type="_NFPbgL3ZEeKOELt9NwXOhg"/>
         </ownedOperation>
-        <ownedOperation xmi:id="_NKCb8L3ZEeKOELt9NwXOhg" name="Essay">
-          <eAnnotations xmi:id="_NKDDAL3ZEeKOELt9NwXOhg" source="http://www.eclipse.org/uml2/2.0.0/UML">
-            <details xmi:id="_NKDDAb3ZEeKOELt9NwXOhg" key="create"/>
-          </eAnnotations>
-          <ownedParameter xmi:id="_NKCb8b3ZEeKOELt9NwXOhg" name="prompt_" type="_NFPbgL3ZEeKOELt9NwXOhg"/>
-          <ownedParameter xmi:id="_NKCb8r3ZEeKOELt9NwXOhg" name="responce_">
-            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-          </ownedParameter>
-          <ownedParameter xmi:id="_NKDDAr3ZEeKOELt9NwXOhg" type="_NERyML3ZEeKOELt9NwXOhg" direction="return"/>
-        </ownedOperation>
-        <ownedOperation xmi:id="_5pePwL8fEeKq2skbJPUWqw" name="create" method="_5pkWYL8fEeKq2skbJPUWqw"/>
         <ownedOperation xmi:id="_-ElXEL9JEeKaVINf8BnwXA" name="getPrompt" method="_-GW4sL9JEeKaVINf8BnwXA">
           <ownedParameter xmi:id="_-El-IL9JEeKaVINf8BnwXA" type="_NFPbgL3ZEeKOELt9NwXOhg" direction="return"/>
         </ownedOperation>
@@ -195,25 +186,28 @@
         </ownedAttribute>
         <ownedAttribute xmi:id="_NN9SoL3ZEeKOELt9NwXOhg" name="left" visibility="protected" type="_NJ3c0L3ZEeKOELt9NwXOhg" association="_NRWk4L3ZEeKOELt9NwXOhg"/>
         <ownedAttribute xmi:id="_NOGckL3ZEeKOELt9NwXOhg" name="right" visibility="protected" type="_NJ3c0L3ZEeKOELt9NwXOhg" association="_NRa2UL3ZEeKOELt9NwXOhg"/>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_dNuqEMjyEeKhwsxlaj5FWA" name="Matching" specification="_NMHfkL3ZEeKOELt9NwXOhg">
+          <ownedParameter xmi:id="_dNuqEcjyEeKhwsxlaj5FWA" name="prompt_" type="_NFPbgL3ZEeKOELt9NwXOhg"/>
+          <ownedParameter xmi:id="_dNvRIMjyEeKhwsxlaj5FWA" name="left_" type="_NJ3c0L3ZEeKOELt9NwXOhg"/>
+          <ownedParameter xmi:id="_dNvRIcjyEeKhwsxlaj5FWA" name="right_" type="_NJ3c0L3ZEeKOELt9NwXOhg"/>
+          <ownedParameter xmi:id="_dNvRIsjyEeKhwsxlaj5FWA" type="_NEhCwL3ZEeKOELt9NwXOhg" direction="return">
+            <name xsi:nil="true"/>
+          </ownedParameter>
+          <language>java</language>
+          <body>super(prompt_);&#xD;
+	</body>
+        </ownedBehavior>
         <ownedOperation xmi:id="_NEi38L3ZEeKOELt9NwXOhg" name="take">
           <ownedParameter xmi:id="_NKJwsL3ZEeKOELt9NwXOhg" type="_NF0qUL3ZEeKOELt9NwXOhg" direction="return"/>
         </ownedOperation>
         <ownedOperation xmi:id="_NEkGEL3ZEeKOELt9NwXOhg" name="modify"/>
         <ownedOperation xmi:id="_NEktIL3ZEeKOELt9NwXOhg" name="save"/>
-        <ownedOperation xmi:id="_NEnwcL3ZEeKOELt9NwXOhg" name="Matching">
-          <eAnnotations xmi:id="_NEoXgL3ZEeKOELt9NwXOhg" source="http://www.eclipse.org/uml2/2.0.0/UML">
-            <details xmi:id="_NEoXgb3ZEeKOELt9NwXOhg" key="create"/>
-          </eAnnotations>
-          <ownedParameter xmi:id="_NEoXgr3ZEeKOELt9NwXOhg" type="_NEhCwL3ZEeKOELt9NwXOhg" direction="return"/>
-        </ownedOperation>
         <ownedOperation xmi:id="_NEo-kL3ZEeKOELt9NwXOhg" name="display"/>
-        <ownedOperation xmi:id="_NMHfkL3ZEeKOELt9NwXOhg" name="Matching">
+        <ownedOperation xmi:id="_NMHfkL3ZEeKOELt9NwXOhg" name="Matching" method="_dNuqEMjyEeKhwsxlaj5FWA">
           <eAnnotations xmi:id="_NMItsL3ZEeKOELt9NwXOhg" source="http://www.eclipse.org/uml2/2.0.0/UML">
             <details xmi:id="_NMItsb3ZEeKOELt9NwXOhg" key="create"/>
           </eAnnotations>
-          <ownedParameter xmi:id="_NMIGoL3ZEeKOELt9NwXOhg" name="prompt_">
-            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-          </ownedParameter>
+          <ownedParameter xmi:id="_NMIGoL3ZEeKOELt9NwXOhg" name="prompt_" type="_NFPbgL3ZEeKOELt9NwXOhg"/>
           <ownedParameter xmi:id="_NMIGob3ZEeKOELt9NwXOhg" name="left_" type="_NJ3c0L3ZEeKOELt9NwXOhg"/>
           <ownedParameter xmi:id="_NMIGor3ZEeKOELt9NwXOhg" name="right_" type="_NJ3c0L3ZEeKOELt9NwXOhg"/>
           <ownedParameter xmi:id="_NMItsr3ZEeKOELt9NwXOhg" type="_NEhCwL3ZEeKOELt9NwXOhg" direction="return"/>
@@ -225,57 +219,49 @@
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
           <defaultValue xmi:type="uml:LiteralString" xmi:id="_NOTQ4L3ZEeKOELt9NwXOhg" value="7005563851486654225L"/>
         </ownedAttribute>
-        <ownedAttribute xmi:id="_NOZXgL3ZEeKOELt9NwXOhg" name="choices" type="_NJ3c0L3ZEeKOELt9NwXOhg" association="_NRfu0b3ZEeKOELt9NwXOhg"/>
-        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_oMa7gL9KEeKaVINf8BnwXA" name="create" specification="_oMRxkL9KEeKaVINf8BnwXA">
+        <ownedAttribute xmi:id="_NOZXgL3ZEeKOELt9NwXOhg" name="choices" visibility="protected" type="_NJ3c0L3ZEeKOELt9NwXOhg" association="_NRfu0b3ZEeKOELt9NwXOhg"/>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_dNv4MMjyEeKhwsxlaj5FWA" name="setChoices" specification="_dKDrAMjyEeKhwsxlaj5FWA">
+          <ownedParameter xmi:id="_dNv4McjyEeKhwsxlaj5FWA" name="value" type="_NJ3c0L3ZEeKOELt9NwXOhg"/>
           <language>java</language>
-          <body>super.create();&#xD;
-		Scanner scan = new Scanner(System.in);&#xD;
-		System.out.println(&quot;Make a selection\n&quot;);&#xD;
-		System.out.println(&quot;1) Create another Question\n2) End Questions&quot;);&#xD;
-		String temp = scan.next();&#xD;
-		scan.close();&#xD;
-		int choice;&#xD;
-		try{&#xD;
-			choice = Integer.parseInt(temp);&#xD;
-			&#xD;
-		} catch (Exception e) {&#xD;
-			System.out.println(&quot;Invalid selection choose a single digit 1-2\n\n\n\n\n&quot;);&#xD;
-			create();&#xD;
-			return;&#xD;
-		}&#xD;
-		&#xD;
-		if(choice &lt; 1 || choice > 2)&#xD;
-		{&#xD;
-			System.out.println(&quot;Invalid selection choose a single digit 1-2\n\n\n\n\n&quot;);&#xD;
-			create();&#xD;
-			return;&#xD;
-		}&#xD;
-		switch(choice){&#xD;
-		case 1:&#xD;
-			&#xD;
-		}&#xD;
+          <body>this.choices = value;&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_dNwfQMjyEeKhwsxlaj5FWA" name="getChoices" specification="_dKHVYMjyEeKhwsxlaj5FWA">
+          <ownedParameter xmi:id="_dNwfQcjyEeKhwsxlaj5FWA" type="_NJ3c0L3ZEeKOELt9NwXOhg" direction="return">
+            <name xsi:nil="true"/>
+          </ownedParameter>
+          <language>java</language>
+          <body>return this.choices;&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_dNwfQsjyEeKhwsxlaj5FWA" name="MultipleChoice" specification="_NE7ScL3ZEeKOELt9NwXOhg">
+          <ownedParameter xmi:id="_q0yVoMjyEeKhwsxlaj5FWA" type="_NE3oEL3ZEeKOELt9NwXOhg" direction="return"/>
+          <ownedParameter xmi:id="_q0yVocjyEeKhwsxlaj5FWA" name="prompt_" type="_NFPbgL3ZEeKOELt9NwXOhg"/>
+          <ownedParameter xmi:id="_q0yVosjyEeKhwsxlaj5FWA" name="choice_" type="_NJ3c0L3ZEeKOELt9NwXOhg"/>
+          <language>java</language>
+          <body>super(prompt_);&#xD;
+		this.choices = choice_;&#xD;
 	</body>
         </ownedBehavior>
         <ownedOperation xmi:id="_NE5dQL3ZEeKOELt9NwXOhg" name="take">
           <ownedParameter xmi:id="_NKcEkL3ZEeKOELt9NwXOhg" type="_NF0qUL3ZEeKOELt9NwXOhg" direction="return"/>
         </ownedOperation>
-        <ownedOperation xmi:id="_NE7ScL3ZEeKOELt9NwXOhg" name="MultipleChoice">
+        <ownedOperation xmi:id="_NE7ScL3ZEeKOELt9NwXOhg" name="MultipleChoice" method="_dNwfQsjyEeKhwsxlaj5FWA">
           <eAnnotations xmi:id="_NE75gL3ZEeKOELt9NwXOhg" source="http://www.eclipse.org/uml2/2.0.0/UML">
             <details xmi:id="_NE75gb3ZEeKOELt9NwXOhg" key="create"/>
           </eAnnotations>
           <ownedParameter xmi:id="_NE9Hob3ZEeKOELt9NwXOhg" type="_NE3oEL3ZEeKOELt9NwXOhg" direction="return"/>
+          <ownedParameter xmi:id="_dKBOwMjyEeKhwsxlaj5FWA" name="prompt_" type="_NFPbgL3ZEeKOELt9NwXOhg"/>
+          <ownedParameter xmi:id="_NMer8b3ZEeKOELt9NwXOhg" name="choice_" type="_NJ3c0L3ZEeKOELt9NwXOhg"/>
         </ownedOperation>
         <ownedOperation xmi:id="_NE-80L3ZEeKOELt9NwXOhg" name="display"/>
         <ownedOperation xmi:id="_NE_j4L3ZEeKOELt9NwXOhg" name="modify"/>
-        <ownedOperation xmi:id="_NFAK8L3ZEeKOELt9NwXOhg" name="save"/>
-        <ownedOperation xmi:id="_NMer8L3ZEeKOELt9NwXOhg" name="MultipleChoice">
-          <eAnnotations xmi:id="_NMfTAL3ZEeKOELt9NwXOhg" source="http://www.eclipse.org/uml2/2.0.0/UML">
-            <details xmi:id="_NMfTAb3ZEeKOELt9NwXOhg" key="create"/>
-          </eAnnotations>
-          <ownedParameter xmi:id="_NMer8b3ZEeKOELt9NwXOhg" name="answers" type="_NJ3c0L3ZEeKOELt9NwXOhg"/>
-          <ownedParameter xmi:id="_NMfTAr3ZEeKOELt9NwXOhg" type="_NE3oEL3ZEeKOELt9NwXOhg" direction="return"/>
+        <ownedOperation xmi:id="_dKDrAMjyEeKhwsxlaj5FWA" name="setChoices" method="_dNv4MMjyEeKhwsxlaj5FWA">
+          <ownedParameter xmi:id="_dKESEMjyEeKhwsxlaj5FWA" name="value" type="_NJ3c0L3ZEeKOELt9NwXOhg"/>
         </ownedOperation>
-        <ownedOperation xmi:id="_oMRxkL9KEeKaVINf8BnwXA" name="create" method="_oMa7gL9KEeKaVINf8BnwXA"/>
+        <ownedOperation xmi:id="_dKHVYMjyEeKhwsxlaj5FWA" name="getChoices" method="_dNwfQMjyEeKhwsxlaj5FWA">
+          <ownedParameter xmi:id="_dKHVYcjyEeKhwsxlaj5FWA" type="_NJ3c0L3ZEeKOELt9NwXOhg" direction="return"/>
+        </ownedOperation>
       </packagedElement>
       <packagedElement xmi:type="uml:Class" xmi:id="_NFPbgL3ZEeKOELt9NwXOhg" name="Prompt" clientDependency="_NFQpoL3ZEeKOELt9NwXOhg">
         <ownedAttribute xmi:id="_NOkWoL3ZEeKOELt9NwXOhg" name="serialVersionUID" visibility="private" isLeaf="true" isStatic="true" isReadOnly="true">
@@ -285,9 +271,26 @@
         <ownedAttribute xmi:id="_NOk9sb3ZEeKOELt9NwXOhg" name="prompt_">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
         </ownedAttribute>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_dNxtYMjyEeKhwsxlaj5FWA" name="display" specification="_NFR3wL3ZEeKOELt9NwXOhg">
+          <ownedParameter xmi:id="_dNxtYcjyEeKhwsxlaj5FWA" name="io" type="_nQHasL3eEeKOELt9NwXOhg"/>
+          <language>java</language>
+          <body>io.display(this.prompt_);&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_dNyUcMjyEeKhwsxlaj5FWA" name="Prompt" specification="_NFTF4L3ZEeKOELt9NwXOhg">
+          <ownedParameter xmi:id="_dNyUccjyEeKhwsxlaj5FWA" name="prompt">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_dNyUcsjyEeKhwsxlaj5FWA" type="_NFPbgL3ZEeKOELt9NwXOhg" direction="return"/>
+          <language>java</language>
+          <body>prompt_ = prompt;&#xD;
+	</body>
+        </ownedBehavior>
         <interfaceRealization xmi:id="_NFQpoL3ZEeKOELt9NwXOhg" supplier="_NDhkQL3ZEeKOELt9NwXOhg" client="_NFPbgL3ZEeKOELt9NwXOhg" contract="_NDhkQL3ZEeKOELt9NwXOhg"/>
-        <ownedOperation xmi:id="_NFR3wL3ZEeKOELt9NwXOhg" name="display"/>
-        <ownedOperation xmi:id="_NFTF4L3ZEeKOELt9NwXOhg" name="Prompt">
+        <ownedOperation xmi:id="_NFR3wL3ZEeKOELt9NwXOhg" name="display" method="_dNxtYMjyEeKhwsxlaj5FWA">
+          <ownedParameter xmi:id="_dKNcAMjyEeKhwsxlaj5FWA" name="io" type="_nQHasL3eEeKOELt9NwXOhg"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_NFTF4L3ZEeKOELt9NwXOhg" name="Prompt" method="_dNyUcMjyEeKhwsxlaj5FWA">
           <eAnnotations xmi:id="_NFUUAL3ZEeKOELt9NwXOhg" source="http://www.eclipse.org/uml2/2.0.0/UML">
             <details xmi:id="_NFUUAb3ZEeKOELt9NwXOhg" key="create"/>
           </eAnnotations>
@@ -303,15 +306,16 @@
           <ownedParameter xmi:id="_NFViIr3ZEeKOELt9NwXOhg" type="_NFPbgL3ZEeKOELt9NwXOhg" direction="return"/>
         </ownedOperation>
       </packagedElement>
-      <packagedElement xmi:type="uml:Class" xmi:id="_NFZMgL3ZEeKOELt9NwXOhg" name="Question" clientDependency="_NFaaoL3ZEeKOELt9NwXOhg">
+      <packagedElement xmi:type="uml:Class" xmi:id="_NFZMgL3ZEeKOELt9NwXOhg" name="Question" clientDependency="_NFaaoL3ZEeKOELt9NwXOhg" isAbstract="true">
         <ownedAttribute xmi:id="_NOoBAL3ZEeKOELt9NwXOhg" name="serialVersionUID" visibility="private" isLeaf="true" isStatic="true" isReadOnly="true">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
           <defaultValue xmi:type="uml:LiteralString" xmi:id="_NOooEL3ZEeKOELt9NwXOhg" value="8843589270194213785L"/>
         </ownedAttribute>
         <ownedAttribute xmi:id="_NOooEb3ZEeKOELt9NwXOhg" name="prompt" visibility="protected" type="_NFPbgL3ZEeKOELt9NwXOhg"/>
         <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_NQGAoL3ZEeKOELt9NwXOhg" name="display" specification="_NFcP0L3ZEeKOELt9NwXOhg">
+          <ownedParameter xmi:id="_dN0JoMjyEeKhwsxlaj5FWA" name="io" type="_nQHasL3eEeKOELt9NwXOhg"/>
           <language>java</language>
-          <body>prompt.display();&#xD;
+          <body>prompt.display(io);&#xD;
 	</body>
         </ownedBehavior>
         <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_NQH10L3ZEeKOELt9NwXOhg" name="take" specification="_NFdd8L3ZEeKOELt9NwXOhg">
@@ -341,30 +345,35 @@
           <body>return this.prompt;&#xD;
 	</body>
         </ownedBehavior>
-        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_-UTOEL9JEeKaVINf8BnwXA" name="create" specification="_BdQ-0L61EeK83rMBtFrz_w">
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_zfX7EL7JEeK83rMBtFrz_w" name="Question" specification="_Q2eNYL7JEeK83rMBtFrz_w">
+          <ownedParameter xmi:id="_dNy7gMjyEeKhwsxlaj5FWA" type="_NFZMgL3ZEeKOELt9NwXOhg" direction="return">
+            <name xsi:nil="true"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_dNzikMjyEeKhwsxlaj5FWA" name="tempPrompt" type="_NFPbgL3ZEeKOELt9NwXOhg"/>
           <language>java</language>
-          <body>System.out.println(&quot;Enter a prompt('Q' to cancel):&quot;);&#xD;
-		Scanner scan = new Scanner(System.in);&#xD;
-		String temp = scan.next();&#xD;
-		if(temp.toLowerCase().equals(&quot;q&quot;))&#xD;
-			prompt = null;&#xD;
-		else&#xD;
-			prompt = new Prompt(temp);&#xD;
-		scan.close();&#xD;
+          <body>this.prompt = tempPrompt;&#xD;
 	</body>
         </ownedBehavior>
         <interfaceRealization xmi:id="_NFaaoL3ZEeKOELt9NwXOhg" supplier="_NDhkQL3ZEeKOELt9NwXOhg" client="_NFZMgL3ZEeKOELt9NwXOhg" contract="_NDhkQL3ZEeKOELt9NwXOhg"/>
-        <ownedOperation xmi:id="_NFcP0L3ZEeKOELt9NwXOhg" name="display" method="_NQGAoL3ZEeKOELt9NwXOhg"/>
-        <ownedOperation xmi:id="_NFdd8L3ZEeKOELt9NwXOhg" name="take" method="_NQH10L3ZEeKOELt9NwXOhg">
+        <ownedOperation xmi:id="_NFcP0L3ZEeKOELt9NwXOhg" name="display" method="_NQGAoL3ZEeKOELt9NwXOhg">
+          <ownedParameter xmi:id="_dKdToMjyEeKhwsxlaj5FWA" name="io" type="_nQHasL3eEeKOELt9NwXOhg"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_NFdd8L3ZEeKOELt9NwXOhg" name="take" isAbstract="true" method="_NQH10L3ZEeKOELt9NwXOhg">
           <ownedParameter xmi:id="_NKpf8L3ZEeKOELt9NwXOhg" type="_NF0qUL3ZEeKOELt9NwXOhg" direction="return"/>
         </ownedOperation>
         <ownedOperation xmi:id="_NFesEL3ZEeKOELt9NwXOhg" name="modify" method="_-es78L60EeK83rMBtFrz_w"/>
-        <ownedOperation xmi:id="_BdQ-0L61EeK83rMBtFrz_w" name="create" method="_-UTOEL9JEeKaVINf8BnwXA"/>
         <ownedOperation xmi:id="_uFbsML8cEeKq2skbJPUWqw" name="setPrompt" method="_uFjA8L8cEeKq2skbJPUWqw">
           <ownedParameter xmi:id="_uFcTQL8cEeKq2skbJPUWqw" name="value" type="_NFPbgL3ZEeKOELt9NwXOhg"/>
         </ownedOperation>
         <ownedOperation xmi:id="_uFc6UL8cEeKq2skbJPUWqw" name="getPrompt" method="_uFkPEL8cEeKq2skbJPUWqw">
           <ownedParameter xmi:id="_uFdhYL8cEeKq2skbJPUWqw" type="_NFPbgL3ZEeKOELt9NwXOhg" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_Q2eNYL7JEeK83rMBtFrz_w" name="Question" visibility="public" method="_zfX7EL7JEeK83rMBtFrz_w">
+          <eAnnotations xmi:id="_dKX0EMjyEeKhwsxlaj5FWA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+            <details xmi:id="_dKYbIMjyEeKhwsxlaj5FWA" key="create"/>
+          </eAnnotations>
+          <ownedParameter xmi:id="_dKYbIcjyEeKhwsxlaj5FWA" type="_NFZMgL3ZEeKOELt9NwXOhg" direction="return"/>
+          <ownedParameter xmi:id="_dKZpQMjyEeKhwsxlaj5FWA" name="tempPrompt" type="_NFPbgL3ZEeKOELt9NwXOhg"/>
         </ownedOperation>
       </packagedElement>
       <packagedElement xmi:type="uml:Class" xmi:id="_NFmA0L3ZEeKOELt9NwXOhg" name="Ranking">
@@ -373,27 +382,36 @@
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
           <defaultValue xmi:type="uml:LiteralString" xmi:id="_NOs5gb3ZEeKOELt9NwXOhg" value="7552164284178692603L"/>
         </ownedAttribute>
-        <ownedOperation xmi:id="_NFpEIL3ZEeKOELt9NwXOhg" name="Ranking">
-          <eAnnotations xmi:id="_NFpEIb3ZEeKOELt9NwXOhg" source="http://www.eclipse.org/uml2/2.0.0/UML">
-            <details xmi:id="_NFpEIr3ZEeKOELt9NwXOhg" key="create"/>
-          </eAnnotations>
-          <ownedParameter xmi:id="_NFpEI73ZEeKOELt9NwXOhg" type="_NFmA0L3ZEeKOELt9NwXOhg" direction="return"/>
-        </ownedOperation>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_dN2l4MjyEeKhwsxlaj5FWA" name="display" specification="_NFq5Ub3ZEeKOELt9NwXOhg">
+          <ownedParameter xmi:id="_dN2l4cjyEeKhwsxlaj5FWA" name="io" type="_nQHasL3eEeKOELt9NwXOhg"/>
+          <language>java</language>
+          <body>super.display(io);&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_dN3M8MjyEeKhwsxlaj5FWA" name="Ranking" specification="_NMsuYL3ZEeKOELt9NwXOhg">
+          <ownedParameter xmi:id="_q0y8sMjyEeKhwsxlaj5FWA" type="_NFmA0L3ZEeKOELt9NwXOhg" direction="return"/>
+          <ownedParameter xmi:id="_q0y8scjyEeKhwsxlaj5FWA" name="tempPrompt" type="_NFPbgL3ZEeKOELt9NwXOhg"/>
+          <ownedParameter xmi:id="_q0y8ssjyEeKhwsxlaj5FWA" name="ranks" type="_NJ3c0L3ZEeKOELt9NwXOhg"/>
+          <ownedParameter xmi:id="_q0y8s8jyEeKhwsxlaj5FWA" name="numbers" type="_NJ3c0L3ZEeKOELt9NwXOhg"/>
+          <language>java</language>
+          <body>super(tempPrompt, numbers, ranks);&#xD;
+	</body>
+        </ownedBehavior>
         <ownedOperation xmi:id="_NFprML3ZEeKOELt9NwXOhg" name="take">
           <ownedParameter xmi:id="_NKsjQL3ZEeKOELt9NwXOhg" type="_NF0qUL3ZEeKOELt9NwXOhg" direction="return"/>
         </ownedOperation>
         <ownedOperation xmi:id="_NFq5UL3ZEeKOELt9NwXOhg" name="modify"/>
-        <ownedOperation xmi:id="_NFq5Ub3ZEeKOELt9NwXOhg" name="display"/>
-        <ownedOperation xmi:id="_NFrgYL3ZEeKOELt9NwXOhg" name="save"/>
-        <ownedOperation xmi:id="_NMsuYL3ZEeKOELt9NwXOhg" name="Ranking">
-          <eAnnotations xmi:id="_NMtVcL3ZEeKOELt9NwXOhg" source="http://www.eclipse.org/uml2/2.0.0/UML">
-            <details xmi:id="_NMtVcb3ZEeKOELt9NwXOhg" key="create"/>
+        <ownedOperation xmi:id="_NFq5Ub3ZEeKOELt9NwXOhg" name="display" method="_dN2l4MjyEeKhwsxlaj5FWA">
+          <ownedParameter xmi:id="_dKnEoMjyEeKhwsxlaj5FWA" name="io" type="_nQHasL3eEeKOELt9NwXOhg"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_NMsuYL3ZEeKOELt9NwXOhg" name="Ranking" method="_dN3M8MjyEeKhwsxlaj5FWA">
+          <eAnnotations xmi:id="_dKoSwMjyEeKhwsxlaj5FWA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+            <details xmi:id="_dKoSwcjyEeKhwsxlaj5FWA" key="create"/>
           </eAnnotations>
-          <ownedParameter xmi:id="_NMsuYb3ZEeKOELt9NwXOhg" name="prompt_">
-            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-          </ownedParameter>
-          <ownedParameter xmi:id="_NMsuYr3ZEeKOELt9NwXOhg" name="right_" type="_NJ3c0L3ZEeKOELt9NwXOhg"/>
           <ownedParameter xmi:id="_NMtVcr3ZEeKOELt9NwXOhg" type="_NFmA0L3ZEeKOELt9NwXOhg" direction="return"/>
+          <ownedParameter xmi:id="_dKpg4MjyEeKhwsxlaj5FWA" name="tempPrompt" type="_NFPbgL3ZEeKOELt9NwXOhg"/>
+          <ownedParameter xmi:id="_NMsuYr3ZEeKOELt9NwXOhg" name="ranks" type="_NJ3c0L3ZEeKOELt9NwXOhg"/>
+          <ownedParameter xmi:id="_dKqH8MjyEeKhwsxlaj5FWA" name="numbers" type="_NJ3c0L3ZEeKOELt9NwXOhg"/>
         </ownedOperation>
       </packagedElement>
       <packagedElement xmi:type="uml:Class" xmi:id="_NF0qUL3ZEeKOELt9NwXOhg" name="Response">
@@ -422,7 +440,21 @@
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
           <defaultValue xmi:type="uml:LiteralString" xmi:id="_NO1cYL3ZEeKOELt9NwXOhg" value="7389044652354777516L"/>
         </ownedAttribute>
-        <ownedAttribute xmi:id="_NO2DcL3ZEeKOELt9NwXOhg" name="answers" type="_NK27UL3ZEeKOELt9NwXOhg" association="_NRknUb3ZEeKOELt9NwXOhg"/>
+        <ownedAttribute xmi:id="_NO2DcL3ZEeKOELt9NwXOhg" name="answer" visibility="protected" type="_NK27UL3ZEeKOELt9NwXOhg" association="_g6mdEMj1EeKhwsxlaj5FWA"/>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_g6kn4Mj1EeKhwsxlaj5FWA" name="setAnswers" specification="_g6csEMj1EeKhwsxlaj5FWA">
+          <ownedParameter xmi:id="_g6kn4cj1EeKhwsxlaj5FWA" name="value" type="_NK27UL3ZEeKOELt9NwXOhg"/>
+          <language>java</language>
+          <body>this.answer = value;&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_g6kn4sj1EeKhwsxlaj5FWA" name="getAnswers" specification="_g6d6Mcj1EeKhwsxlaj5FWA">
+          <ownedParameter xmi:id="_g6kn48j1EeKhwsxlaj5FWA" type="_NK27UL3ZEeKOELt9NwXOhg" direction="return">
+            <name xsi:nil="true"/>
+          </ownedParameter>
+          <language>java</language>
+          <body>return this.answer;&#xD;
+	</body>
+        </ownedBehavior>
         <interfaceRealization xmi:id="_NGAQgL3ZEeKOELt9NwXOhg" supplier="_NDhkQL3ZEeKOELt9NwXOhg" client="_NF_pcL3ZEeKOELt9NwXOhg" contract="_NDhkQL3ZEeKOELt9NwXOhg"/>
         <ownedOperation xmi:id="_NK7MwL3ZEeKOELt9NwXOhg" name="compare">
           <ownedParameter xmi:id="_NK7Mwb3ZEeKOELt9NwXOhg" name="responce1" type="_NF_pcL3ZEeKOELt9NwXOhg"/>
@@ -431,6 +463,12 @@
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
           </ownedParameter>
         </ownedOperation>
+        <ownedOperation xmi:id="_g6csEMj1EeKhwsxlaj5FWA" name="setAnswers" method="_g6kn4Mj1EeKhwsxlaj5FWA">
+          <ownedParameter xmi:id="_g6csEcj1EeKhwsxlaj5FWA" name="value" type="_NK27UL3ZEeKOELt9NwXOhg"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_g6d6Mcj1EeKhwsxlaj5FWA" name="getAnswers" method="_g6kn4sj1EeKhwsxlaj5FWA">
+          <ownedParameter xmi:id="_g6d6Msj1EeKhwsxlaj5FWA" type="_NK27UL3ZEeKOELt9NwXOhg" direction="return"/>
+        </ownedOperation>
       </packagedElement>
       <packagedElement xmi:type="uml:Class" xmi:id="_NGJacL3ZEeKOELt9NwXOhg" name="ShortAnswer">
         <generalization xmi:id="_NLDvoL3ZEeKOELt9NwXOhg" general="_NERyML3ZEeKOELt9NwXOhg"/>
@@ -438,9 +476,13 @@
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
           <defaultValue xmi:type="uml:LiteralString" xmi:id="_NO_NYL3ZEeKOELt9NwXOhg" value="-4343050404498262554L"/>
         </ownedAttribute>
-        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_-GbKIL9JEeKaVINf8BnwXA" name="create" specification="_-FG7gL9JEeKaVINf8BnwXA">
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_dN4bEMjyEeKhwsxlaj5FWA" name="ShortAnswer" specification="_NGQvML3ZEeKOELt9NwXOhg">
+          <ownedParameter xmi:id="_dN4bEcjyEeKhwsxlaj5FWA" type="_NGJacL3ZEeKOELt9NwXOhg" direction="return">
+            <name xsi:nil="true"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_dN4bEsjyEeKhwsxlaj5FWA" name="tempPrompt" type="_NFPbgL3ZEeKOELt9NwXOhg"/>
           <language>java</language>
-          <body>super.create();&#xD;
+          <body>super(tempPrompt);&#xD;
 	</body>
         </ownedBehavior>
         <ownedOperation xmi:id="_NGNE0L3ZEeKOELt9NwXOhg" name="display"/>
@@ -449,21 +491,13 @@
         </ownedOperation>
         <ownedOperation xmi:id="_NGO6AL3ZEeKOELt9NwXOhg" name="modify"/>
         <ownedOperation xmi:id="_NGPhEL3ZEeKOELt9NwXOhg" name="save"/>
-        <ownedOperation xmi:id="_NGQvML3ZEeKOELt9NwXOhg" name="ShortAnswer">
-          <eAnnotations xmi:id="_NGR9UL3ZEeKOELt9NwXOhg" source="http://www.eclipse.org/uml2/2.0.0/UML">
-            <details xmi:id="_NGR9Ub3ZEeKOELt9NwXOhg" key="create"/>
+        <ownedOperation xmi:id="_NGQvML3ZEeKOELt9NwXOhg" name="ShortAnswer" method="_dN4bEMjyEeKhwsxlaj5FWA">
+          <eAnnotations xmi:id="_dKyDwMjyEeKhwsxlaj5FWA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+            <details xmi:id="_dKyDwcjyEeKhwsxlaj5FWA" key="create"/>
           </eAnnotations>
           <ownedParameter xmi:id="_NGR9Ur3ZEeKOELt9NwXOhg" type="_NGJacL3ZEeKOELt9NwXOhg" direction="return"/>
+          <ownedParameter xmi:id="_dKyq0MjyEeKhwsxlaj5FWA" name="tempPrompt" type="_NFPbgL3ZEeKOELt9NwXOhg"/>
         </ownedOperation>
-        <ownedOperation xmi:id="_NLAsUL3ZEeKOELt9NwXOhg" name="ShortAnswer">
-          <eAnnotations xmi:id="_NLB6cL3ZEeKOELt9NwXOhg" source="http://www.eclipse.org/uml2/2.0.0/UML">
-            <details xmi:id="_NLB6cb3ZEeKOELt9NwXOhg" key="create"/>
-          </eAnnotations>
-          <ownedParameter xmi:id="_NLBTYL3ZEeKOELt9NwXOhg" name="prompt_" type="_NFPbgL3ZEeKOELt9NwXOhg"/>
-          <ownedParameter xmi:id="_NLBTYb3ZEeKOELt9NwXOhg" name="responce_" type="_NF0qUL3ZEeKOELt9NwXOhg"/>
-          <ownedParameter xmi:id="_NLChgL3ZEeKOELt9NwXOhg" type="_NGJacL3ZEeKOELt9NwXOhg" direction="return"/>
-        </ownedOperation>
-        <ownedOperation xmi:id="_-FG7gL9JEeKaVINf8BnwXA" name="create" method="_-GbKIL9JEeKaVINf8BnwXA"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Class" xmi:id="_NGZSEL3ZEeKOELt9NwXOhg" name="Survey" clientDependency="_NGagML3ZEeKOELt9NwXOhg">
         <ownedAttribute xmi:id="_NPCQsL3ZEeKOELt9NwXOhg" name="serialVersionUID" visibility="private" isLeaf="true" isStatic="true" isReadOnly="true">
@@ -475,6 +509,7 @@
         <ownedAttribute xmi:id="_S2Ln4L60EeK83rMBtFrz_w" name="title" visibility="protected">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
         </ownedAttribute>
+        <ownedAttribute xmi:id="_dNhOsMjyEeKhwsxlaj5FWA" name="io" visibility="protected" type="_nQHasL3eEeKOELt9NwXOhg" association="_dOVHAMjyEeKhwsxlaj5FWA"/>
         <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_NQN8cL3ZEeKOELt9NwXOhg" name="setResponces" specification="_NLIoIL3ZEeKOELt9NwXOhg">
           <ownedParameter xmi:id="_M2A1ML60EeK83rMBtFrz_w" name="value" type="_NJ3c0L3ZEeKOELt9NwXOhg"/>
           <language>java</language>
@@ -492,55 +527,110 @@
         <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_sJUKwL6NEeK83rMBtFrz_w" name="create" specification="_sH09AL6NEeK83rMBtFrz_w">
           <language>java</language>
           <body>//Prompt user for choice&#xD;
-		System.out.println(&quot;Enter a choice&quot;);&#xD;
+		System.out.println(&quot;\nEnter a choice&quot;);&#xD;
 		System.out&#xD;
-				.println(&quot;1) Add a New Question\n2) Display Current Survey3) Quit&quot;);&#xD;
+				.println(&quot;1) Add a New Question\n2) Display Current Questions\n3) Quit&quot;);&#xD;
 		String temp = &quot;&quot;;&#xD;
-		Scanner scan = new Scanner(System.in);&#xD;
-		temp = scan.next();&#xD;
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));&#xD;
+		temp = br.readLine();&#xD;
 		int choice = -1;&#xD;
-		try {&#xD;
+		try&#xD;
+		{&#xD;
 			//Will go into exception if input is not an integer&#xD;
 			choice = Integer.parseInt(temp);&#xD;
-		} catch (Exception e) {&#xD;
+		}&#xD;
+		catch (Exception e)&#xD;
+		{&#xD;
 			//Catch invalid input, non digit&#xD;
-			System.out&#xD;
-					.println(&quot;Invalid entry enter a single digit 1-3\n\n\n\n\n&quot;);&#xD;
-			create();&#xD;
-			scan.close();&#xD;
+			System.out.println(&quot;Invalid entry enter a single digit 1-3\n\n\n\n\n&quot;);&#xD;
+			this.create();&#xD;
 			return;&#xD;
 		}&#xD;
 		//Not valid choices for this menu, let the user know and prompt again&#xD;
-		if (choice > 3 || choice &lt; 1) {&#xD;
-			System.out&#xD;
-					.println(&quot;Invalid entry enter a single digit 1-3\n\n\n\n\n&quot;);&#xD;
-			create();&#xD;
-			scan.close();&#xD;
+		if (choice > 3 || choice &lt; 1)&#xD;
+		{&#xD;
+			System.out.println(&quot;Invalid entry enter a single digit 1-3\n\n\n\n\n&quot;);&#xD;
+			this.create();&#xD;
 			return;&#xD;
-		} else {&#xD;
-			switch (choice) {&#xD;
+		}&#xD;
+		else&#xD;
+		{&#xD;
+			switch (choice)&#xD;
+			{&#xD;
 			case 1:&#xD;
-				if (questions.size() == 0) {&#xD;
-					System.out.println(&quot;Creating new survey, enter title&quot;);&#xD;
-					this.title = scan.next();&#xD;
-					Question tempQuestion = questionMenu();&#xD;
-					if (tempQuestion == null) {&#xD;
-						System.out.println(&quot;Cancelling survey, returning to main menu\n\n\n\n\n&quot;);&#xD;
-						scan.close();&#xD;
+				try&#xD;
+				{&#xD;
+					if (questions.size() == 0)&#xD;
+					{&#xD;
+						System.out.println(&quot;Creating new survey, enter title&quot;);&#xD;
+						br = new BufferedReader(new InputStreamReader(System.in));&#xD;
+						this.title = br.readLine();&#xD;
+						Question tempQuestion = new QuestionCreate().createQuestion();&#xD;
+						if (tempQuestion.getPrompt() == null)&#xD;
+						{&#xD;
+							System.out&#xD;
+									.println(&quot;Cancelling survey, returning to main menu\n\n\n\n\n&quot;);&#xD;
+							return;&#xD;
+						}&#xD;
+						else&#xD;
+						{&#xD;
+							this.questions.add(tempQuestion);&#xD;
+							this.create();&#xD;
+							return;&#xD;
+						}&#xD;
+					}&#xD;
+					else&#xD;
+					{&#xD;
+						Question tempQuestion = new QuestionCreate().createQuestion();&#xD;
+						if (tempQuestion.getPrompt() == null)&#xD;
+						{&#xD;
+							System.out.println(&quot;Cancelling current question\n\n\n\n\n&quot;);&#xD;
+							return;&#xD;
+						}&#xD;
+						else&#xD;
+						{&#xD;
+							this.questions.add(tempQuestion);&#xD;
+							this.create();&#xD;
+							return;&#xD;
+						}&#xD;
+					}&#xD;
+				}&#xD;
+				catch (Exception e)&#xD;
+				{&#xD;
+					System.out.println(e.toString());&#xD;
+					br = new BufferedReader(new InputStreamReader(System.in));&#xD;
+					this.title = br.readLine();&#xD;
+					Question tempQuestion = new QuestionCreate().createQuestion();&#xD;
+					if (tempQuestion == null)&#xD;
+					{&#xD;
+						System.out&#xD;
+								.println(&quot;Cancelling survey, returning to main menu\n\n\n\n\n&quot;);&#xD;
 						return;&#xD;
 					}&#xD;
 					else&#xD;
+					{&#xD;
 						this.questions.add(tempQuestion);&#xD;
+						this.create();&#xD;
+						return;&#xD;
+					}&#xD;
 				}&#xD;
 			case 2:&#xD;
-				if (questions.size() == 0) {&#xD;
+				try&#xD;
+				{&#xD;
+					if (questions.size() == 0)&#xD;
+					{&#xD;
+						System.out.println(&quot;No questions to display yet!\n\n\n\n\n&quot;);&#xD;
+						this.create();&#xD;
+						return;&#xD;
+					}&#xD;
+				}&#xD;
+				catch (Exception e)&#xD;
+				{&#xD;
 					System.out.println(&quot;No questions to display yet!\n\n\n\n\n&quot;);&#xD;
-					scan.close();&#xD;
-					create();&#xD;
+					this.create();&#xD;
 					return;&#xD;
 				}&#xD;
 			}&#xD;
-			scan.close();&#xD;
 			return;&#xD;
 		}&#xD;
 	</body>
@@ -557,7 +647,7 @@
         <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_8yKMUL6NEeK83rMBtFrz_w" name="display" specification="_8xuugL6NEeK83rMBtFrz_w">
           <language>java</language>
           <body>for (int i = 0; i &lt; questions.size(); i++)&#xD;
-			questions.get(i).display();&#xD;
+			questions.get(i).display(this.io);&#xD;
 	</body>
         </ownedBehavior>
         <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_8yKzYL6NEeK83rMBtFrz_w" name="take" specification="_8xvVkL6NEeK83rMBtFrz_w">
@@ -574,68 +664,7 @@
           </ownedParameter>
           <language>java</language>
           <body>//Just a default constructor is needed&#xD;
-	</body>
-        </ownedBehavior>
-        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_zfX7EL7JEeK83rMBtFrz_w" name="questionMenu" specification="_Q2eNYL7JEeK83rMBtFrz_w">
-          <ownedParameter xmi:id="_zfX7Eb7JEeK83rMBtFrz_w" type="_NFZMgL3ZEeKOELt9NwXOhg" direction="return">
-            <name xsi:nil="true"/>
-          </ownedParameter>
-          <language>java</language>
-          <body>System.out&#xD;
-				.println(&quot;Choose an option\n1) T/F question\n2) multiple choice question\n3) &quot;&#xD;
-						+ &quot;short answer question\n4) essay question\n5) ranking question\n6) matching question\n7) return to previous menu&quot;);&#xD;
-		String temp = &quot;&quot;;&#xD;
-		Scanner scan = new Scanner(System.in);&#xD;
-		temp = scan.next();&#xD;
-		int choice = -1;&#xD;
-		try {&#xD;
-			//Will go into exception if input is not an integer&#xD;
-			choice = Integer.parseInt(temp);&#xD;
-		} catch (Exception e) {&#xD;
-			//Catch invalid input, non digit&#xD;
-			System.out&#xD;
-					.println(&quot;Invalid entry enter a single digit 1-7\n\n\n\n\n&quot;);&#xD;
-			scan.close();&#xD;
-			return questionMenu();&#xD;
-		}&#xD;
-		//Not valid choices for this menu, let the user know and prompt again&#xD;
-		if (choice > 7 || choice &lt; 1) {&#xD;
-			System.out&#xD;
-					.println(&quot;Invalid entry enter a single digit 1-7\n\n\n\n\n&quot;);&#xD;
-			scan.close();&#xD;
-			return questionMenu();&#xD;
-		} else {&#xD;
-			Question tempQuest;&#xD;
-			scan.close();&#xD;
-			switch (choice) {&#xD;
-			case 1:&#xD;
-				tempQuest = new TrueFalse();&#xD;
-				tempQuest.create();&#xD;
-				return tempQuest;&#xD;
-			case 2:&#xD;
-				tempQuest = new MultipleChoice();&#xD;
-				tempQuest.create();&#xD;
-				return tempQuest;&#xD;
-			case 3:&#xD;
-				tempQuest = new ShortAnswer();&#xD;
-				tempQuest.create();&#xD;
-				return tempQuest;&#xD;
-			case 4:&#xD;
-				tempQuest = new Essay();&#xD;
-				tempQuest.create();&#xD;
-				return tempQuest;&#xD;
-			case 5:&#xD;
-				tempQuest = new Ranking();&#xD;
-				tempQuest.create();&#xD;
-				return tempQuest;&#xD;
-			case 6:&#xD;
-				tempQuest = new Matching();&#xD;
-				tempQuest.create();&#xD;
-				return tempQuest;&#xD;
-			default:&#xD;
-				return null;&#xD;
-			}&#xD;
-		}&#xD;
+		questions = new ArrayList&lt;Question>();&#xD;
 	</body>
         </ownedBehavior>
         <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_wivDcL7MEeK83rMBtFrz_w" name="setQuestions" specification="_wio80L7MEeK83rMBtFrz_w">
@@ -650,6 +679,20 @@
           </ownedParameter>
           <language>java</language>
           <body>return this.questions;&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_dN6QQMjyEeKhwsxlaj5FWA" name="getIO" specification="_dLCicMjyEeKhwsxlaj5FWA">
+          <ownedParameter xmi:id="_dN6QQcjyEeKhwsxlaj5FWA" type="_nQHasL3eEeKOELt9NwXOhg" direction="return">
+            <name xsi:nil="true"/>
+          </ownedParameter>
+          <language>java</language>
+          <body>return this.io;&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_dN6QQsjyEeKhwsxlaj5FWA" name="setIO" specification="_dLDJgMjyEeKhwsxlaj5FWA">
+          <ownedParameter xmi:id="_dN6QQ8jyEeKhwsxlaj5FWA" name="io_" type="_nQHasL3eEeKOELt9NwXOhg"/>
+          <language>java</language>
+          <body>this.io = io_;&#xD;
 	</body>
         </ownedBehavior>
         <interfaceRealization xmi:id="_NGagML3ZEeKOELt9NwXOhg" supplier="_NDhkQL3ZEeKOELt9NwXOhg" client="_NGZSEL3ZEeKOELt9NwXOhg" contract="_NDhkQL3ZEeKOELt9NwXOhg"/>
@@ -677,7 +720,7 @@
         <ownedOperation xmi:id="_NLIoIL3ZEeKOELt9NwXOhg" name="setResponces" method="_NQN8cL3ZEeKOELt9NwXOhg">
           <ownedParameter xmi:id="_NLJPML3ZEeKOELt9NwXOhg" name="value" type="_NJ3c0L3ZEeKOELt9NwXOhg"/>
         </ownedOperation>
-        <ownedOperation xmi:id="_sH09AL6NEeK83rMBtFrz_w" name="create" method="_sJUKwL6NEeK83rMBtFrz_w"/>
+        <ownedOperation xmi:id="_sH09AL6NEeK83rMBtFrz_w" name="create" method="_sJUKwL6NEeK83rMBtFrz_w" raisedException="_dM-cIMjyEeKhwsxlaj5FWA"/>
         <ownedOperation xmi:id="_sH1kEL6NEeK83rMBtFrz_w" name="getClassType" method="_sJUx0L6NEeK83rMBtFrz_w">
           <ownedParameter xmi:id="_sIrRkL6NEeK83rMBtFrz_w" direction="return">
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
@@ -687,14 +730,17 @@
         <ownedOperation xmi:id="_8xvVkL6NEeK83rMBtFrz_w" name="take" method="_8yKzYL6NEeK83rMBtFrz_w">
           <ownedParameter xmi:id="_8xvVkb6NEeK83rMBtFrz_w" type="_NJ3c0L3ZEeKOELt9NwXOhg" direction="return"/>
         </ownedOperation>
-        <ownedOperation xmi:id="_Q2eNYL7JEeK83rMBtFrz_w" name="questionMenu" visibility="private" method="_zfX7EL7JEeK83rMBtFrz_w">
-          <ownedParameter xmi:id="_Q2eNYb7JEeK83rMBtFrz_w" type="_NFZMgL3ZEeKOELt9NwXOhg" direction="return"/>
-        </ownedOperation>
         <ownedOperation xmi:id="_wio80L7MEeK83rMBtFrz_w" name="setQuestions" method="_wivDcL7MEeK83rMBtFrz_w">
           <ownedParameter xmi:id="_wio80b7MEeK83rMBtFrz_w" name="value" type="_NJ3c0L3ZEeKOELt9NwXOhg"/>
         </ownedOperation>
         <ownedOperation xmi:id="_wiqK8L7MEeK83rMBtFrz_w" name="getQuestions" method="_wivDcr7MEeK83rMBtFrz_w">
           <ownedParameter xmi:id="_wiqK8b7MEeK83rMBtFrz_w" type="_NJ3c0L3ZEeKOELt9NwXOhg" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_dLCicMjyEeKhwsxlaj5FWA" name="getIO" method="_dN6QQMjyEeKhwsxlaj5FWA">
+          <ownedParameter xmi:id="_dLCiccjyEeKhwsxlaj5FWA" type="_nQHasL3eEeKOELt9NwXOhg" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_dLDJgMjyEeKhwsxlaj5FWA" name="setIO" method="_dN6QQsjyEeKhwsxlaj5FWA">
+          <ownedParameter xmi:id="_dLDwkMjyEeKhwsxlaj5FWA" name="io_" type="_nQHasL3eEeKOELt9NwXOhg"/>
         </ownedOperation>
       </packagedElement>
       <packagedElement xmi:type="uml:Class" xmi:id="_NG0I0L3ZEeKOELt9NwXOhg" name="Test">
@@ -747,7 +793,7 @@
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
           </ownedParameter>
         </ownedOperation>
-        <ownedOperation xmi:id="_h5GGEL63EeK83rMBtFrz_w" name="create" method="_h5H7QL63EeK83rMBtFrz_w"/>
+        <ownedOperation xmi:id="_h5GGEL63EeK83rMBtFrz_w" name="create" method="_h5H7QL63EeK83rMBtFrz_w" raisedException="_dM-cIMjyEeKhwsxlaj5FWA"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Class" xmi:id="_NG-g4L3ZEeKOELt9NwXOhg" name="TrueFalse">
         <generalization xmi:id="_NLYfwL3ZEeKOELt9NwXOhg" general="_NE3oEL3ZEeKOELt9NwXOhg"/>
@@ -755,38 +801,29 @@
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
           <defaultValue xmi:type="uml:LiteralString" xmi:id="_NPPFAL3ZEeKOELt9NwXOhg" value="7298235727155569817L"/>
         </ownedAttribute>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_dN-hsMjyEeKhwsxlaj5FWA" name="TrueFalse" specification="_NLWqkL3ZEeKOELt9NwXOhg">
+          <ownedParameter xmi:id="_dN-hscjyEeKhwsxlaj5FWA" name="tempPrompt" type="_NFPbgL3ZEeKOELt9NwXOhg"/>
+          <ownedParameter xmi:id="_dN-hssjyEeKhwsxlaj5FWA" type="_NG-g4L3ZEeKOELt9NwXOhg" direction="return">
+            <name xsi:nil="true"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_dN-hs8jyEeKhwsxlaj5FWA" name="tempChoice" type="_NJ3c0L3ZEeKOELt9NwXOhg"/>
+          <language>java</language>
+          <body>super(tempPrompt, tempChoice);&#xD;
+	</body>
+        </ownedBehavior>
         <ownedOperation xmi:id="_NHA9IL3ZEeKOELt9NwXOhg" name="take">
           <ownedParameter xmi:id="_NLWDgL3ZEeKOELt9NwXOhg" type="_NF0qUL3ZEeKOELt9NwXOhg" direction="return"/>
         </ownedOperation>
         <ownedOperation xmi:id="_NHCLQL3ZEeKOELt9NwXOhg" name="display"/>
         <ownedOperation xmi:id="_NHCyUL3ZEeKOELt9NwXOhg" name="modify"/>
-        <ownedOperation xmi:id="_NHDZYL3ZEeKOELt9NwXOhg" name="save"/>
-        <ownedOperation xmi:id="_NHEngL3ZEeKOELt9NwXOhg" name="TrueFalse">
-          <eAnnotations xmi:id="_NHFOkL3ZEeKOELt9NwXOhg" source="http://www.eclipse.org/uml2/2.0.0/UML">
-            <details xmi:id="_NHFOkb3ZEeKOELt9NwXOhg" key="create"/>
+        <ownedOperation xmi:id="_NLWqkL3ZEeKOELt9NwXOhg" name="TrueFalse" method="_dN-hsMjyEeKhwsxlaj5FWA">
+          <eAnnotations xmi:id="_dLU2UMjyEeKhwsxlaj5FWA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+            <details xmi:id="_dLU2UcjyEeKhwsxlaj5FWA" key="create"/>
           </eAnnotations>
-          <ownedParameter xmi:id="_NHFOkr3ZEeKOELt9NwXOhg" type="_NG-g4L3ZEeKOELt9NwXOhg" direction="return"/>
-        </ownedOperation>
-        <ownedOperation xmi:id="_NLWqkL3ZEeKOELt9NwXOhg" name="TrueFalse">
-          <eAnnotations xmi:id="_NLXRob3ZEeKOELt9NwXOhg" source="http://www.eclipse.org/uml2/2.0.0/UML">
-            <details xmi:id="_NLXRor3ZEeKOELt9NwXOhg" key="create"/>
-          </eAnnotations>
-          <ownedParameter xmi:id="_NLXRoL3ZEeKOELt9NwXOhg" name="prompt_" type="_NFPbgL3ZEeKOELt9NwXOhg"/>
+          <ownedParameter xmi:id="_NLXRoL3ZEeKOELt9NwXOhg" name="tempPrompt" type="_NFPbgL3ZEeKOELt9NwXOhg"/>
           <ownedParameter xmi:id="_NLX4sL3ZEeKOELt9NwXOhg" type="_NG-g4L3ZEeKOELt9NwXOhg" direction="return"/>
+          <ownedParameter xmi:id="_dLVdYMjyEeKhwsxlaj5FWA" name="tempChoice" type="_NJ3c0L3ZEeKOELt9NwXOhg"/>
         </ownedOperation>
-      </packagedElement>
-      <packagedElement xmi:type="uml:Association" xmi:id="_NNpJkL3ZEeKOELt9NwXOhg" name="" memberEnd="_NNnUYL3ZEeKOELt9NwXOhg _NNmGQL3ZEeKOELt9NwXOhg">
-        <ownedEnd xmi:id="_NNnUYL3ZEeKOELt9NwXOhg" name="" type="_NDRFkL3ZEeKOELt9NwXOhg" association="_NNpJkL3ZEeKOELt9NwXOhg"/>
-      </packagedElement>
-      <packagedElement xmi:type="uml:Association" xmi:id="_NOXiUL3ZEeKOELt9NwXOhg" name="" memberEnd="_NNk4IL3ZEeKOELt9NwXOhg"/>
-      <packagedElement xmi:type="uml:Association" xmi:id="_NQwH8L3ZEeKOELt9NwXOhg" name="" memberEnd="_NQwH8b3ZEeKOELt9NwXOhg">
-        <ownedEnd xmi:id="_NQwH8b3ZEeKOELt9NwXOhg" name="" type="_NFZMgL3ZEeKOELt9NwXOhg" association="_NQwH8L3ZEeKOELt9NwXOhg"/>
-      </packagedElement>
-      <packagedElement xmi:type="uml:Association" xmi:id="_NQ2OkL3ZEeKOELt9NwXOhg" name="" memberEnd="_NQ2Okb3ZEeKOELt9NwXOhg">
-        <ownedEnd xmi:id="_NQ2Okb3ZEeKOELt9NwXOhg" name="" type="_NGZSEL3ZEeKOELt9NwXOhg" association="_NQ2OkL3ZEeKOELt9NwXOhg"/>
-      </packagedElement>
-      <packagedElement xmi:type="uml:Association" xmi:id="_NQ_YgL3ZEeKOELt9NwXOhg" name="" memberEnd="_NQ_Ygb3ZEeKOELt9NwXOhg">
-        <ownedEnd xmi:id="_NQ_Ygb3ZEeKOELt9NwXOhg" name="" type="_NG0I0L3ZEeKOELt9NwXOhg" association="_NQ_YgL3ZEeKOELt9NwXOhg"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Association" xmi:id="_NRWk4L3ZEeKOELt9NwXOhg" name="" memberEnd="_NRWk4b3ZEeKOELt9NwXOhg _NN9SoL3ZEeKOELt9NwXOhg">
         <ownedEnd xmi:id="_NRWk4b3ZEeKOELt9NwXOhg" name="" type="_NEhCwL3ZEeKOELt9NwXOhg" association="_NRWk4L3ZEeKOELt9NwXOhg"/>
@@ -797,15 +834,43 @@
       <packagedElement xmi:type="uml:Association" xmi:id="_NRfu0b3ZEeKOELt9NwXOhg" name="" memberEnd="_NRfu0r3ZEeKOELt9NwXOhg _NOZXgL3ZEeKOELt9NwXOhg">
         <ownedEnd xmi:id="_NRfu0r3ZEeKOELt9NwXOhg" name="" type="_NE3oEL3ZEeKOELt9NwXOhg" association="_NRfu0b3ZEeKOELt9NwXOhg"/>
       </packagedElement>
-      <packagedElement xmi:type="uml:Association" xmi:id="_NRknUb3ZEeKOELt9NwXOhg" name="" memberEnd="_NRknUr3ZEeKOELt9NwXOhg _NO2DcL3ZEeKOELt9NwXOhg">
-        <ownedEnd xmi:id="_NRknUr3ZEeKOELt9NwXOhg" name="" type="_NF_pcL3ZEeKOELt9NwXOhg" association="_NRknUb3ZEeKOELt9NwXOhg"/>
-      </packagedElement>
       <packagedElement xmi:type="uml:Association" xmi:id="_NRo4wb3ZEeKOELt9NwXOhg" name="" memberEnd="_NRo4wr3ZEeKOELt9NwXOhg _NPEs8L3ZEeKOELt9NwXOhg">
         <ownedEnd xmi:id="_NRo4wr3ZEeKOELt9NwXOhg" name="" type="_NGZSEL3ZEeKOELt9NwXOhg" association="_NRo4wb3ZEeKOELt9NwXOhg"/>
       </packagedElement>
-      <packagedElement xmi:type="uml:Class" xmi:id="_nQHasL3eEeKOELt9NwXOhg" name="InputOutput"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_nQHasL3eEeKOELt9NwXOhg" name="InputOutput" isAbstract="true">
+        <ownedOperation xmi:id="_NFpEIL3ZEeKOELt9NwXOhg" name="InputOutput">
+          <eAnnotations xmi:id="_NFpEIb3ZEeKOELt9NwXOhg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+            <details xmi:id="_NFpEIr3ZEeKOELt9NwXOhg" key="create"/>
+          </eAnnotations>
+          <ownedParameter xmi:id="_NFpEI73ZEeKOELt9NwXOhg" type="_nQHasL3eEeKOELt9NwXOhg" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_dMJ8wMjyEeKhwsxlaj5FWA" name="display">
+          <ownedParameter xmi:id="_dMKj0MjyEeKhwsxlaj5FWA" name="stream">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+        </ownedOperation>
+      </packagedElement>
       <packagedElement xmi:type="uml:Class" xmi:id="_pEBoUL3eEeKOELt9NwXOhg" name="ConsoleIO">
         <generalization xmi:id="_w9HEcL3eEeKOELt9NwXOhg" general="_nQHasL3eEeKOELt9NwXOhg"/>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_dNs04MjyEeKhwsxlaj5FWA" name="display" specification="_dMIuoMjyEeKhwsxlaj5FWA">
+          <ownedParameter xmi:id="_dNs04cjyEeKhwsxlaj5FWA" name="stream">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <language>java</language>
+          <body>System.out.print(stream);&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedOperation xmi:id="_dMIuoMjyEeKhwsxlaj5FWA" name="display" method="_dNs04MjyEeKhwsxlaj5FWA">
+          <ownedParameter xmi:id="_dMIuocjyEeKhwsxlaj5FWA" name="stream">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_dOVHAMjyEeKhwsxlaj5FWA" name="" memberEnd="_dOVHAcjyEeKhwsxlaj5FWA _dNhOsMjyEeKhwsxlaj5FWA">
+        <ownedEnd xmi:id="_dOVHAcjyEeKhwsxlaj5FWA" name="" type="_NGZSEL3ZEeKOELt9NwXOhg" association="_dOVHAMjyEeKhwsxlaj5FWA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_g6mdEMj1EeKhwsxlaj5FWA" name="" memberEnd="_g6mdEcj1EeKhwsxlaj5FWA _NO2DcL3ZEeKOELt9NwXOhg">
+        <ownedEnd xmi:id="_g6mdEcj1EeKhwsxlaj5FWA" name="" type="_NF_pcL3ZEeKOELt9NwXOhg" association="_g6mdEMj1EeKhwsxlaj5FWA"/>
       </packagedElement>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_NHO_kL3ZEeKOELt9NwXOhg" name="Main">
@@ -824,29 +889,32 @@
 				.println(&quot;1) Create a new Survey\n2) Create a new Test\n3) Display current Survey/Test\n&quot;&#xD;
 						+ &quot;4) Load a Survey\n5) Load a Test\n6) Quit&quot;);&#xD;
 		String temp = &quot;&quot;;&#xD;
-		Scanner scan = new Scanner(System.in);&#xD;
-		temp = scan.next();&#xD;
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));&#xD;
+		temp = br.readLine();&#xD;
 		int choice = -1;&#xD;
-		try {&#xD;
+		try&#xD;
+		{&#xD;
 			//Will go into exception if input is not an integer&#xD;
 			choice = Integer.parseInt(temp);&#xD;
-		} catch (Exception e) {&#xD;
+		}&#xD;
+		catch (Exception e)&#xD;
+		{&#xD;
 			//Catch invalid input, non digit&#xD;
-			System.out&#xD;
-					.println(&quot;Invalid entry enter a single digit 1-6\n\n\n\n\n&quot;);&#xD;
+			System.out.println(&quot;Invalid entry enter a single digit 1-6\n\n\n\n\n&quot;);&#xD;
 			main(args);&#xD;
-			scan.close();&#xD;
 			return;&#xD;
 		}&#xD;
 		//Not valid choices for this menu, let the user know and prompt again&#xD;
-		if (choice > 6 || choice &lt; 1) {&#xD;
-			System.out&#xD;
-					.println(&quot;Invalid entry enter a single digit 1-6\n\n\n\n\n&quot;);&#xD;
+		if (choice > 6 || choice &lt; 1)&#xD;
+		{&#xD;
+			System.out.println(&quot;Invalid entry enter a single digit 1-6\n\n\n\n\n&quot;);&#xD;
 			main(args);&#xD;
-			scan.close();&#xD;
 			return;&#xD;
-		} else {&#xD;
-			switch (choice) {&#xD;
+		}&#xD;
+		else&#xD;
+		{&#xD;
+			switch (choice)&#xD;
+			{&#xD;
 			case 1:&#xD;
 				currentSurvey = new Survey();&#xD;
 				currentSurvey.create();&#xD;
@@ -858,76 +926,98 @@
 				main(args);&#xD;
 				return;&#xD;
 			case 3:&#xD;
-				if (currentSurvey.equals(null)) {&#xD;
+				try&#xD;
+				{&#xD;
+					currentSurvey.display();&#xD;
+				}&#xD;
+				catch (Exception e)&#xD;
+				{&#xD;
 					System.out&#xD;
 							.println(&quot;No Survey/Test currently active in System\n\n\n\n\n&quot;);&#xD;
-					main(args);&#xD;
-					return;&#xD;
 				}&#xD;
-				currentSurvey.display();&#xD;
+				main(args);&#xD;
+				return;&#xD;
 			case 4:&#xD;
-				try {&#xD;
+				try&#xD;
+				{&#xD;
 					FileReader fr = new FileReader(&quot;.\\surveys.txt&quot;);&#xD;
-					BufferedReader br = new BufferedReader(fr);&#xD;
+					br = new BufferedReader(fr);&#xD;
 					String surveyList = &quot;&quot;;&#xD;
 					temp = br.readLine();&#xD;
-					while (!temp.equals(null)) {&#xD;
+					while (!temp.equals(null))&#xD;
+					{&#xD;
 						//Ensures no blank lines since file is edited inside system&#xD;
 						if (!temp.equals(&quot;&quot;))&#xD;
 							surveyList = surveyList + temp;&#xD;
 						temp = br.readLine();&#xD;
 					}&#xD;
 					loadSurveyTest(surveyList, &quot;Survey&quot;);&#xD;
-				} catch (FileNotFoundException e) {&#xD;
+				}&#xD;
+				catch (FileNotFoundException e)&#xD;
+				{&#xD;
 					System.out.println(&quot;No surveys have been created yet...&quot;);&#xD;
 					main(args);&#xD;
 					return;&#xD;
-				} catch (Exception e) {&#xD;
-					try {&#xD;
+				}&#xD;
+				catch (Exception e)&#xD;
+				{&#xD;
+					try&#xD;
+					{&#xD;
 						System.out&#xD;
 								.println(&quot;File has been edited outside of system check at &quot;&#xD;
-										+ (new FileReader(&quot;.\\surveys.txt&quot;))&#xD;
-												.toString());&#xD;
-					} catch (FileNotFoundException e1) {&#xD;
+										+ (new FileReader(&quot;.\\surveys.txt&quot;)).toString());&#xD;
+					}&#xD;
+					catch (FileNotFoundException e1)&#xD;
+					{&#xD;
 						//Already tested for...&#xD;
 					}&#xD;
+					br.close();&#xD;
 					System.exit(-1);&#xD;
 				}&#xD;
 			case 5:&#xD;
-				try {&#xD;
+				try&#xD;
+				{&#xD;
 					FileReader fr = new FileReader(&quot;.\\tests.txt&quot;);&#xD;
-					BufferedReader br = new BufferedReader(fr);&#xD;
+					br = new BufferedReader(fr);&#xD;
 					String surveyList = &quot;&quot;;&#xD;
 					temp = br.readLine();&#xD;
-					while (!temp.equals(null)) {&#xD;
+					while (!temp.equals(null))&#xD;
+					{&#xD;
 						//Ensures no blank lines since file is edited inside system&#xD;
 						if (!temp.equals(&quot;&quot;))&#xD;
 							surveyList = surveyList + temp;&#xD;
 						temp = br.readLine();&#xD;
 					}&#xD;
 					loadSurveyTest(surveyList, &quot;Test&quot;);&#xD;
-				} catch (FileNotFoundException e) {&#xD;
+				}&#xD;
+				catch (FileNotFoundException e)&#xD;
+				{&#xD;
 					System.out.println(&quot;No tests have been created yet...&quot;);&#xD;
 					main(args);&#xD;
 					return;&#xD;
-				} catch (Exception e) {&#xD;
-					try {&#xD;
+				}&#xD;
+				catch (Exception e)&#xD;
+				{&#xD;
+					try&#xD;
+					{&#xD;
 						System.out&#xD;
 								.println(&quot;File has been edited outside of system check at &quot;&#xD;
-										+ (new FileReader(&quot;.\\tests.txt&quot;))&#xD;
-												.toString());&#xD;
-					} catch (FileNotFoundException e1) {&#xD;
+										+ (new FileReader(&quot;.\\tests.txt&quot;)).toString());&#xD;
+					}&#xD;
+					catch (FileNotFoundException e1)&#xD;
+					{&#xD;
 						//Already tested for...&#xD;
 					}&#xD;
+					br.close();&#xD;
 					System.exit(-1);&#xD;
 				}&#xD;
 			case 6:&#xD;
 				System.out.println(&quot;Exiting&quot;);&#xD;
+				br.close();&#xD;
 				System.exit(1);&#xD;
 			default:&#xD;
 				//won't get here&#xD;
 			}&#xD;
-			scan.close();&#xD;
 		}&#xD;
 	</body>
       </ownedBehavior>
@@ -942,42 +1032,50 @@
         <body>System.out.println(&quot;Select a &quot; + type);&#xD;
 		String temp = &quot;&quot;;&#xD;
 		String[] surveys = surveyList.split(&quot;\n&quot;);&#xD;
-		for (int i = 0; i &lt; surveys.length; i++) {&#xD;
+		for (int i = 0; i &lt; surveys.length; i++)&#xD;
+		{&#xD;
 			System.out.println(&quot;&quot; + (i + 1) + &quot;) &quot;&#xD;
 					+ surveys[i].substring(0, surveys[i].lastIndexOf('.')));&#xD;
 		}&#xD;
 		System.out.println(&quot;&quot; + (surveys.length + 1) + &quot;) Exit&quot;);&#xD;
 		int choice = -1;&#xD;
 		Scanner scan = new Scanner(System.in);&#xD;
-		temp = scan.next();&#xD;
-		try {&#xD;
+		temp = scan.nextLine();&#xD;
+		try&#xD;
+		{&#xD;
 			//Will go into exception if input is not an integer&#xD;
 			choice = Integer.parseInt(temp);&#xD;
-		} catch (Exception e) {&#xD;
+		}&#xD;
+		catch (Exception e)&#xD;
+		{&#xD;
 			//Catch invalid input, non digit&#xD;
 			System.out.println(&quot;Invalid entry enter a number for a &quot; + type&#xD;
 					+ &quot; \n\n\n\n\n&quot;);&#xD;
 			loadSurveyTest(surveyList, type);&#xD;
-			scan.close();&#xD;
 			return;&#xD;
 		}&#xD;
 		//Not valid choices for this menu, let the user know and prompt again&#xD;
-		if (choice > surveys.length + 1 || choice &lt; 1) {&#xD;
+		if (choice > surveys.length + 1 || choice &lt; 1)&#xD;
+		{&#xD;
 			System.out.println(&quot;Invalid entry enter a number for a &quot; + type&#xD;
 					+ &quot; \n\n\n\n\n&quot;);&#xD;
 			loadSurveyTest(surveyList, type);&#xD;
-			scan.close();&#xD;
 			return;&#xD;
-		} else {&#xD;
-			if (choice == surveys.length + 1) {&#xD;
+		}&#xD;
+		else&#xD;
+		{&#xD;
+			if (choice == surveys.length + 1)&#xD;
+			{&#xD;
 				System.out.println(&quot;Current working file not updated&quot;);&#xD;
 				return;&#xD;
 			}&#xD;
-			try {&#xD;
+			try&#xD;
+			{&#xD;
 				//Deserialize the selected survey or test&#xD;
 				FileInputStream fis = new FileInputStream(surveys[choice + 1]);&#xD;
 				ObjectInputStream ois = new ObjectInputStream(fis);&#xD;
-				switch (type.toLowerCase()) {&#xD;
+				switch (type.toLowerCase())&#xD;
+				{&#xD;
 				case &quot;survey&quot;:&#xD;
 					currentSurvey = (Survey) ois.readObject();&#xD;
 					break;&#xD;
@@ -990,15 +1088,17 @@
 				}&#xD;
 				fis.close();&#xD;
 				ois.close();&#xD;
-				scan.close();&#xD;
-			} catch (Exception e) {&#xD;
+			}&#xD;
+			catch (Exception e)&#xD;
+			{&#xD;
 				System.out.println(&quot;File was not serialized correctly&quot;);&#xD;
+				scan.close();&#xD;
 				System.exit(0);&#xD;
 			}&#xD;
 		}&#xD;
 	</body>
       </ownedBehavior>
-      <ownedOperation xmi:id="_sIz0cL6NEeK83rMBtFrz_w" name="main" isStatic="true" method="_sJYcML6NEeK83rMBtFrz_w">
+      <ownedOperation xmi:id="_sIz0cL6NEeK83rMBtFrz_w" name="main" isStatic="true" method="_sJYcML6NEeK83rMBtFrz_w" raisedException="_dM-cIMjyEeKhwsxlaj5FWA">
         <ownedParameter xmi:id="_sI0bgL6NEeK83rMBtFrz_w" name="args">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_sI1CkL6NEeK83rMBtFrz_w" value="*"/>
@@ -1027,7 +1127,6 @@
     <languageName>java</languageName>
   </UMLLabProfile:TargetLanguage>
   <UMLLabProfile:Reference xmi:id="_NDjZcL3ZEeKOELt9NwXOhg" base_Element="_NDhkQL3ZEeKOELt9NwXOhg"/>
-  <UMLLabProfile:LegacyStyledElement xmi:id="_NE9HoL3ZEeKOELt9NwXOhg" base_Element="_NE7ScL3ZEeKOELt9NwXOhg"/>
   <UMLLabProfile:Generics xmi:id="_NGhN4L3ZEeKOELt9NwXOhg" genericsValue="HashMap&lt;Response, Integer>" base_Element="_NGexoL3ZEeKOELt9NwXOhg"/>
   <UMLLabProfile:Reference xmi:id="_NJpaYL3ZEeKOELt9NwXOhg" base_Element="_NJlI8L3ZEeKOELt9NwXOhg"/>
   <UMLLabProfile:Reference xmi:id="_NJuS4L3ZEeKOELt9NwXOhg" base_Element="_NJqogL3ZEeKOELt9NwXOhg"/>
@@ -1037,7 +1136,6 @@
   <UMLLabProfile:Generics xmi:id="_NMBY8L3ZEeKOELt9NwXOhg" genericsValue="Object" base_Element="_NL75YL3ZEeKOELt9NwXOhg"/>
   <UMLLabProfile:Generics xmi:id="_NMM_IL3ZEeKOELt9NwXOhg" genericsValue="Choice" base_Element="_NMIGob3ZEeKOELt9NwXOhg"/>
   <UMLLabProfile:Generics xmi:id="_NMSesL3ZEeKOELt9NwXOhg" genericsValue="Choice" base_Element="_NMIGor3ZEeKOELt9NwXOhg"/>
-  <UMLLabProfile:Generics xmi:id="_NMi9YL3ZEeKOELt9NwXOhg" genericsValue="Choice" base_Element="_NMer8b3ZEeKOELt9NwXOhg"/>
   <UMLLabProfile:Generics xmi:id="_NMxm4L3ZEeKOELt9NwXOhg" genericsValue="Choice" base_Element="_NMsuYr3ZEeKOELt9NwXOhg"/>
   <UMLLabProfile:Generics xmi:id="_NOEnYL3ZEeKOELt9NwXOhg" genericsValue="Choice" base_Element="_NN9SoL3ZEeKOELt9NwXOhg"/>
   <UMLLabProfile:LegacyStyledElement xmi:id="_NOF1gL3ZEeKOELt9NwXOhg" base_Element="_NN9SoL3ZEeKOELt9NwXOhg"/>
@@ -1049,7 +1147,6 @@
   <UMLLabProfile:Reference xmi:id="_NRaPQL3ZEeKOELt9NwXOhg" base_Element="_NRWk4L3ZEeKOELt9NwXOhg"/>
   <UMLLabProfile:Reference xmi:id="_NRfu0L3ZEeKOELt9NwXOhg" base_Element="_NRa2UL3ZEeKOELt9NwXOhg"/>
   <UMLLabProfile:Reference xmi:id="_NRknUL3ZEeKOELt9NwXOhg" base_Element="_NRfu0b3ZEeKOELt9NwXOhg"/>
-  <UMLLabProfile:Reference xmi:id="_NRo4wL3ZEeKOELt9NwXOhg" base_Element="_NRknUb3ZEeKOELt9NwXOhg"/>
   <UMLLabProfile:Reference xmi:id="_NRsjIL3ZEeKOELt9NwXOhg" base_Element="_NRo4wb3ZEeKOELt9NwXOhg"/>
   <UMLLabProfile:Generics xmi:id="_sHqk8L6NEeK83rMBtFrz_w" genericsValue="Question" base_Element="_NPEF4L3ZEeKOELt9NwXOhg"/>
   <UMLLabProfile:Reference xmi:id="_sJHWcL6NEeK83rMBtFrz_w" base_Element="_sJETIL6NEeK83rMBtFrz_w"/>
@@ -1071,28 +1168,30 @@
   <UMLLabProfile:Generics xmi:id="_wiqyAL7MEeK83rMBtFrz_w" genericsValue="Question" base_Element="_wiqK8L7MEeK83rMBtFrz_w"/>
   <UMLLabProfile:LegacyStyledElement xmi:id="_wisAIL7MEeK83rMBtFrz_w" base_Element="_NPEF4L3ZEeKOELt9NwXOhg"/>
   <UMLLabProfile:LegacyStyledElement xmi:id="_uFfWkL8cEeKq2skbJPUWqw" base_Element="_NOooEb3ZEeKOELt9NwXOhg"/>
-  <UMLLabProfile:LegacyStyledElement xmi:id="_-FumkL9JEeKaVINf8BnwXA" base_Element="_NO2DcL3ZEeKOELt9NwXOhg">
-    <associatedElement xmi:type="uml:Operation" xmi:id="_-Fv0sL9JEeKaVINf8BnwXA" name="getAnswers" method="_-GZU8L9JEeKaVINf8BnwXA">
-      <ownedParameter xmi:id="_-FwbwL9JEeKaVINf8BnwXA" type="_NK27UL3ZEeKOELt9NwXOhg" direction="return"/>
-    </associatedElement>
-    <associatedElement xmi:type="uml:Operation" xmi:id="_-FyQ8L9JEeKaVINf8BnwXA" name="setAnswers" method="_-GZU8r9JEeKaVINf8BnwXA">
-      <ownedParameter xmi:id="_-FyQ8b9JEeKaVINf8BnwXA" name="value" type="_NK27UL3ZEeKOELt9NwXOhg"/>
-    </associatedElement>
-  </UMLLabProfile:LegacyStyledElement>
-  <UMLLabProfile:Generics xmi:id="_-Fxp4L9JEeKaVINf8BnwXA" genericsValue="Prompt,ArrayList&lt;Response>" base_Element="_-Fv0sL9JEeKaVINf8BnwXA"/>
-  <UMLLabProfile:Generics xmi:id="_-F0GIL9JEeKaVINf8BnwXA" genericsValue="Prompt,ArrayList&lt;Response>" base_Element="_-FyQ8b9JEeKaVINf8BnwXA"/>
-  <uml:OpaqueBehavior xmi:id="_-GZU8L9JEeKaVINf8BnwXA" name="getAnswers" specification="_-Fv0sL9JEeKaVINf8BnwXA">
-    <ownedParameter xmi:id="_-GZU8b9JEeKaVINf8BnwXA" type="_NK27UL3ZEeKOELt9NwXOhg" direction="return">
-      <name xsi:nil="true"/>
-    </ownedParameter>
-    <language>java</language>
-    <body>return this.answers;&#xD;
-	</body>
-  </uml:OpaqueBehavior>
-  <uml:OpaqueBehavior xmi:id="_-GZU8r9JEeKaVINf8BnwXA" name="setAnswers" specification="_-FyQ8L9JEeKaVINf8BnwXA">
-    <ownedParameter xmi:id="_-GZU879JEeKaVINf8BnwXA" name="value" type="_NK27UL3ZEeKOELt9NwXOhg"/>
-    <language>java</language>
-    <body>this.answers = value;&#xD;
-	</body>
-  </uml:OpaqueBehavior>
+  <UMLLabProfile:Generics xmi:id="_dKGuUMjyEeKhwsxlaj5FWA" genericsValue="Choice" base_Element="_dKESEMjyEeKhwsxlaj5FWA"/>
+  <UMLLabProfile:Generics xmi:id="_dKIjgMjyEeKhwsxlaj5FWA" genericsValue="Choice" base_Element="_dKHVYMjyEeKhwsxlaj5FWA"/>
+  <UMLLabProfile:Generics xmi:id="_dKr9IMjyEeKhwsxlaj5FWA" genericsValue="Choice" base_Element="_dKqH8MjyEeKhwsxlaj5FWA"/>
+  <UMLLabProfile:Generics xmi:id="_dLWrgMjyEeKhwsxlaj5FWA" genericsValue="Choice" base_Element="_dLVdYMjyEeKhwsxlaj5FWA"/>
+  <UMLLabProfile:Annotations xmi:id="_dLdZMMjyEeKhwsxlaj5FWA" base_Element="_-XQ6ML6TEeK83rMBtFrz_w">
+    <annotations xmi:id="_dLdZMcjyEeKhwsxlaj5FWA" name="SuppressWarnings">
+      <annotationParameters xmi:id="_dMFrUcjyEeKhwsxlaj5FWA" skipName="true" skipArray="true">
+        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_dOL9EMjyEeKhwsxlaj5FWA" value="&quot;resource&quot;"/>
+      </annotationParameters>
+    </annotations>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_dLpmcMjyEeKhwsxlaj5FWA" base_Element="_NNmGQL3ZEeKOELt9NwXOhg"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_dLt34MjyEeKhwsxlaj5FWA" base_Element="_NFpEIL3ZEeKOELt9NwXOhg"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_dLxiQMjyEeKhwsxlaj5FWA" base_Element="_NOZXgL3ZEeKOELt9NwXOhg"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_dL0lkMjyEeKhwsxlaj5FWA" base_Element="_NFU7EL3ZEeKOELt9NwXOhg"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_dMFrUMjyEeKhwsxlaj5FWA" base_Element="_-XQ6ML6TEeK83rMBtFrz_w"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_dMLK4MjyEeKhwsxlaj5FWA" base_Element="_dMJ8wMjyEeKhwsxlaj5FWA"/>
+  <UMLLabProfile:Reference xmi:id="_dNARUMjyEeKhwsxlaj5FWA" base_Element="_dM-cIMjyEeKhwsxlaj5FWA"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_dNh1wMjyEeKhwsxlaj5FWA" base_Element="_dNhOsMjyEeKhwsxlaj5FWA"/>
+  <UMLLabProfile:Generics xmi:id="_dOGdgMjyEeKhwsxlaj5FWA" genericsValue="Choice" base_Element="_NMer8b3ZEeKOELt9NwXOhg"/>
+  <UMLLabProfile:Reference xmi:id="_dOWVIMjyEeKhwsxlaj5FWA" base_Element="_dOVHAMjyEeKhwsxlaj5FWA"/>
+  <UMLLabProfile:Generics xmi:id="_hC1TYMjyEeKhwsxlaj5FWA" genericsValue="Response" base_Element="_NM3Gcr3ZEeKOELt9NwXOhg"/>
+  <UMLLabProfile:Generics xmi:id="_g6d6MMj1EeKhwsxlaj5FWA" genericsValue="Prompt, ArrayList&lt;Response>" base_Element="_g6csEcj1EeKhwsxlaj5FWA"/>
+  <UMLLabProfile:Generics xmi:id="_g6fvYMj1EeKhwsxlaj5FWA" genericsValue="Prompt, ArrayList&lt;Response>" base_Element="_g6d6Mcj1EeKhwsxlaj5FWA"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_g6iLoMj1EeKhwsxlaj5FWA" base_Element="_NO2DcL3ZEeKOELt9NwXOhg"/>
+  <UMLLabProfile:Reference xmi:id="_g6nEIMj1EeKhwsxlaj5FWA" base_Element="_g6mdEMj1EeKhwsxlaj5FWA"/>
 </xmi:XMI>
