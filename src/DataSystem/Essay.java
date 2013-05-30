@@ -1,6 +1,5 @@
 package DataSystem;
 
-import java.io.IOException;
 
 public class Essay extends Question
 {
@@ -8,36 +7,18 @@ public class Essay extends Question
 	 * 
 	 */
 	private static final long serialVersionUID = 9216347102043281617L;
-	private String data;
 
-	public void setData(String value)
+	public void display(InputOutput io)
 	{
-		this.data = value;
-	}
-
-	public String getData()
-	{
-		return this.data;
-	}
-
-	public void display()
-	{
-		super.display();
+		super.display(io);
 	}
 
 	public Response take()
 	{
-		this.display();
+		this.display(new ConsoleIO());
 		return new Response();
-
 	}
-
-	//All you need for an essay and a short answer is a prompt
-	public void create() throws IOException
-	{
-		super.create();
-	}
-
+	
 	public Prompt getPrompt()
 	{
 		return this.prompt;
@@ -49,20 +30,8 @@ public class Essay extends Question
 		throw new UnsupportedOperationException("not implemented");
 	}
 
-	public void save()
-	{
-		// TODO implement this operation
-		throw new UnsupportedOperationException("not implemented");
-	}
-
-	public Essay(Prompt prompt_, String responce_)
-	{
-		// TODO implement this operation
-		throw new UnsupportedOperationException("not implemented");
-	}
-
-	public Essay()
-	{
+	public Essay(Prompt tempPrompt) {
+		super(tempPrompt);
 	}
 
 }

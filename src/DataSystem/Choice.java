@@ -38,11 +38,4 @@ public class Choice implements java.io.Serializable
 	{
 		this.choice = data_;
 	}
-	
-	public Choice()
-	{
-		// TODO implement this operation
-		throw new UnsupportedOperationException("not implemented");
-	}
-
 }

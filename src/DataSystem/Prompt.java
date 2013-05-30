@@ -18,10 +18,9 @@ public class Prompt implements java.io.Serializable
 		return this.prompt_;
 	}
 
-	public void display()
+	public void display(InputOutput io)
 	{
-		// TODO implement this operation
-		throw new UnsupportedOperationException("not implemented");
+		io.display(this.prompt_);
 	}
 
 	public Prompt(String prompt)

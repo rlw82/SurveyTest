@@ -26,17 +26,9 @@ public class Matching extends Question
 		throw new UnsupportedOperationException("not implemented");
 	}
 
-	public Matching(String prompt_, ArrayList<Choice> left_,
-			ArrayList<Choice> right_)
+	public Matching(Prompt prompt_, ArrayList<Choice> left_, ArrayList<Choice> right_)
 	{
-		// TODO implement this operation
-		throw new UnsupportedOperationException("not implemented");
-	}
-
-	public Matching()
-	{
-		// TODO implement this operation
-		throw new UnsupportedOperationException("not implemented");
+		super(prompt_);
 	}
 
 	public void display()

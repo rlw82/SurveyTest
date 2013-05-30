@@ -10,6 +10,7 @@ public class Survey implements java.io.Serializable
 {
 	private static final long serialVersionUID = -7199734700246684141L;
 	protected String title;
+	protected InputOutput io;
 	protected ArrayList<Question> questions;
 
 	public Survey()
@@ -21,7 +22,7 @@ public class Survey implements java.io.Serializable
 	public void display()
 	{
 		for (int i = 0; i < questions.size(); i++)
-			questions.get(i).display();
+			questions.get(i).display(this.io);
 	}
 
 	public ArrayList<Response> take()
@@ -29,6 +30,16 @@ public class Survey implements java.io.Serializable
 		throw new UnsupportedOperationException("not implemented");
 	}
 
+	public InputOutput getIO()
+	{
+		return this.io;
+	}
+	
+	public void setIO(InputOutput io_)
+	{
+		this.io = io_;
+	}
+	
 	public void create() throws IOException
 	{
 		//Prompt user for choice
@@ -69,7 +80,7 @@ public class Survey implements java.io.Serializable
 						System.out.println("Creating new survey, enter title");
 						br = new BufferedReader(new InputStreamReader(System.in));
 						this.title = br.readLine();
-						Question tempQuestion = questionMenu();
+						Question tempQuestion = new QuestionCreate().createQuestion();
 						if(tempQuestion.getPrompt() == null)
 						{
 							System.out.println("Cancelling survey, returning to main menu\n\n\n\n\n");
@@ -84,7 +95,7 @@ public class Survey implements java.io.Serializable
 					}
 					else
 					{
-						Question tempQuestion = questionMenu();
+						Question tempQuestion = new QuestionCreate().createQuestion();
 						if(tempQuestion.getPrompt() == null)
 						{
 							System.out.println("Cancelling current question\n\n\n\n\n");
@@ -101,7 +112,7 @@ public class Survey implements java.io.Serializable
 					System.out.println(e.toString());
 					br = new BufferedReader(new InputStreamReader(System.in));
 					this.title = br.readLine();
-					Question tempQuestion = questionMenu();
+					Question tempQuestion = new QuestionCreate().createQuestion();
 					if (tempQuestion == null)
 					{
 						System.out.println("Cancelling survey, returning to main menu\n\n\n\n\n");
@@ -129,66 +140,6 @@ public class Survey implements java.io.Serializable
 			}
 			}
 			return;
-		}
-	}
-
-	private Question questionMenu() throws IOException
-	{
-		System.out
-				.println("Choose an option\n1) T/F question\n2) multiple choice question\n3) "
-						+ "short answer question\n4) essay question\n5) ranking question\n6) matching question\n7) return to previous menu");
-		String temp = "";
-		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		temp = br.readLine();
-		int choice = -1;
-		try
-		{
-			//Will go into exception if input is not an integer
-			choice = Integer.parseInt(temp);
-		}
-		catch (Exception e)
-		{
-			//Catch invalid input, non digit
-			System.out.println("Invalid entry enter a single digit 1-7\n\n\n\n\n");
-			return questionMenu();
-		}
-		//Not valid choices for this menu, let the user know and prompt again
-		if (choice > 7 || choice < 1)
-		{
-			System.out.println("Invalid entry enter a single digit 1-7\n\n\n\n\n");
-			return questionMenu();
-		}
-		else
-		{
-			Question tempQuest;
-			switch (choice)
-			{
-			case 1:
-				tempQuest = new TrueFalse();
-				return tempQuest;
-			case 2:
-				tempQuest = new MultipleChoice();
-				tempQuest.create();
-				return tempQuest;
-			case 3:
-				tempQuest = new ShortAnswer();
-				tempQuest.create();
-				return tempQuest;
-			case 4:
-				tempQuest = new Essay();
-				tempQuest.create();
-				return tempQuest;
-			case 5:
-				tempQuest = new Ranking();
-				tempQuest.create();
-				return tempQuest;
-			case 6:
-				tempQuest = new Matching();
-				tempQuest.create();
-				return tempQuest;
-			default:
-				return null;
-			}
 		}
 	}
 

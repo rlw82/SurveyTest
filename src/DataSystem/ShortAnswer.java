@@ -1,6 +1,5 @@
 package DataSystem;
 
-import java.io.IOException;
 
 public class ShortAnswer extends Essay
 {
@@ -8,12 +7,6 @@ public class ShortAnswer extends Essay
 	 * 
 	 */
 	private static final long serialVersionUID = -4343050404498262554L;
-
-	public ShortAnswer(Prompt prompt_, Response responce_)
-	{
-		// TODO implement this operation
-		throw new UnsupportedOperationException("not implemented");
-	}
 
 	public void display()
 	{
@@ -39,15 +32,8 @@ public class ShortAnswer extends Essay
 		throw new UnsupportedOperationException("not implemented");
 	}
 
-	public void create() throws IOException
-	{
-		super.create();
-	}
-
-	public ShortAnswer()
-	{
-		// TODO implement this operation
-		throw new UnsupportedOperationException("not implemented");
+	public ShortAnswer(Prompt tempPrompt) {
+		super(tempPrompt);
 	}
 
 }

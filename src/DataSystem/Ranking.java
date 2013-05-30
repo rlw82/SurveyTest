@@ -5,13 +5,7 @@ import java.util.ArrayList;
 public class Ranking extends Matching
 {
 	private static final long serialVersionUID = 7552164284178692603L;
-
-	public Ranking()
-	{
-		// TODO implement this operation
-		throw new UnsupportedOperationException("not implemented");
-	}
-
+	
 	public Response take()
 	{
 		// TODO implement this operation
@@ -24,22 +18,14 @@ public class Ranking extends Matching
 		throw new UnsupportedOperationException("not implemented");
 	}
 
-	public void display()
+	public void display(InputOutput io)
 	{
-		// TODO implement this operation
-		throw new UnsupportedOperationException("not implemented");
+		super.display(io);
 	}
 
-	public void save()
+	public Ranking(Prompt tempPrompt, ArrayList<Choice> ranks, ArrayList<Choice> numbers)
 	{
-		// TODO implement this operation
-		throw new UnsupportedOperationException("not implemented");
-	}
-
-	public Ranking(String prompt_, ArrayList<Choice> right_)
-	{
-		// TODO implement this operation
-		throw new UnsupportedOperationException("not implemented");
+		super(tempPrompt, numbers,  ranks);
 	}
 
 }
