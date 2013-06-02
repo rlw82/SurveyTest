@@ -1,5 +1,10 @@
 package DataSystem;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+
 public class Essay extends Question
 {
 	/**
@@ -15,7 +20,15 @@ public class Essay extends Question
 	public Response take()
 	{
 		this.display(new ConsoleIO());
-		return new Response();
+		System.out.println("Enter your response, press Enter to finish");
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		ArrayList<String> temp = new ArrayList<String>();
+		try {
+			temp.add(br.readLine());
+		} catch (IOException e) {
+			//Should never get here, handle later if it is found possible
+		}
+		return new Response(this.prompt, temp);
 	}
 
 	public Prompt getPrompt()

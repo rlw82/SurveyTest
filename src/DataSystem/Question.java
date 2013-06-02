@@ -1,5 +1,7 @@
 package DataSystem;
 
+import java.io.IOException;
+
 public abstract class Question implements java.io.Serializable
 {
 
@@ -23,10 +25,10 @@ public abstract class Question implements java.io.Serializable
 
 	public void display(InputOutput io)
 	{
-		prompt.display(io);
+		this.prompt.display(io);
 	}
 
-	public abstract Response take();
+	public abstract Response take() throws IOException;
 
 	public void modify()
 	{

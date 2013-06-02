@@ -29,9 +29,13 @@ public class Survey implements java.io.Serializable
 
 	public void display()
 	{
-		this.io.display(this.title + "\n\n\nQuestions\n\n");
+		this.io.display(this.title + "\n\nQuestions\n\n");
 		for (int i = 0; i < questions.size(); i++)
+		{
+			this.io.display("" + (i+1) + ")");
 			questions.get(i).display(this.io);
+			this.io.display("\n");
+		}
 	}
 
 	public ArrayList<Response> take()

@@ -85,6 +85,7 @@ public class QuestionCreate {
 				}
 				//A ranking is just a matching with numbers instead of other values
 				//So create the second matching set to be 1-size
+				System.out.println("\nEnter Second Set of Choices\n");
 				for(int i = 0; i < tempChoice.size(); i++)
 				{
 					tempChoice2.add(new Choice("" + (i+1)));

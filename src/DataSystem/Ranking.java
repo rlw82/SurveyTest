@@ -18,8 +18,18 @@ public class Ranking extends Matching
 		throw new UnsupportedOperationException("not implemented");
 	}
 
-	public Ranking(Prompt tempPrompt, ArrayList<Choice> ranks,
-			ArrayList<Choice> numbers)
+	public void display(InputOutput io)
+	{
+		this.prompt.display(io);
+		for(int i = 0; i < left.size(); i++)
+		{
+			io.display(""+(i+1)+") ");
+			right.get(i).display(io);
+			io.display("\n");
+		}
+	}
+	
+	public Ranking(Prompt tempPrompt, ArrayList<Choice> ranks,ArrayList<Choice> numbers)
 	{
 		super(tempPrompt, numbers, ranks);
 	}

@@ -1,15 +1,30 @@
 package DataSystem;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 
 public class MultipleChoice extends Question
 {
 	private static final long serialVersionUID = 7005563851486654225L;
 
-	public Response take()
+	public Response take() throws IOException
 	{
-		// TODO implement this operation
-		throw new UnsupportedOperationException("not implemented");
+		this.display(new ConsoleIO());
+		System.out.print("Enter a choice");
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		String temp = br.readLine();
+		try
+		{
+			ArrayList<String> tempArr = new ArrayList<String>();
+			int tempint = Integer.parseInt(temp);
+			tempArr.add(""+tempint);
+			
+		} catch (Exception e) {
+			System.out.println("\nInvalid selection");
+		}
+		return null;
 	}
 
 	protected ArrayList<Choice> choices;
@@ -35,6 +50,7 @@ public class MultipleChoice extends Question
 		super.display(io);
 		for(int i = 0; i < choices.size(); i++)
 		{
+			io.display(""+(i+1)+") ");
 			choices.get(i).display(io);
 			io.display("\n");
 		}
