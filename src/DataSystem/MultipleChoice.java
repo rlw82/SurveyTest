@@ -47,6 +47,11 @@ public class MultipleChoice extends Question
 		return this.choices;
 	}
 
+	public String getType()
+	{
+		return "MultipleChoice";
+	}
+	
 	public MultipleChoice(Prompt prompt_, ArrayList<Choice> choice_)
 	{
 		super(prompt_);

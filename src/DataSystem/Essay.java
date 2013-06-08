@@ -47,4 +47,9 @@ public class Essay extends Question
 		super(tempPrompt);
 	}
 
+	public String getType()
+	{
+		return "Essay";
+	}
+
 }

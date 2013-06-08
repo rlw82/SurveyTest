@@ -71,6 +71,11 @@ public class Matching extends Question
 		return -1;
 	}
 	
+	public String getType()
+	{
+		return "Matching";
+	}
+	
 	public void modify()
 	{
 		

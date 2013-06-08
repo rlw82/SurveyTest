@@ -31,7 +31,13 @@ public class Test extends Survey
 	{
 		super.create();
 		if (questions.size() != 0)
-			this.correctAnswers = this.take();
+		{
+			for(int i = 0; i < questions.size(); i++)
+			{
+				Question tempQues = questions.get(i);
+				if(tempQues.getType().equals("Essay") || tempQues.getType().equals("ShortAnswer"))
+			}
+		}
 		else
 			return;
 	}
@@ -41,7 +47,6 @@ public class Test extends Survey
 		//Just need a default constructor, object is either loaded in through serialization or created from line by line input
 	}
 
-	//I need to figure out what I really want for responses
 	private ArrayList<Response> correctAnswers;
 
 	public void setCorrectAnswers(ArrayList<Response> value)

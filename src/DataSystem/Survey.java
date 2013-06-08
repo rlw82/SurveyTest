@@ -17,14 +17,14 @@ public class Survey implements java.io.Serializable
 	protected String title;
 	protected InputOutput io;
 	protected ArrayList<Question> questions;
-	protected ArrayList<Response> responses;
+	protected ArrayList<ArrayList<Response>> responses;
 
 	public Survey()
 	{
 		title = null;
 		io = new ConsoleIO();
 		questions = new ArrayList<Question>();
-		responses = new ArrayList<Response>();
+		responses = new ArrayList<ArrayList<Response>>();
 	}
 
 	public void display()
@@ -38,9 +38,14 @@ public class Survey implements java.io.Serializable
 		}
 	}
 
-	public ArrayList<Response> take()
+	public void take() throws IOException
 	{
-		throw new UnsupportedOperationException("not implemented");
+		responses.add(new ArrayList<Response>());
+		for(int i = 0; i < questions.size(); i++)
+		{
+			responses.get(responses.size()-1).add(questions.get(i).take());
+		}
+		System.out.println("Your response is number " + responses.size());
 	}
 
 	public void create() throws IOException
@@ -155,21 +160,29 @@ public class Survey implements java.io.Serializable
 		throw new UnsupportedOperationException("not implemented");
 	}
 
+	//Output to a file
 	public void serialize() throws Exception
 	{
 		File verifyFolder = new File("surveys\\");
 		if(!verifyFolder.exists())
 			verifyFolder.mkdirs();
+		
 		File createFile = new File("surveys\\" + this.title + ".dat");
+		
 		if(!createFile.exists())
 			createFile.createNewFile();
+		
 		FileOutputStream fileOut = new FileOutputStream(createFile);
     ObjectOutputStream out = new ObjectOutputStream(fileOut);
     out.writeObject(this);
+    
     FileWriter fw = new FileWriter("surveys.txt", true);
     BufferedWriter bw = new BufferedWriter(fw);
+    
     bw.write(this.title + ".dat\n");
     System.out.println("File saved at surveys\\" + this.title + ".dat");
+    
+    //Close all the streams
     bw.close();
     fw.close();
     out.close();
@@ -184,7 +197,7 @@ public class Survey implements java.io.Serializable
 
 	//Getters
 	
-	public ArrayList<Response> getResponces()
+	public ArrayList<ArrayList<Response>> getResponces()
 	{
 		return this.responses;
 	}
@@ -218,7 +231,7 @@ public class Survey implements java.io.Serializable
 		this.questions = value;
 	}
 	
-	public void setResponces(ArrayList<Response> value)
+	public void setResponces(ArrayList<ArrayList<Response>> value)
 	{
 		this.responses = value;
 	}

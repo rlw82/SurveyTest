@@ -28,6 +28,11 @@ public class Ranking extends Matching
 		}
 	}
 	
+	public String getType()
+	{
+		return "Ranking";
+	}
+	
 	public Ranking(Prompt tempPrompt, ArrayList<Choice> ranks,ArrayList<Choice> numbers)
 	{
 		super(tempPrompt, numbers, ranks);
