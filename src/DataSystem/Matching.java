@@ -1,5 +1,7 @@
 package DataSystem;
 
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 
 public class Matching extends Question
@@ -19,14 +21,59 @@ public class Matching extends Question
 		ArrayList<String> responses = new ArrayList<String>();
 		for(int i = 0; i < left.size(); i++)
 		{
-			
+			int temp = getChoice(used, i);
+			used.set(temp,true);
+			responses.add(""+ i + "," +temp);	
 		}
+		return new Response(this.prompt, responses);
 	}
 
+	private int getChoice(ArrayList<Boolean> choice, int i)
+	{
+		System.out.print("Choose the match to ");
+		this.left.get(i).display(new ConsoleIO());
+		System.out.println();
+		for(int j = 0; j < this.right.size(); j++)
+		{
+			System.out.println(""+(j+1)+") ");
+			this.right.get(j).display(new ConsoleIO());
+			if(choice.get(j))
+				System.out.println("X");
+			else
+				System.out.println();
+		}
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		try {
+			String temp = br.readLine();
+			int check = Integer.parseInt(temp);
+			if(check < 0 || check > this.right.size())
+			{
+				System.out.println("Invalid Choice, try again");
+				return getChoice(choice, i);
+			}
+			else
+			{
+				if(!choice.get(check-1))
+				{
+					System.out.println("Already Chosen select again");
+				}
+				else
+				{
+					return (check - 1);
+				}
+			}
+				
+		} catch (Exception e) {
+			System.out.println("Invalid Choice, try again");
+			return getChoice(choice, i);
+		}
+		//Should never get here
+		return -1;
+	}
+	
 	public void modify()
 	{
-		// TODO implement this operation
-		throw new UnsupportedOperationException("not implemented");
+		
 	}
 	
 	public Matching(Prompt prompt_, ArrayList<Choice> left_,ArrayList<Choice> right_)
@@ -36,6 +83,7 @@ public class Matching extends Question
 		this.right = right_;
 	}
 
+	//Display the question title then display the choices tab separated
 	public void display(InputOutput io)
 	{
 		super.display(io);

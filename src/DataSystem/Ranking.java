@@ -8,8 +8,7 @@ public class Ranking extends Matching
 
 	public Response take()
 	{
-		// TODO implement this operation
-		throw new UnsupportedOperationException("not implemented");
+		return super.take();
 	}
 
 	public void modify()

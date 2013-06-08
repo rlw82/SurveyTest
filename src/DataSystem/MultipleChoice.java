@@ -19,8 +19,16 @@ public class MultipleChoice extends Question
 		{
 			ArrayList<String> tempArr = new ArrayList<String>();
 			int tempint = Integer.parseInt(temp);
-			tempArr.add(""+tempint);
-			
+			if(tempint < 1 || tempint > this.choices.size())
+			{
+				System.out.println("Invalid selection try again");
+				return this.take();
+			}
+			else
+			{
+				tempArr.add(temp);
+				return new Response(this.prompt, tempArr);
+			}
 		} catch (Exception e) {
 			System.out.println("\nInvalid selection");
 		}
