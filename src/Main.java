@@ -61,12 +61,12 @@ public class Main
 			{
 			case 1:
 				currentSurvey = new Survey();
-				currentSurvey.create();
+				currentSurvey.create("Survey");
 				main(args);
 				return;
 			case 2:
 				currentSurvey = new Test();
-				currentSurvey.create();
+				currentSurvey.create("Test");
 				main(args);
 				return;
 			case 3:

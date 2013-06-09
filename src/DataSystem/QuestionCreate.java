@@ -85,7 +85,6 @@ public class QuestionCreate {
 				}
 				//A ranking is just a matching with numbers instead of other values
 				//So create the second matching set to be 1-size
-				System.out.println("\nEnter Second Set of Choices\n");
 				for(int i = 0; i < tempChoice.size(); i++)
 				{
 					tempChoice2.add(new Choice("" + (i+1)));
@@ -161,6 +160,8 @@ public class QuestionCreate {
 			System.out.println("Enter a Choice");
 			choices.get(0).add(new Choice(br.readLine()));
 		}
+		
+		System.out.println("Enter a Second Set");
 		
 		//Go through and get all the choices
 		//No invalid inputs since its open to the user what they want

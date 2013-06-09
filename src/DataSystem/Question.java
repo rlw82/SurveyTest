@@ -36,4 +36,10 @@ public abstract class Question implements java.io.Serializable
 	{
 		//to do
 	}
+
+	public void displayAnswer(InputOutput io, Response response)
+	{
+		// TODO Auto-generated method stub
+		
+	}
 }

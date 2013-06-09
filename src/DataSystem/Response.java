@@ -9,16 +9,15 @@ public class Response extends ResponseComparison
 	 */
 	private static final long serialVersionUID = 2549913857878546785L;
 
-	public Response(Prompt key, ArrayList<String> values)
+	public Response(Prompt key_, ArrayList<String> values_)
 	{
-		// TODO implement this operation
-		throw new UnsupportedOperationException("not implemented");
+		this.key = key_;
+		this.values = values_;
 	}
 
 	public Response()
 	{
-		// TODO implement this operation
-		throw new UnsupportedOperationException("not implemented");
+
 	}
 
 }

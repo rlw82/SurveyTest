@@ -12,7 +12,7 @@ public class MultipleChoice extends Question
 	public Response take() throws IOException
 	{
 		this.display(new ConsoleIO());
-		System.out.print("Enter a choice");
+		System.out.println("Enter a choice");
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		String temp = br.readLine();
 		try

@@ -16,7 +16,12 @@ public class Essay extends Question
 	{
 		super.display(io);
 	}
-
+	
+	public void displayAnswer(InputOutput io, Response response)
+	{
+		io.display("No Answers for Essays\n");
+	}
+	
 	public Response take()
 	{
 		this.display(new ConsoleIO());

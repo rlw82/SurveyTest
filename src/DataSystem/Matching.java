@@ -16,7 +16,7 @@ public class Matching extends Question
 		ArrayList<Boolean> used = new ArrayList<Boolean>();
 		for(int i = 0; i < left.size(); i++)
 		{
-			used.set(i, false);
+			used.add(false);
 		}
 		ArrayList<String> responses = new ArrayList<String>();
 		for(int i = 0; i < left.size(); i++)
@@ -35,10 +35,10 @@ public class Matching extends Question
 		System.out.println();
 		for(int j = 0; j < this.right.size(); j++)
 		{
-			System.out.println(""+(j+1)+") ");
+			System.out.print(""+(j+1)+") ");
 			this.right.get(j).display(new ConsoleIO());
 			if(choice.get(j))
-				System.out.println("X");
+				System.out.println(" X");
 			else
 				System.out.println();
 		}
@@ -53,7 +53,7 @@ public class Matching extends Question
 			}
 			else
 			{
-				if(!choice.get(check-1))
+				if(choice.get(check-1))
 				{
 					System.out.println("Already Chosen select again");
 				}
@@ -69,6 +69,14 @@ public class Matching extends Question
 		}
 		//Should never get here
 		return -1;
+	}
+	
+	public void displayAnswer(InputOutput io, Response response)
+	{
+		for(int i = 0; i < left.size(); i++)
+		{
+			
+		}
 	}
 	
 	public String getType()

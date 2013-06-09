@@ -48,7 +48,7 @@ public class Survey implements java.io.Serializable
 		System.out.println("Your response is number " + responses.size());
 	}
 
-	public void create() throws IOException
+	public void create(String type) throws IOException
 	{
 		//Prompt user for choice
 		System.out.println("\nEnter a choice");
@@ -67,14 +67,14 @@ public class Survey implements java.io.Serializable
 		{
 			//Catch invalid input, non digit
 			System.out.println("Invalid entry enter a single digit 1-3\n\n\n");
-			this.create();
+			create(type);
 			return;
 		}
 		//Not valid choices for this menu, let the user know and prompt again
 		if (choice > 3 || choice < 1)
 		{
 			System.out.println("Invalid entry enter a single digit 1-3\n\n\n");
-			this.create();
+			create(type);
 			return;
 		}
 		else
@@ -86,20 +86,20 @@ public class Survey implements java.io.Serializable
 				{
 					if (questions.size() == 0)
 					{
-						System.out.println("Creating new survey, enter title");
+						System.out.println("Creating new " + type + ", enter title");
 						br = new BufferedReader(new InputStreamReader(System.in));
 						this.title = br.readLine();
 						Question tempQuestion = new QuestionCreate().createQuestion();
 						if (tempQuestion.getPrompt() == null)
 						{
-							System.out.println("Cancelling survey, returning to main menu\n\n\n");
+							System.out.println("Cancelling "+ type + ", returning to main menu\n\n\n");
 							this.title = null;
 							return;
 						}
 						else
 						{
 							this.questions.add(tempQuestion);
-							this.create();
+							create(type);
 							return;
 						}
 					}
@@ -113,14 +113,14 @@ public class Survey implements java.io.Serializable
 						else
 						{
 							this.questions.add(tempQuestion);
-							this.create();
+							create(type);
 							return;
 						}
 					}
 				}
 				catch (Exception e)
 				{
-						System.out.println("Cancelling survey, returning to main menu\n\n\n");
+						System.out.println("Cancelling  "+ type + ", returning to main menu\n\n\n");
 						this.title = null;
 						return;
 				}
@@ -130,16 +130,18 @@ public class Survey implements java.io.Serializable
 					if (questions.size() == 0)
 					{
 						System.out.println("No questions to display yet!\n\n\n");
-						this.create();
+						create(type);
 						return;
 					}
 					else
 						this.display();
+						create(type);
+						return;
 				}
 				catch (Exception e)
 				{
 					System.out.println("No questions to display yet!\n\n\n");
-					this.create();
+					create(type);
 					return;
 				}
 			case 3:
@@ -148,12 +150,7 @@ public class Survey implements java.io.Serializable
 			return;
 		}
 	}
-
-	public String getClassType()
-	{
-		return "Survey";
-	}
-
+	
 	public void modifyQuestions()
 	{
 		// TODO implement this operation
