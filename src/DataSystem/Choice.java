@@ -1,5 +1,8 @@
+//Russell Wiley
+//CS 350
+//Professor Salvage
 package DataSystem;
-
+//Choice class for data for Questions
 public class Choice implements java.io.Serializable
 {
 	/**
@@ -9,7 +12,7 @@ public class Choice implements java.io.Serializable
 
 	String choice;
 
-	public void setChoice(String chage)
+	public void setChoice(String choice_)
 	{
 		// TODO implement this operation
 		throw new UnsupportedOperationException("not implemented");

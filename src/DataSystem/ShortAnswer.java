@@ -1,3 +1,6 @@
+//Russell Wiley
+//CS 350
+//Professor Salvage
 package DataSystem;
 
 import java.io.BufferedReader;
@@ -5,6 +8,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 
+//Similar to Essay except it must be less than 240 characters so you verify that it is
 public class ShortAnswer extends Essay
 {
 	private static final long serialVersionUID = -4343050404498262554L;
@@ -29,7 +33,12 @@ public class ShortAnswer extends Essay
 		}
 		return new Response(this.prompt, tempArr);
 	}
-
+	
+	public void displayAnswer(InputOutput io, Response response)
+	{
+		io.display(response.getValues().get(0)+"\n");
+	}
+	
 	public String getType()
 	{
 		return "ShortAnswer";

@@ -1,9 +1,13 @@
+//Russell Wiley
+//CS 350
+//Professor Salvage
 package DataSystem;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileOutputStream;
+import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -19,6 +23,7 @@ public class Survey implements java.io.Serializable
 	protected ArrayList<Question> questions;
 	protected ArrayList<ArrayList<Response>> responses;
 
+	//Initilize variables
 	public Survey()
 	{
 		title = null;
@@ -27,6 +32,7 @@ public class Survey implements java.io.Serializable
 		responses = new ArrayList<ArrayList<Response>>();
 	}
 
+	//No correct answers to display
 	public void display()
 	{
 		this.io.display(this.title + "\n\nQuestions\n\n");
@@ -38,6 +44,7 @@ public class Survey implements java.io.Serializable
 		}
 	}
 
+	//Add to the responses of the survey the new set
 	public void take() throws IOException
 	{
 		responses.add(new ArrayList<Response>());
@@ -48,6 +55,7 @@ public class Survey implements java.io.Serializable
 		System.out.println("Your response is number " + responses.size());
 	}
 
+	//Go through all the steps to creating a survey
 	public void create(String type) throws IOException
 	{
 		//Prompt user for choice
@@ -172,11 +180,22 @@ public class Survey implements java.io.Serializable
 		FileOutputStream fileOut = new FileOutputStream(createFile);
     ObjectOutputStream out = new ObjectOutputStream(fileOut);
     out.writeObject(this);
-    
-    FileWriter fw = new FileWriter("surveys.txt", true);
+    FileReader fr = new FileReader("surveys.txt");
+    BufferedReader bro = new BufferedReader(fr);
+    String collection = "";
+    String temp = bro.readLine();
+    while(temp!=null)
+    {
+    	if(!temp.toLowerCase().equals((this.title+".dat").toLowerCase()))
+    	{
+    		collection = collection + temp + "\n";
+    	}
+  		temp = bro.readLine();
+    }
+    FileWriter fw = new FileWriter("surveys.txt");
     BufferedWriter bw = new BufferedWriter(fw);
     
-    bw.write(this.title + ".dat\n");
+    bw.write(collection + this.title + ".dat\n");
     System.out.println("File saved at surveys\\" + this.title + ".dat");
     
     //Close all the streams

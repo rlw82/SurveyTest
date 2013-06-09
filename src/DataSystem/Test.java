@@ -1,8 +1,17 @@
+//Russell Wiley
+//CS 350
+//Professor Salvage
 package DataSystem;
 
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 
 public class Test extends Survey
@@ -18,6 +27,7 @@ public class Test extends Survey
 		throw new UnsupportedOperationException("not implemented");
 	}
 	
+	//Display to the current io
 	public void display()
 	{
 		this.io.display(this.title + "\n\nQuestions\n\n");
@@ -25,7 +35,7 @@ public class Test extends Survey
 		{
 			this.io.display("" + (i+1) + ")");
 			questions.get(i).display(this.io);
-			this.io.display("\n");
+			this.io.display("\nAnswer(s) for this question\n");
 			for(int j = 0; j < correctAnswers.get(i).size(); j++)
 			{
 				questions.get(i).displayAnswer(this.io, correctAnswers.get(i).get(j));
@@ -33,12 +43,14 @@ public class Test extends Survey
 		}
 		
 	}
+	
 	public double grade()
 	{
 		// TODO implement this operation
 		throw new UnsupportedOperationException("not implemented");
 	}
 
+	//Create all the needed parts for a Test
 	public void create(String type) throws IOException
 	{
 		//First create all the questions
@@ -105,6 +117,52 @@ public class Test extends Survey
 		return questResponses;
 	}
 	
+	//Output to a file
+	public void serialize() throws Exception
+	{
+		File verifyFolder = new File("tests\\");
+		if(!verifyFolder.exists())
+			verifyFolder.mkdirs();
+		
+		File createFile = new File("tests\\" + this.title + ".dat");
+		
+		if(!createFile.exists())
+			createFile.createNewFile();
+		
+		FileOutputStream fileOut = new FileOutputStream(createFile);
+    ObjectOutputStream out = new ObjectOutputStream(fileOut);
+    out.writeObject(this);
+    File testsFile = new File("tests.txt");
+    
+    if(!testsFile.exists())
+    	testsFile.createNewFile();
+    
+    FileReader fr = new FileReader("tests.txt");
+    BufferedReader bro = new BufferedReader(fr);
+    String collection = "";
+    String temp = bro.readLine();
+    while(temp!=null)
+    {
+    	if(!temp.toLowerCase().equals((this.title+".dat").toLowerCase()))
+    	{
+    		collection = collection + temp + "\n";
+    	}
+  		temp = bro.readLine();
+    }
+    FileWriter fw = new FileWriter("tests.txt");
+    BufferedWriter bw = new BufferedWriter(fw);
+    
+    bw.write(collection + this.title + ".dat\n");
+    System.out.println("File saved at tests\\" + this.title + ".dat");
+    
+    //Close all the streams
+    bw.close();
+    fw.close();
+    out.close();
+    fileOut.close();
+	}
+	
+	//Initialize new variable
 	public Test()
 	{
 		//Just need a default constructor, object is either loaded in through serialization or created from line by line input

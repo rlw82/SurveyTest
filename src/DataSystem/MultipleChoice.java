@@ -1,3 +1,6 @@
+//Russell Wiley
+//CS 350
+//Professor Salvage
 package DataSystem;
 
 import java.io.BufferedReader;
@@ -9,6 +12,7 @@ public class MultipleChoice extends Question
 {
 	private static final long serialVersionUID = 7005563851486654225L;
 
+	//Get a response
 	public Response take() throws IOException
 	{
 		this.display(new ConsoleIO());
@@ -19,6 +23,7 @@ public class MultipleChoice extends Question
 		{
 			ArrayList<String> tempArr = new ArrayList<String>();
 			int tempint = Integer.parseInt(temp);
+			//Make sure the response is possible
 			if(tempint < 1 || tempint > this.choices.size())
 			{
 				System.out.println("Invalid selection try again");
@@ -26,7 +31,7 @@ public class MultipleChoice extends Question
 			}
 			else
 			{
-				tempArr.add(temp);
+				tempArr.add(""+(tempint-1));
 				return new Response(this.prompt, tempArr);
 			}
 		} catch (Exception e) {
@@ -57,7 +62,17 @@ public class MultipleChoice extends Question
 		super(prompt_);
 		this.choices = choice_;
 	}
-
+	
+	//Display the response passed in
+	public void displayAnswer(InputOutput io, Response response)
+	{
+		String temp = response.getValues().get(0);
+		int choice = Integer.parseInt(temp);
+		choices.get(choice).display(io);
+		io.display("\n");
+	}
+	
+	//Display the question
 	public void display(InputOutput io)
 	{
 		super.display(io);

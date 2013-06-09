@@ -1,3 +1,6 @@
+//Russell Wiley
+//CS 350
+//Professor Salvage
 package DataSystem;
 
 import java.io.IOException;
@@ -25,7 +28,12 @@ public class TrueFalse extends MultipleChoice
 		// TODO implement this operation
 		throw new UnsupportedOperationException("not implemented");
 	}
-
+	
+	public void displayAnswer(InputOutput io, Response response)
+	{
+		super.displayAnswer(io, response);
+	}
+	
 	public TrueFalse(Prompt tempPrompt, ArrayList<Choice> tempChoice)
 	{
 		super(tempPrompt, tempChoice);

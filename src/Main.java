@@ -1,7 +1,6 @@
 //Russell Wiley
 //CS 350
 //Professor Salvage
-
 import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -142,7 +141,7 @@ public class Main
 					br = new BufferedReader(fr);
 					String surveyList = "";
 					temp = br.readLine();
-					while (!temp.equals(null))
+					while (temp != null)
 					{
 						//Ensures no blank lines since file is edited inside system
 						if (!temp.equals(""))
@@ -150,6 +149,8 @@ public class Main
 						temp = br.readLine();
 					}
 					loadSurveyTest(surveyList, "Test");
+					main(args);
+					return;
 				}
 				catch (FileNotFoundException e)
 				{

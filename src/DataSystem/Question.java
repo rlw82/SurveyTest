@@ -1,7 +1,11 @@
+//Russell Wiley
+//CS 350
+//Professor Salvage
 package DataSystem;
 
 import java.io.IOException;
 
+//Generic methods which every Questions will use
 public abstract class Question implements java.io.Serializable
 {
 

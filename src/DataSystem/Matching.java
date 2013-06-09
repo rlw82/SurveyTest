@@ -1,3 +1,6 @@
+//Russell Wiley
+//CS 350
+//Professor Salvage
 package DataSystem;
 
 import java.io.BufferedReader;
@@ -10,6 +13,7 @@ public class Matching extends Question
 	protected ArrayList<Choice> left;
 	protected ArrayList<Choice> right;
 
+	//Get a response
 	public Response take()
 	{
 		this.prompt.display(new ConsoleIO());
@@ -28,6 +32,7 @@ public class Matching extends Question
 		return new Response(this.prompt, responses);
 	}
 
+	//Get a specific choice for each matching choice
 	private int getChoice(ArrayList<Boolean> choice, int i)
 	{
 		System.out.print("Choose the match to ");
@@ -37,12 +42,14 @@ public class Matching extends Question
 		{
 			System.out.print(""+(j+1)+") ");
 			this.right.get(j).display(new ConsoleIO());
+			//Mark if it has been selected already
 			if(choice.get(j))
 				System.out.println(" X");
 			else
 				System.out.println();
 		}
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		//Get valid input
 		try {
 			String temp = br.readLine();
 			int check = Integer.parseInt(temp);
@@ -71,11 +78,18 @@ public class Matching extends Question
 		return -1;
 	}
 	
+	//Display a response to multiple choice
 	public void displayAnswer(InputOutput io, Response response)
 	{
-		for(int i = 0; i < left.size(); i++)
+		for(int i = 0; i < response.getValues().size(); i++)
 		{
-			
+			String[] pair = response.getValues().get(i).split(",");
+			int one = Integer.parseInt(pair[0]);
+			int two = Integer.parseInt(pair[1]);
+			left.get(one).display(io);
+			io.display(" is matched to ");
+			right.get(two).display(io);
+			io.display("\n");
 		}
 	}
 	

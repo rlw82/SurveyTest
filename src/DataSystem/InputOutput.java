@@ -1,5 +1,9 @@
+//Russell Wiley
+//CS 350
+//Professor Salvage
 package DataSystem;
 
+//Abstract class to bridge inputs
 public abstract class InputOutput implements java.io.Serializable
 {
 	/**

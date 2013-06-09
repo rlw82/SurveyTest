@@ -1,7 +1,11 @@
+//Russell Wiley
+//CS 350
+//Professor Salvage
 package DataSystem;
 
 import java.util.ArrayList;
 
+//Ranking is a Matching that matches one set of choices to 1-choices.size()
 public class Ranking extends Matching
 {
 	private static final long serialVersionUID = 7552164284178692603L;
@@ -16,7 +20,13 @@ public class Ranking extends Matching
 		// TODO implement this operation
 		throw new UnsupportedOperationException("not implemented");
 	}
-
+	
+	public void displayAnswer(InputOutput io, Response response)
+	{
+		super.displayAnswer(io, response);
+	}
+	
+	//Can be more efficiently done
 	public void display(InputOutput io)
 	{
 		this.prompt.display(io);

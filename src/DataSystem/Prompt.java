@@ -1,5 +1,9 @@
+//Russell Wiley
+//CS 350
+//Professor Salvage
 package DataSystem;
 
+//Every Question has a prompt which contains the prompt...
 public class Prompt implements java.io.Serializable
 {
 	/**
