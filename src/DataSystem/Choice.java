@@ -2,6 +2,7 @@
 //CS 350
 //Professor Salvage
 package DataSystem;
+
 //Choice class for data for Questions
 public class Choice implements java.io.Serializable
 {
@@ -19,7 +20,7 @@ public class Choice implements java.io.Serializable
 	}
 
 	public void display(InputOutput io)
-	{	
+	{
 		io.display(this.choice);
 	}
 

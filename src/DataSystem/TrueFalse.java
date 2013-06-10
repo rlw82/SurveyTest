@@ -3,7 +3,9 @@
 //Professor Salvage
 package DataSystem;
 
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 
 public class TrueFalse extends MultipleChoice
@@ -17,23 +19,39 @@ public class TrueFalse extends MultipleChoice
 	{
 		return super.take();
 	}
-	
+
 	public String getType()
 	{
 		return "TrueFalse";
 	}
-	
-	public void modify()
+
+	public boolean modify()
 	{
-		// TODO implement this operation
-		throw new UnsupportedOperationException("not implemented");
+		System.out.println("Enter a new Prompt, Q to keep current");
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		String temp;
+		try
+		{
+			temp = br.readLine();
+			if(!temp.toLowerCase().equals("q"))
+			{
+				this.prompt = new Prompt(temp);
+				return true;
+			}
+			return false;
+		} catch (IOException e)
+		{
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return false;
 	}
-	
+
 	public void displayAnswer(InputOutput io, Response response)
 	{
 		super.displayAnswer(io, response);
 	}
-	
+
 	public TrueFalse(Prompt tempPrompt, ArrayList<Choice> tempChoice)
 	{
 		super(tempPrompt, tempChoice);

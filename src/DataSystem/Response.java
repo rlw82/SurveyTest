@@ -28,6 +28,26 @@ public class Response implements java.io.Serializable
 		return this.values;
 	}
 
+	public int hashCode()
+	{
+		return 0;
+	}
+	
+	public boolean equals(Object obj)
+	{
+		if(this.key.equals(((Response) obj).getKey()))
+		{
+			for(int i = 0; i < this.values.size(); i++)
+			{
+				if(!((Response) obj).getValues().get(i).toLowerCase().equals(this.values.get(i).toLowerCase()))
+				{
+					return false;
+				}
+			}
+			return true;
+		}
+		return false;
+	}
 	public Prompt getKey()
 	{
 		return key;

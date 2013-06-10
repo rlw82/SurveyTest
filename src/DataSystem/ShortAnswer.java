@@ -16,38 +16,41 @@ public class ShortAnswer extends Essay
 	public Response take()
 	{
 		this.display(new ConsoleIO());
-		System.out.println("Enter your response, press Enter to finish(Must be 240 characters)");
+		System.out
+				.println("Enter your response, press Enter to finish(Must be 240 characters)");
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		ArrayList<String> tempArr = new ArrayList<String>();
-		try {
+		try
+		{
 			String temp = br.readLine();
-			if(temp.length() > 240)
+			if (temp.length() > 240)
 			{
-				System.out.println("Response too long, your response was " + temp.length() + " characters, try again");
+				System.out.println("Response too long, your response was "
+						+ temp.length() + " characters, try again");
 				return this.take();
 			}
 			tempArr.add(temp);
-		} catch (IOException e) {
+		} catch (IOException e)
+		{
 			//Should never get here, handle later if it is found possible
 			return null;
 		}
 		return new Response(this.prompt, tempArr);
 	}
-	
+
 	public void displayAnswer(InputOutput io, Response response)
 	{
-		io.display(response.getValues().get(0)+"\n");
+		io.display(response.getValues().get(0) + "\n");
 	}
-	
+
 	public String getType()
 	{
 		return "ShortAnswer";
 	}
-	
-	public void modify()
+
+	public boolean modify() throws IOException
 	{
-		// TODO implement this operation
-		throw new UnsupportedOperationException("not implemented");
+		return super.modify();
 	}
 
 	public void save()

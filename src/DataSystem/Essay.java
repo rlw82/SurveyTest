@@ -17,13 +17,13 @@ public class Essay extends Question
 	{
 		super.display(io);
 	}
-	
+
 	//Essays cannot have correct answers but this will display any response
 	public void displayAnswer(InputOutput io, Response response)
 	{
-		io.display(response.getValues().get(0)+ "\n");
+		io.display(response.getValues().get(0) + "\n");
 	}
-	
+
 	//Take whatever input the user gives, specifics don't matter
 	public Response take()
 	{
@@ -31,9 +31,11 @@ public class Essay extends Question
 		System.out.println("Enter your response, press Enter to finish");
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		ArrayList<String> temp = new ArrayList<String>();
-		try {
+		try
+		{
 			temp.add(br.readLine());
-		} catch (IOException e) {
+		} catch (IOException e)
+		{
 			//Should never get here, handle later if it is found possible
 		}
 		return new Response(this.prompt, temp);
@@ -44,10 +46,9 @@ public class Essay extends Question
 		return this.prompt;
 	}
 
-	public void modify()
+	public boolean modify() throws IOException
 	{
-		// TODO implement this operation
-		throw new UnsupportedOperationException("not implemented");
+		return super.modify();
 	}
 
 	public Essay(Prompt tempPrompt)
