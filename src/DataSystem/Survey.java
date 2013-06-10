@@ -171,6 +171,7 @@ public class Survey implements java.io.Serializable
 	//Output to a file
 	public void serialize() throws Exception
 	{
+		//Verify files will be created
 		File verifyFolder = new File("surveys\\");
 		if (!verifyFolder.exists())
 			verifyFolder.mkdirs();
@@ -214,6 +215,7 @@ public class Survey implements java.io.Serializable
 		fileOut.close();
 	}
 
+	//Count the number of each responses
 	public ArrayList<HashMap<Response, Integer>> tabulate()
 	{
 		ArrayList<HashMap<Response,Integer>> tempArr = new ArrayList<HashMap<Response,Integer>>();
