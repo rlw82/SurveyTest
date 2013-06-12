@@ -33,8 +33,8 @@ public class Test extends Survey
 			this.io.display("\nAnswer(s) for this question\n");
 			for (int j = 0; j < correctAnswers.get(i).size(); j++)
 			{
-				questions.get(i).displayAnswer(this.io,
-						correctAnswers.get(i).get(j));
+				if(!questions.get(i).getType().equals("Essay"))
+					questions.get(i).displayAnswer(this.io,correctAnswers.get(i).get(j));
 			}
 		}
 

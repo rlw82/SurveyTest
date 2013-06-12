@@ -14,6 +14,7 @@ import java.util.Map;
 import java.util.Scanner;
 
 import DataSystem.ConsoleIO;
+import DataSystem.FileIO;
 import DataSystem.Response;
 import DataSystem.Survey;
 import DataSystem.Test;
@@ -36,7 +37,8 @@ public class Main
 		System.out
 				.println("1) Create a new Survey\n2) Create a new Test\n3) Display current Survey/Test\n"
 						+ "4) Save current Survey/Test\n5) Load a Survey\n6) Load a Test\n7) Grading/Tabulating Menu\n"
-						+ "8) Modify Current Test/Survey\n9) Take Current Survey/Test\n10) Quit");
+						+ "8) Modify Current Test/Survey\n9) Take Current Survey/Test\n10) Output to PNG\n11) Output to PostScript"
+						+ "\n12) Quit");
 		String temp = "";
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		temp = br.readLine();
@@ -48,14 +50,14 @@ public class Main
 		} catch (Exception e)
 		{
 			//Catch invalid input, non digit
-			System.out.println("Invalid entry enter an int 1-10\n\n\n");
+			System.out.println("Invalid entry enter an int 1-12\n\n\n");
 			main(args);
 			return;
 		}
 		//Not valid choices for this menu, let the user know and prompt again
-		if (choice > 10 || choice < 1)
+		if (choice > 12 || choice < 1)
 		{
-			System.out.println("Invalid entry enter an int 1-10\n\n\n");
+			System.out.println("Invalid entry enter an int 1-12\n\n\n");
 			main(args);
 			return;
 		}
@@ -223,6 +225,42 @@ public class Main
 				main(args);
 				return;
 			case 10:
+				try
+				{
+					if (currentSurvey.getTitle() != null
+							&& currentSurvey.getQuestions() != null)
+					{
+						currentSurvey.setIO(new FileIO());
+						currentSurvey.display();
+						((FileIO) currentSurvey.getIO()).outputToPNG(currentSurvey.getTitle()+".png");
+						currentSurvey.setIO(new ConsoleIO());
+					}
+				} catch (Exception e)
+				{
+					System.out
+							.println("No Survey/Test currently active in System\n\n\n");
+				}
+				main(args);
+				return;
+			case 11:
+				try
+				{
+					if (currentSurvey.getTitle() != null
+							&& currentSurvey.getQuestions() != null)
+					{
+						currentSurvey.setIO(new FileIO());
+						currentSurvey.display();
+						((FileIO) currentSurvey.getIO()).outputToPS(currentSurvey.getTitle()+".ps");
+						currentSurvey.setIO(new ConsoleIO());
+					}
+				} catch (Exception e)
+				{
+					System.out
+							.println("No Survey/Test currently active in System\n\n\n");
+				}
+				main(args);
+				return;
+			case 12:
 				System.out.println("Exiting");
 				br.close();
 				System.exit(1);
